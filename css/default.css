@@ -6,13 +6,13 @@
   --mainText: rgb(216, 216, 216);
   --secondaryText: #fc76e5;
   --shadow: #16212e;
-  --bkgd: url("../images/bkgd2.jpg");
+  --bkgd: url("../images/bkgd1.jpg");
 }
 
 /* Text formatting */
 h1, h2, h3, h4, h5, h6, strong {
   color: var(--mainText);
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", "mono";
 }
 
 h1 {font-size: 56px;}
@@ -58,7 +58,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  min-height: 5em;
+  /* min-height: 5em; */
 }
 
 .intro img {
@@ -84,7 +84,7 @@ html, body {
 }
 
 .title-bar {
-  width: 1480px;
+  max-width: 1480px;
   height: 50px;
   margin: 0 auto;
   padding: 10px;
@@ -120,18 +120,3 @@ html, body {
   }
 }
 
-@media screen and (max-width: 800px) {
-  .intro-wrapper {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "nav-bar"
-      "left-column"
-      "right-column";
-  }
-
-  .right-column {
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-}
