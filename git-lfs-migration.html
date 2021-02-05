@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Migrating to GitLab LFS 
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/default.css">
+    </head>
+
+    <body>
+        <div class="opaque-bkgd">
+            
+            <div class="title-bar">
+                <img src="images/arrows.png" height=30px width=auto>
+                
+                <h3> Migrating a large-file repository to GitLab and Git LFS</h3>
+                                
+                <img src="images/arrows2.png" height=30px width=auto>
+            </div>
+            
+            <section class="box-main"> 
+                    <h4 style="padding-left: 20px;"><strong>Requirements:</strong></h4>
+                    <ul>
+                        <li><a href=https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>Git</a></li>
+                        <li><a href=https://github.com/git-lfs/git-lfs/wiki/Installation>Git LFS</a></li>
+                    </ul>
+                    <h4 style="padding-left: 20px;"><strong>Let"s get started!</strong></h4>
+                    <ol>
+                        <li>Set up environment
+                            <p>- Install requirements</p>
+                            <p style="padding-left: 20px;"> Linux: <code>sudo {apt, dnf} install git git-lfs</code></p>
+                            <p style="padding-left: 20px;"> Windows: download and install <a href="https://git-scm.com/download/win">Git</a> and <a href="https://github.com/git-lfs/git-lfs/wiki/Installation">Git LFS</a></p>
+                            <p>- Initialize Git LFS (only needed once per user account)</p>
+                            <p style="padding-left: 20px;">Any OS: <code>git lfs install</code></p>
+                        </li>
+                        
+                        <li>Clone your repository with large files:
+                            <p><code>git clone &lt;your large repository&gt;<br>cd &lt;your large repository&gt;/</code></p>
+                        </li>
+                        
+                        <li>
+                            Track desired files:
+                            <p><code>git lfs track "*.flac" "folder/" "whatever-else"</code></p>
+                        </li>
+
+                        <li>
+                            Add .gitattributes:
+                            <p><code>git add .gitattributes</code></p>
+                        </li>
+                        
+                        <li>
+                            "Refresh" tracked files in git and commit:
+                            <p><code>git rm --cached "*.flac" "folder/" "whatever-else"<br>git add -A<br>git commit -a -m "Convert to LFS"</code></p>
+                        </li>
+                        
+                        <p><strong>Sanity Check!</strong><br>At this point, a <code>git lfs ls-files</code> should show all your tracked files.<br>Now we need to push the repository to GitLab, with the tracked files pointing to GitLab LFS.</p>
+
+                        <li>
+                            Add GitLab as remote origin
+                            <p>Edit your .git/config directly, replacing the url, for example:<br>
+                            <code>
+                                [remote "origin"]<br>&emsp;&emsp;url = git@gitlab.com:group/project.git<br>&emsp;&emsp;fetch = +refs/heads/*:refs/remotes/origin/</code></p>
+                        </li>
+                        
+                        <li>
+                            Converts pre-existing git objects to lfs objects
+                            <p><code>git lfs migrate import -I "*.flac" "folder/" "whatever-else"</code></p>
+                        </li>
+
+                        <li>
+                            Clean up commit history
+                            <p><code>git reflog expire --expire-unreachable=now --all<br>git gc --prune=now</code></p>
+                            <p>Note there is a chance this must be done <em>after</em> your <code>git push --force</code></p>
+                        </li>
+
+                        <li>
+                            Force push to new GitLab remote
+                            <p><code>git push --force</code></p>
+                        </li>
+                    </ol>
+
+                <div>
+                    <h4>References:</h4>
+                    <ul>
+                        <li>
+                            <a href="https://docs.gitlab.com/ee/topics/git/lfs/migrate_to_git_lfs.html">GitLab LFS Migration Docs</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/git-lfs/git-lfs/wiki/Tutorial#migrating-existing-repository-data-to-lfs">Alternate LFS Migration Method</a>
+                        </li>
+                    </ul>
+                </div>
+               
+            </section>
+        </div>
+    </body>
+</html>
