@@ -8,47 +8,86 @@
     
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        
+        <!-- Import stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/default.css">
+
+        <!-- Import javascript -->
+        <script type="text/javascript" src="js/script.js"></script>
     </head>
 
     <body>
-        <div class="opaque-bkgd">
+        <section class="opaque-bkgd">
+            <div class="main-container">
 
-            <div class="intro">
+                <div class="navbar">
+                    <div class="navlinks">
+                        <a href="http://twitter.com/glass__ships" target="_blank">
+                            <img src="images/buttons/twitter.png" alt="@glass__ships"
+                            onmouseover="hover(this, 'twitterHover.png');" 
+                            onmouseout="unhover(this, 'twitter.png');">
+                        </a>
+                        <a href="http://github.com/glass-ships" target="_blank">
+                            <img src="images/buttons/github.png" alt="github"
+                            onmouseover="hover(this, 'githubHover.png');" 
+                            onmouseout="unhover(this, 'github.png');">
+                        </a>
+                        <a href="http://gitlab.com/glass-ships" target="_blank">
+                            <img src="images/buttons/gitlab.png" alt="gitlab"
+                            onmouseover="hover(this, 'gitlabHover.png');" 
+                            onmouseout="unhover(this, 'gitlab.png');">
+                        </a>
+                        <a href="mailto: hello@glass-ships.com" target="_blank">
+                            <img src="images/buttons/email.png" alt="email"
+                            onmouseover="hover(this, 'emailHover.png');" 
+                            onmouseout="unhover(this, 'email.png');">
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
+                    </div>
+                </div>
 
-                <img src="images/glass_Logo.png" alt="logo">
+                <div class="intro">
 
-                <h2>Scientific software developer, collaborator at the Super Cryogenic<br>Dark Matter Search.</h2>
+                    <img id="logo" src="images/glass_Logo.png" alt="logo">
+
+                    <div id="blurb">
+                        <h1 style="text-align: center;">Hi, I'm Glass.</h1>
+                        <h2 style="text-align: center;">Scientific software developer,</h2>
+                        <h3>Collaborator at Cryogenic Dark Matter Search.</h3>
+                    </div>
+                    
+                </div>
+
+                <img id="continue" src="images/continue.gif">
+
+                <div class="title-bar">
+                    <img src="images/arrows.png" height=30px width=auto>
+                    <h3>Something</h3>
+                    <img src="images/arrows2.png" height=30px width=auto>
+                </div>
+
+                <section class="box-main">
+                    <h2>Previous Projects</h2>
+                </section>
                 
-            </div>
+                <section class="box-main">
+                    <h3>Skills and Languages</h3>
+                    <ul>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos unde repellat culpa qui reprehenderit aliquam quas placeat doloribus corporis quos iure iusto saepe velit ex a, aspernatur, voluptatum vitae dolorem.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vel totam adipisci rerum sit minus, quo et ab perferendis expedita non magni laudantium cum quos vero doloremque, nihil, cumque corporis.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab dolores beatae iure, vero aut voluptatum ipsa deserunt dolor quis nisi. Illo perferendis rerum quidem nemo unde ea, inventore reiciendis.</li>
+                    </ul>
+                    
+                </section>
 
-            <div class="title-bar">
-                <img src="images/arrows.png" height=30px width=auto>
-                <h3>Something</h3>
-                <img src="images/arrows2.png" height=30px width=auto>
-            </div>
-
-            <section class="">
-                <h2>Previous Projects</h2>
-            </section>
+                <section class="box-main">
+                    <h3>Contact</h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia labore aliquid, fuga laboriosam consectetur quam ex dolorum repellat nulla doloribus corporis harum, ratione aperiam? Hic et aut sed accusantium eum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt tempore rem ipsam quis reiciendis tempora, earum quasi esse maiores culpa nesciunt, molestias magni voluptatibus illum asperiores. Doloremque temporibus expedita aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi quaerat, eius laudantium et similique possimus optio explicabo ea iste nisi consequatur doloribus temporibus commodi quas modi autem quasi ducimus.
+                </section>
             
-            <section class="">
-                <h3>Skills and Languages</h3>
-                <ul>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos unde repellat culpa qui reprehenderit aliquam quas placeat doloribus corporis quos iure iusto saepe velit ex a, aspernatur, voluptatum vitae dolorem.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vel totam adipisci rerum sit minus, quo et ab perferendis expedita non magni laudantium cum quos vero doloremque, nihil, cumque corporis.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab dolores beatae iure, vero aut voluptatum ipsa deserunt dolor quis nisi. Illo perferendis rerum quidem nemo unde ea, inventore reiciendis.</li>
-                </ul>
-                
-            </section>
+            </div>
 
-            <section class="">
-                <h3>Contact</h3>
-            </section>
-
-        </div>
-
-        <script type="text/javascript" src="js/script.js"></script>
+        </section>
 
     </body>
 </html>
