@@ -21,38 +21,14 @@
         <div class="opaque-bkgd">
             <div class="main-wrapper">
 
-                <div class="navbar">
-                    <div class="navlinks">
-                        <a href="index.html">
-                            <img src="images/buttons/homeLong.png" alt="glass-ships.com"
-                            onmouseover="hover(this, 'homeLongHover.png');" 
-                            onmouseout="unhover(this, 'homeLong.png');">
-                        </a>
-                        <a href="http://twitter.com/glass__ships" target="_blank">
-                            <img src="images/buttons/twitterLong.png" alt="@glass__ships"
-                            onmouseover="hover(this, 'twitterLongHover.png');" 
-                            onmouseout="unhover(this, 'twitterLong.png');">
-                        </a>
-                        <a href="http://github.com/glass-ships" target="_blank">
-                            <img src="images/buttons/githubLong.png" alt="github"
-                            onmouseover="hover(this, 'githubLongHover.png');" 
-                            onmouseout="unhover(this, 'githubLong.png');">
-                        </a>
-                        <a href="http://gitlab.com/glass-ships" target="_blank">
-                            <img src="images/buttons/gitlabLong.png" alt="gitlab"
-                            onmouseover="hover(this, 'gitlabLongHover.png');" 
-                            onmouseout="unhover(this, 'gitlabLong.png');">
-                        </a>
-                        <a href="mailto: hello@glass-ships.com" target="_blank">
-                            <img src="images/buttons/emailLong.png" alt="email"
-                            onmouseover="hover(this, 'emailLongHover.png');" 
-                            onmouseout="unhover(this, 'emailLong.png');">
-                        </a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
-                    </div>
-                </div>
-
+                <!-- Landing view -->
                 <section class="intro">
+
+                    <div class="navbar">
+                        <a href="#">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Past Projects</a>
+                    </div>
 
                     <img id="logo" src="images/glass_Logo.png" alt="logo">
 
@@ -65,7 +41,8 @@
 
                 </section>
  
-                <section class="box-main"><h4>About</h4>
+                <section class="box-main" id="about">
+                    <h4>About</h4>
                     <p>
                         Hi, I'm Glass - a scientific software developer with a Bachelor in Physics from University of Colorado Denver.<br>
                         Currently, I offer software support at the Cryogenic Dark Matter Search (CDMS), where I've debugged  and containerized the data analysis environment, managed code in Git repositories, and worked with test facilities to direct data acquisition systems to data catalog compliant paths.<br>
@@ -73,7 +50,9 @@
                     </p>
                 </section>
                 
-                <section class="box-main"><h4>Skills</h4>
+                <!-- Skills -->
+                <section class="box-main" id="skills">
+                    <h4>Skills</h4>
 
                     <div class="skill-section">
                         <div class="skill">
@@ -87,37 +66,73 @@
                         </div>
 
                         <div class="skill">
-                            <img src="images/icons/docker.png" alt="git">
+                            <img src="images/icons/docker.png" alt="docker">
                             <h6>Docker</h6>
                         </div>
-                    </div>
 
-                    <div class="skill-section">
                         <div class="skill">
                             <img src="images/icons/linux.png" alt="linux">
                             <h6>Linux</h6>
                         </div>
 
                         <div class="skill">
-                            <img src="images/icons/windows.png" alt="linux">
+                            <img src="images/icons/windows.png" alt="windows">
                             <h6>Windows</h6>
                         </div>
                     </div>
                 </section>
 
-                <section class="box-main">
+                <!-- Past Projects -->
+                <section class="box-main" id="projects">
                     <h4>Past Projects</h4>
                     <p>Add boxes with 3/4 main projects</p>
                 </section>
 
-                <section class="box-main">
+                <!-- Contact -->
+                <section class="box-main box-last" id="contact">
                     <h4>Contact</h4>
-                    <p>Put Links here instead of navbar?</p>
+                    
+                    <p>
+                        Questions? Interested in working together?<br>
+                        Find me at any of the social media links below,<br>
+                        or just shoot me an email!
+                    </p>
+
+                    <section class="contact">
+
+                    </section>
                 </section>
             
+                <!-- Social links -->
+                <div class="sticky-bar">
+                    <div class="links">
+                        <a href="http://twitter.com/glass__ships" target="_blank">
+                            <img src="images/buttons/twitter.png" alt="@glass__ships"
+                            onmouseover="hover(this);" 
+                            onmouseout="unhover(this);">
+                        </a>
+                        <a href="http://github.com/glass-ships" target="_blank">
+                            <img src="images/buttons/github.png" alt="github"
+                            onmouseover="hover(this);" 
+                            onmouseout="unhover(this);">
+                        </a>
+                        <a href="http://gitlab.com/glass-ships" target="_blank">
+                            <img src="images/buttons/gitlab.png" alt="gitlab"
+                            onmouseover="hover(this);" 
+                            onmouseout="unhover(this);">
+                        </a>
+                        <a href="mailto: hello@glass-ships.com" target="_blank">
+                            <img src="images/buttons/email.png" alt="email"
+                            onmouseover="hover(this);" 
+                            onmouseout="unhover(this);">
+                        </a>               
+                    </div>
+                </div>
+
+                <!-- Literally just a line at the bottom -->
+                <div id="bottom-line"></div>
+
             </div>
-
         </div>
-
     </body>
 </html>
