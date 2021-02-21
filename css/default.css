@@ -55,6 +55,10 @@ html, body {
   background-size: cover;
 }
 
+body *{
+	transition: 0.3s;
+}
+
 .opaque-bkgd {
   background-color: rgba(0, 0, 0, 0.84);
   opacity: 0.99;
