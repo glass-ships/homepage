@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
         
         <!-- Import stylesheets -->
-        <link rel="stylesheet" type="text/css" href="css/default.css">
+        <link rel="stylesheet" type="text/css" href="css/post.css">
 
         <!-- Import javascript -->
         <script type="text/javascript" src="js/script.js"></script>
@@ -19,9 +19,39 @@
 
     <body>
         <section class="opaque-bkgd">
-            <div class="main-container">
+            <div class="main-wrapper">
                 
-                <div style="height: 20%;">  </div>
+                <div class="navbar">
+                    <div class="navlinks">
+                        <a href="index.html">
+                            <img src="images/buttons/homeLong.png" alt="glass-ships.com"
+                            onmouseover="hover(this, 'homeLongHover.png');" 
+                            onmouseout="unhover(this, 'homeLong.png');">
+                        </a>
+                        <a href="http://twitter.com/glass__ships" target="_blank">
+                            <img src="images/buttons/twitterLong.png" alt="@glass__ships"
+                            onmouseover="hover(this, 'twitterLongHover.png');" 
+                            onmouseout="unhover(this, 'twitterLong.png');">
+                        </a>
+                        <a href="http://github.com/glass-ships" target="_blank">
+                            <img src="images/buttons/githubLong.png" alt="github"
+                            onmouseover="hover(this, 'githubLongHover.png');" 
+                            onmouseout="unhover(this, 'githubLong.png');">
+                        </a>
+                        <a href="http://gitlab.com/glass-ships" target="_blank">
+                            <img src="images/buttons/gitlabLong.png" alt="gitlab"
+                            onmouseover="hover(this, 'gitlabLongHover.png');" 
+                            onmouseout="unhover(this, 'gitlabLong.png');">
+                        </a>
+                        <a href="mailto: hello@glass-ships.com" target="_blank">
+                            <img src="images/buttons/emailLong.png" alt="email"
+                            onmouseover="hover(this, 'emailLongHover.png');" 
+                            onmouseout="unhover(this, 'emailLong.png');">
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
+                    </div>
+                </div>
+                   
                 <div class="title-bar">
                     <h4> Migrating a large-file repository to GitLab and Git LFS</h4>
                 </div>

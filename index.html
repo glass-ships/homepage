@@ -18,76 +18,106 @@
     </head>
 
     <body>
-        <section class="opaque-bkgd">
-            <div class="main-container">
+        <div class="opaque-bkgd">
+            <div class="main-wrapper">
 
                 <div class="navbar">
                     <div class="navlinks">
+                        <a href="index.html">
+                            <img src="images/buttons/homeLong.png" alt="glass-ships.com"
+                            onmouseover="hover(this, 'homeLongHover.png');" 
+                            onmouseout="unhover(this, 'homeLong.png');">
+                        </a>
                         <a href="http://twitter.com/glass__ships" target="_blank">
-                            <img src="images/buttons/twitter.png" alt="@glass__ships"
-                            onmouseover="hover(this, 'twitterHover.png');" 
-                            onmouseout="unhover(this, 'twitter.png');">
+                            <img src="images/buttons/twitterLong.png" alt="@glass__ships"
+                            onmouseover="hover(this, 'twitterLongHover.png');" 
+                            onmouseout="unhover(this, 'twitterLong.png');">
                         </a>
                         <a href="http://github.com/glass-ships" target="_blank">
-                            <img src="images/buttons/github.png" alt="github"
-                            onmouseover="hover(this, 'githubHover.png');" 
-                            onmouseout="unhover(this, 'github.png');">
+                            <img src="images/buttons/githubLong.png" alt="github"
+                            onmouseover="hover(this, 'githubLongHover.png');" 
+                            onmouseout="unhover(this, 'githubLong.png');">
                         </a>
                         <a href="http://gitlab.com/glass-ships" target="_blank">
-                            <img src="images/buttons/gitlab.png" alt="gitlab"
-                            onmouseover="hover(this, 'gitlabHover.png');" 
-                            onmouseout="unhover(this, 'gitlab.png');">
+                            <img src="images/buttons/gitlabLong.png" alt="gitlab"
+                            onmouseover="hover(this, 'gitlabLongHover.png');" 
+                            onmouseout="unhover(this, 'gitlabLong.png');">
                         </a>
                         <a href="mailto: hello@glass-ships.com" target="_blank">
-                            <img src="images/buttons/email.png" alt="email"
-                            onmouseover="hover(this, 'emailHover.png');" 
-                            onmouseout="unhover(this, 'email.png');">
+                            <img src="images/buttons/emailLong.png" alt="email"
+                            onmouseover="hover(this, 'emailLongHover.png');" 
+                            onmouseout="unhover(this, 'emailLong.png');">
                         </a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
                     </div>
                 </div>
 
-                <div class="intro">
+                <section class="intro">
 
-                    <img class="logo" src="images/glass_Logo.png" alt="logo">
+                    <img id="logo" src="images/glass_Logo.png" alt="logo">
 
                     <div id="blurb">
-                        <h4>Hi, I'm Glass.</h4>
                         <h5>Scientific software developer,</h5>
                         <h5>Collaborator at Cryogenic Dark Matter Search.</h5>
                     </div>
                     
                     <img id="continue" src="images/continue.gif">
 
-                </div>
+                </section>
  
-
-                <div class="title-bar">
-                    <h4>Something</h4>  
-                </div>
-
-                <section class="box-main">
-                    <h4>Previous Projects</h4>
+                <section class="box-main"><h4>About</h4>
+                    <p>
+                        Hi, I'm Glass - a scientific software developer with a Bachelor in Physics from University of Colorado Denver.<br>
+                        Currently, I offer software support at the Cryogenic Dark Matter Search (CDMS), where I've debugged  and containerized the data analysis environment, managed code in Git repositories, and worked with test facilities to direct data acquisition systems to data catalog compliant paths.<br>
+                        I'm curious by nature, constantly seeking deeper understanding and self-improvement.
+                    </p>
                 </section>
                 
+                <section class="box-main"><h4>Skills</h4>
+
+                    <div class="skill-section">
+                        <div class="skill">
+                            <img src="images/icons/python.png" alt="python">
+                            <h6>Python</h6>
+                        </div>
+
+                        <div class="skill">
+                            <img src="images/icons/git.png" alt="git">
+                            <h6>Git</h6>
+                        </div>
+
+                        <div class="skill">
+                            <img src="images/icons/docker.png" alt="git">
+                            <h6>Docker</h6>
+                        </div>
+                    </div>
+
+                    <div class="skill-section">
+                        <div class="skill">
+                            <img src="images/icons/linux.png" alt="linux">
+                            <h6>Linux</h6>
+                        </div>
+
+                        <div class="skill">
+                            <img src="images/icons/windows.png" alt="linux">
+                            <h6>Windows</h6>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="box-main">
-                    <h4>Skills and Languages</h4>
-                    <ul>
-                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos unde repellat culpa qui reprehenderit aliquam quas placeat doloribus corporis quos iure iusto saepe velit ex a, aspernatur, voluptatum vitae dolorem.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vel totam adipisci rerum sit minus, quo et ab perferendis expedita non magni laudantium cum quos vero doloremque, nihil, cumque corporis.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab dolores beatae iure, vero aut voluptatum ipsa deserunt dolor quis nisi. Illo perferendis rerum quidem nemo unde ea, inventore reiciendis.</li>
-                    </ul>
-                    
+                    <h4>Past Projects</h4>
+                    <p>Add boxes with 3/4 main projects</p>
                 </section>
 
                 <section class="box-main">
                     <h4>Contact</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia labore aliquid, fuga laboriosam consectetur quam ex dolorum repellat nulla doloribus corporis harum, ratione aperiam? Hic et aut sed accusantium eum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt tempore rem ipsam quis reiciendis tempora, earum quasi esse maiores culpa nesciunt, molestias magni voluptatibus illum asperiores. Doloremque temporibus expedita aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi quaerat, eius laudantium et similique possimus optio explicabo ea iste nisi consequatur doloribus temporibus commodi quas modi autem quasi ducimus.</p>
+                    <p>Put Links here instead of navbar?</p>
                 </section>
             
             </div>
 
-        </section>
+        </div>
 
     </body>
 </html>
