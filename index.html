@@ -12,6 +12,7 @@
         
         <!-- Import stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/default.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
 
         <!-- Import javascript -->
         <script type="text/javascript" src="js/script.js"></script>
@@ -42,18 +43,27 @@
 
                 </section>
  
+                <!-- About -->
                 <section class="box-main" id="about">
                     <h4>About</h4>
                     <p>
                         Hi, I'm Glass - a scientific software developer with a Bachelor in Physics from University of Colorado Denver.<br>
-                        Currently, I offer software support at the Cryogenic Dark Matter Search (CDMS), where I've debugged  and containerized the data analysis environment, managed code in Git repositories, and worked with test facilities to direct data acquisition systems to data catalog compliant paths.<br>
-                        I'm curious by nature, constantly seeking deeper understanding and self-improvement.
+                        Currently, I offer systems administration and other computational support to the Cryogenic Dark Matter Search (<a href="https://supercdms.slac.stanford.edu" target="_blank">CDMS</a>) where I've debugged  and containerized the data analysis environment, managed code in Git repositories, and worked with test facilities to direct data acquisition systems to data catalog compliant paths.<br>
+                        I'm curious by nature, always striving for understanding and self-improvement.<br>
+                        When I'm not at work, I enjoy making music, developing and contributing to open-source projects,<br>
+                        and lounging with my cat. 
                     </p>
                 </section>
                 
                 <!-- Skills -->
                 <section class="box-main" id="skills">
                     <h4>Skills</h4>
+
+                    <p style="text-align: center;">
+                        Below are some of the languages and frameworks I've focused on.<br>
+                        I've also dabbled in front end development, relational databases,<br>
+                        and Twitch and Discord APIs for chat bots.
+                    </p>
 
                     <div class="skill-section">
                         <div class="skill">
@@ -93,28 +103,32 @@
                 <section class="box-main box-last" id="contact">
                     <h4>Contact</h4>
                     
-                    <p>
+                    <p style="text-align: center;">
                         Questions? Interested in working together?<br>
                         Find me at any of the social media links below,<br>
                         or just shoot me an email!
                     </p>
 
                     <section class="message-me">
-                        <form name="contact" method="POST" action="https://formspree.io/mxr180061@utdallas.edu">
+                        
+                        <form name="contact" action="https://formspree.io/f/moqpzbzj" method="POST">    
                             <div class="form-group">
-                                <label class="sr-only" for="inputName"></label>
-                                <input type="text" name="name" class="form-control w-100" id="inputName" placeholder="Name" required="">
+                                <label class="sr-only" for="inputName">Name</label>
+                                <input type="text" name="name" class="form-box" id="inputName" placeholder="Name" required="">
                             </div>
+
                             <div class="form-group form-inline">
-                                <label class="sr-only" for="inputEmail"></label>
-                                <input type="email" name="email" class="form-control w-100" id="inputEmail" placeholder="Email" required="">
+                                <label class="sr-only" for="inputEmail">Email</label>
+                                <input type="email" name="email" class="form-box" id="inputEmail" placeholder="Email" required="">
                             </div>
+
                             <div class="form-group">
-                                <label class="sr-only" for="inputMessage"></label>
-                                <textarea name="message" class="form-control" id="inputMessage" rows="5" placeholder="Message" required=""></textarea>
+                                <label class="sr-only" for="inputMessage">Message</label>
+                                <textarea name="message" class="form-box" id="inputMessage" rows="5" placeholder="Message" required=""></textarea>
                             </div>
-                            <button type="submit" class="btn btn-outline-primary px-3 py-2">Send!</button>
-                            </form>
+
+                            <button type="submit" class="form-btn" style="color: rgb(0, 0, 0);">Send!</button>
+                        </form>
                     </section>
                 </section>
             
@@ -122,24 +136,22 @@
                 <div class="sticky-bar">
                     <div class="links">
                         <a href="http://twitter.com/glass__ships" target="_blank">
-                            <img src="images/buttons/twitter.png" alt="@glass__ships"
-                            onmouseover="hover(this);" 
-                            onmouseout="unhover(this);">
+                            <img src="images/buttons/twonker.png" alt="@glass__ships">
                         </a>
+                    </div>
+                    <div class="links">
                         <a href="http://github.com/glass-ships" target="_blank">
-                            <img src="images/buttons/github.png" alt="github"
-                            onmouseover="hover(this);" 
-                            onmouseout="unhover(this);">
+                            <img src="images/buttons/github.png" alt="github">
                         </a>
+                    </div>
+                    <div class="links">
                         <a href="http://gitlab.com/glass-ships" target="_blank">
-                            <img src="images/buttons/gitlab.png" alt="gitlab"
-                            onmouseover="hover(this);" 
-                            onmouseout="unhover(this);">
+                            <img src="images/buttons/gitlab.png" alt="gitlab">
                         </a>
+                    </div>
+                    <div class="links">
                         <a href="mailto: hello@glass-ships.com" target="_blank">
-                            <img src="images/buttons/email.png" alt="email"
-                            onmouseover="hover(this);" 
-                            onmouseout="unhover(this);">
+                            <img src="images/buttons/email.png" alt="email">
                         </a>               
                     </div>
                 </div>
