@@ -2,11 +2,16 @@
 <html>
     <head>
         <title>
-            Glass Ships - Developer Page
+            Glass Ships | Scientific Software Developer / Musician
         </title>
 
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="images/faviconGS.ico" />
+
+
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
-    
+
+        <!-- Import fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
         
@@ -36,7 +41,7 @@
 
                     <div id="blurb">
                         <h5>Scientific software developer,</h5>
-                        <h5>Collaborator at Cryogenic Dark Matter Search.</h5>
+                        <h5>Collaborator at <a href="https://supercdms.slac.stanford.edu" target="_blank">Cryogenic Dark Matter Search</a>.</h5>
                     </div>
                     
                     <img id="continue" src="images/continue.gif">
@@ -95,8 +100,53 @@
 
                 <!-- Past Projects -->
                 <section class="box-main" id="projects">
+
                     <h4>Past Projects</h4>
                     <p>These are some of the projects I've worked on as a developer.</p>
+
+                    <div class="project-wrapper">
+                        
+                        <div class="project">
+                            <button class="project" onclick="toggleProject(value)"
+                            value="The SuperCDMS analysis environment requires a very specific set of dependencies, many of which can be heavy and difficult to install (cough, ROOT, cough). Historically, new analysts and developers would spend months trying to get data analysis packages installed, often to little or no success. It was therefore of significant value to streamline the installation process and allow users to more easily jump in and start analyzing data.<br><br>
+                            To accomplish this, I containerized the environment in a Dockerfile to work with an instance of JupyterHub hosted at SLAC.<br><br>
+                            &lt;a href='https://gitlab.com/supercdms/CompInfrastructure/cdms-jupyterlab' target='_blank'&gt;Click here&lt;/a&gt; to see the Dockerfile and its related files">
+                                Dockerized CDMS Analysis Environment
+                            </button>
+                        </div>
+
+                        <div class="project">
+                            <button onclick="toggleProject(value)"
+                            value="As any collaboration expands its code and user bases, easily accessing necessary software becomes critical to workflow - one of the many reasons Git is such a powerful industry standard for code versioning and sharing. Previously, all SuperCDMS software was hosted in a local GitBlit server running at SLAC, which presented its own issues over the years, primarily regarding permissions.<br><br>
+                            With SuperCDMS making the decision to move to third-party hosting, I created a &lt;a href='https://gitlab.com/glass-ships/cdms-git-transition' target='_blank'&gt;Jupyter notebook&lt;/a&gt; to semi-automatically migrate most of the SuperCDMS code base to GitLab.<br>
+                            Larger repositories were migrated by hand, using &lt;a href='https://docs.gitlab.com/ee/topics/git/lfs/' target='_blank'&gt;Git LFS&lt;/a&gt;">
+                                Migrated CDMS Code-Base to GitLab
+                            </button>
+                        </div>
+
+                        <div class="project">
+                            <button onclick="toggleProject(value)"
+                            value="&lt;strong&gt;Kaitai Struct&lt;/strong&gt; is an open-source project that seeks to simplify the highly variable nature of binary data formats by generating code specific to a data format based on a YAML like description of that data format.<br><br>
+                            &lt;strong&gt;Awkward arrays&lt;/strong&gt;, developed by Scikit-HEP, are a way of storing data into jagged Numpy-like arrays of arbitrary types and variable sizes very efficiently.<br><br>
+                            Given the scale and complexity of scientific data formats, being able to describe one's custom data format in a simple YAML, and generate code which reads a binary data file into C++/Python compatible Awkward arrays could be extremely powerful!<br><br>
+                            As a proof of concept, I began implementing Awkward as a target language for Kaitai Struct Compiler. The OSF page for this project can be found &lt;a href='https://osf.io/2sner' target='_blank'&gt;here&lt;/a&gt;">
+                                Implemented Awkward Arrays into Kaitai Struct Compiler
+                            </button>
+                        </div>
+
+                        <!-- <div class="project">
+                            <button onclick="toggleProject(value)"
+                            value="">
+                                Debugged build process for data processing software
+                            </button>
+                        </div> -->
+
+                    </div>
+
+                    <div id="project-blurb-wrapper" style="display: none;">
+                        <p id="project-blurb"></p>
+                    </div>
+                    
                 </section>
 
                 <!-- Contact -->

@@ -24,21 +24,16 @@ h3 {font-size: 6rem;}
 h4 {font-size: 5rem;}
 h5 {font-size: 4rem;}
 h6 {font-size: 3rem;}
-p, a, li, button, label, input, textarea {
+p, a, li, button, label, input, textarea, strong {
   font-size: 2.2rem;
   color: var(--textMain);
   font-family: "Ubuntu", "mono";
   text-decoration: none;
+  margin: 0;
 }
 
 code {
   font-size: 2.2rem;
-  padding: 0 1rem;
-}
-
-.box-main a {
-  font-size: 2rem;
-  color: #17a2b8;  
   padding: 0 1rem;
 }
 
@@ -61,7 +56,7 @@ body * {
 }
 
 .opaque-bkgd {
-  background-color: rgba(0, 0, 0, 0.84)!important;
+  background-color: rgba(0, 0, 0, 0.84);
   opacity: 0.99;
   background-attachment: local;
   overflow:hidden;
@@ -83,19 +78,20 @@ body * {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-image: linear-gradient(0deg, rgba(0,0,0,1) 2%, rgba(41,4,95,1) 61%, rgba(66,6,154,1) 85%, rgba(66,6,154,1) 100%)!important;
+  background-image: linear-gradient(0deg, rgba(0,0,0,1) 2%, rgba(41,4,95,1) 61%, rgba(66,6,154,1) 85%, rgba(66,6,154,1) 100%);
 }
 
-.navbar p, a{
-  font-size: 3rem;
+.navbar a {
+  font-size: 7rem;
   color:rgb(216, 216, 216);
-  padding: 1rem 3rem;
+  padding: 1rem 1rem !important;
 }
 
 /* Main styles */
 .box-main {
-  max-width: 60%;
-  min-width: 60%;
+  /* max-width: 60%;
+  min-width: 60%; */
+  width: 60%;
   margin: 2rem auto;
   padding-bottom: 5rem;
 
@@ -111,16 +107,13 @@ body * {
 
 .box-main p {
   max-width: 80%;
-  text-align: left justify;
+  text-align: center;
   margin: 0.4rem auto;
 }
 
 .box-last {
   margin-bottom: 0;
   padding-bottom: 2rem;
-  /* border-radius: 5px 5px 0 0;
-  border: 1.5px solid var(--borderMain);
-  border-bottom: 0; */
 }
 
 #bottom-line {
@@ -145,7 +138,7 @@ body * {
   justify-content: space-evenly;
   align-items: center;
   /* background-color: #42069a; */
-  background-image: linear-gradient(0deg, rgba(0,0,0,1) 2%, rgba(41,4,95,1) 61%, rgba(66,6,154,1) 85%, rgba(66,6,154,1) 100%)!important;
+  background-image: linear-gradient(0deg, rgba(0,0,0,1) 2%, rgba(41,4,95,1) 61%, rgba(66,6,154,1) 85%, rgba(66,6,154,1) 100%);
   opacity: 1;
 }
 
@@ -227,21 +220,22 @@ p.copyright {
 @media screen and (max-width: 991px) {
 /* start of large tablet styles */
   html { font-size: 60%;}
+  .box-main, .box-last {
+    width: 75%;
+    /* max-width: 75%;
+    min-width: 75%; */
+  }  
 }
   
 @media screen and (max-width: 767px) {
 /* start of medium tablet styles */
   html { font-size: 50%; }
   p { font-size: 2.5rem;}
-  .skill-section { 
-    justify-content: left; 
-    flex-direction: column; 
-    flex-wrap: nowrap;
-  }
-  .skill { 
-    flex-direction: row; 
-    align-items: center;
-  }
+  .box-main, .box-last {
+    width: 95%
+    /* max-width: 90%;
+    min-width: 90%; */
+  }  
 }
   
 @media screen and (max-width: 479px) {

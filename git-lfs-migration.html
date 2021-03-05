@@ -5,13 +5,19 @@
             Migrating to GitLab LFS 
         </title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
-    
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="images/faviconGS.ico" />
+
+
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+
+        <!-- Import fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
         
         <!-- Import stylesheets -->
-        <link rel="stylesheet" type="text/css" href="css/post.css">
+        <link rel="stylesheet" type="text/css" href="css/default.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
 
         <!-- Import javascript -->
         <script type="text/javascript" src="js/script.js"></script>
@@ -20,37 +26,6 @@
     <body>
         <section class="opaque-bkgd">
             <div class="main-wrapper">
-                
-                <div class="navbar">
-                    <div class="navlinks">
-                        <a href="index.html">
-                            <img src="images/buttons/homeLong.png" alt="glass-ships.com"
-                            onmouseover="hover(this, 'homeLongHover.png');" 
-                            onmouseout="unhover(this, 'homeLong.png');">
-                        </a>
-                        <a href="http://twitter.com/glass__ships" target="_blank">
-                            <img src="images/buttons/twitterLong.png" alt="@glass__ships"
-                            onmouseover="hover(this, 'twitterLongHover.png');" 
-                            onmouseout="unhover(this, 'twitterLong.png');">
-                        </a>
-                        <a href="http://github.com/glass-ships" target="_blank">
-                            <img src="images/buttons/githubLong.png" alt="github"
-                            onmouseover="hover(this, 'githubLongHover.png');" 
-                            onmouseout="unhover(this, 'githubLong.png');">
-                        </a>
-                        <a href="http://gitlab.com/glass-ships" target="_blank">
-                            <img src="images/buttons/gitlabLong.png" alt="gitlab"
-                            onmouseover="hover(this, 'gitlabLongHover.png');" 
-                            onmouseout="unhover(this, 'gitlabLong.png');">
-                        </a>
-                        <a href="mailto: hello@glass-ships.com" target="_blank">
-                            <img src="images/buttons/emailLong.png" alt="email"
-                            onmouseover="hover(this, 'emailLongHover.png');" 
-                            onmouseout="unhover(this, 'emailLong.png');">
-                        </a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
-                    </div>
-                </div>
                    
                 <div class="title-bar">
                     <h4> Migrating a large-file repository to GitLab and Git LFS</h4>
@@ -131,6 +106,38 @@
                     </div>
                 
                 </section>
+
+                <!-- Social links -->
+                <section class="sticky-bar">
+                    <div class="link-wrapper">
+                        <div class="links">
+                            <a href="http://twitter.com/glass__ships" target="_blank">
+                                <img src="images/buttons/twonker.png" alt="@glass__ships">
+                            </a>
+                        </div>
+                        <div class="links">
+                            <a href="http://github.com/glass-ships" target="_blank">
+                                <img src="images/buttons/github.png" alt="github">
+                            </a>
+                        </div>
+                        <div class="links">
+                            <a href="http://gitlab.com/glass-ships" target="_blank">
+                                <img src="images/buttons/gitlab.png" alt="gitlab">
+                            </a>
+                        </div>
+                        <div class="links">
+                            <a href="mailto: hello@glass-ships.com" target="_blank">
+                                <img src="images/buttons/email.png" alt="email">
+                            </a>               
+                        </div>
+                    </div>
+                </section>
+
+                <footer>
+                    <p class="copyright">
+                        logo &copy; Josh Elsarboukh 2020-<script>document.write(new Date().getFullYear());</script>
+                    </p>
+                </footer>
 
             </div>
         </section>
