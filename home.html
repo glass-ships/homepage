@@ -1,223 +1,273 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Glass Ships | Scientific Software Developer / Musician
-        </title>
+  <head>
+    <title>Glass Ships | Scientific Software Developer / Musician</title>
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/svg+xml" href="images/faviconGS.ico" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/faviconGS.ico" />
 
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1"
+    />
 
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+    <!-- Import fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- Import fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-        
-        <!-- Import stylesheets -->
-        <link rel="stylesheet" type="text/css" href="css/default.css">
-        <link rel="stylesheet" type="text/css" href="css/home.css">
+    <!-- Import stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
 
-        <!-- Import javascript -->
-        <script type="text/javascript" src="js/script.js"></script>
-    </head>
+    <!-- Import javascript -->
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
 
-    <body>
-        <div class="opaque-bkgd">
-            <div class="main-wrapper">
+  <body>
+    <div class="opaque-bkgd">
+      <div class="main-wrapper">
+        <!-- Landing view -->
+        <section class="intro">
+          <div class="navbar">
+            <!-- <a href="#">Blog</a> -->
+            <a href="#about">About</a>
+            <a href="#projects">Past Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
 
-                <!-- Landing view -->
-                <section class="intro">
+          <img id="logo" src="images/glass_Logo.png" alt="logo" />
 
-                    <div class="navbar">
-                        <!-- <a href="#">Blog</a> -->
-                        <a href="#about">About</a>
-                        <a href="#projects">Past Projects</a>
-                        <a href="#contact">Contact</a>
-                    </div>
+          <div id="blurb">
+            <h5>Scientific software developer,</h5>
+            <h5>
+              Collaborator at
+              <a href="https://supercdms.slac.stanford.edu" target="_blank"
+                >Cryogenic Dark Matter Search</a
+              >.
+            </h5>
+          </div>
 
-                    <img id="logo" src="images/glass_Logo.png" alt="logo">
+          <img id="continue" src="images/continue.gif" />
+        </section>
 
-                    <div id="blurb">
-                        <h5>Scientific software developer,</h5>
-                        <h5>Collaborator at <a href="https://supercdms.slac.stanford.edu" target="_blank">Cryogenic Dark Matter Search</a>.</h5>
-                    </div>
-                    
-                    <img id="continue" src="images/continue.gif">
+        <!-- About -->
+        <section class="box-main" id="about">
+          <h4>About</h4>
+          <p>
+            Hi, I'm Glass - a scientific software developer with a Bachelor in
+            Physics from University of Colorado Denver.<br />
+            Currently, I offer systems administration and other computational
+            support to the Cryogenic Dark Matter Search (<a
+              href="https://supercdms.slac.stanford.edu"
+              target="_blank"
+              >CDMS</a
+            >) where I've debugged and containerized the data analysis
+            environment, managed code in Git repositories, and worked with test
+            facilities to direct data acquisition systems to data catalog
+            compliant paths.<br />
+            I'm curious by nature, always striving for understanding and
+            self-improvement.<br />
+            When I'm not at work, I enjoy making music, developing and
+            contributing to open-source projects,<br />
+            and lounging with my cat.
+          </p>
+        </section>
 
-                </section>
- 
-                <!-- About -->
-                <section class="box-main" id="about">
-                    <h4>About</h4>
-                    <p>
-                        Hi, I'm Glass - a scientific software developer with a Bachelor in Physics from University of Colorado Denver.<br>
-                        Currently, I offer systems administration and other computational support to the Cryogenic Dark Matter Search (<a href="https://supercdms.slac.stanford.edu" target="_blank">CDMS</a>) where I've debugged  and containerized the data analysis environment, managed code in Git repositories, and worked with test facilities to direct data acquisition systems to data catalog compliant paths.<br>
-                        I'm curious by nature, always striving for understanding and self-improvement.<br>
-                        When I'm not at work, I enjoy making music, developing and contributing to open-source projects,<br>
-                        and lounging with my cat. 
-                    </p>
-                </section>
-                
-                <!-- Skills -->
-                <section class="box-main" id="skills">
-                    <h4>Skills</h4>
+        <!-- Skills -->
+        <section class="box-main" id="skills">
+          <h4>Skills</h4>
 
-                    <p style="text-align: center;">
-                        Below are some of the languages and frameworks I've focused on.<br>
-                        I've also dabbled in front end development, relational databases,<br>
-                        and Twitch and Discord APIs for chat bots.
-                    </p>
+          <p style="text-align: center">
+            Below are some of the languages and frameworks I've focused on.<br />
+            I've also dabbled in front end development, relational databases,<br />
+            and Twitch and Discord APIs for chat bots.
+          </p>
 
-                    <div class="skill-section">
-                        <div class="skill">
-                            <img src="images/icons/python.png" alt="python">
-                            <h6>Python</h6>
-                        </div>
+          <div class="skill-section">
+            <div class="skill">
+              <img src="images/icons/python.png" alt="python" />
+              <h6>Python</h6>
+            </div>
 
-                        <div class="skill">
-                            <img src="images/icons/git.png" alt="git">
-                            <h6>Git</h6>
-                        </div>
+            <div class="skill">
+              <img src="images/icons/git.png" alt="git" />
+              <h6>Git</h6>
+            </div>
 
-                        <div class="skill">
-                            <img src="images/icons/docker.png" alt="docker">
-                            <h6>Docker</h6>
-                        </div>
+            <div class="skill">
+              <img src="images/icons/docker.png" alt="docker" />
+              <h6>Docker</h6>
+            </div>
 
-                        <div class="skill">
-                            <img src="images/icons/linux.png" alt="linux">
-                            <h6>Linux</h6>
-                        </div>
+            <div class="skill">
+              <img src="images/icons/linux.png" alt="linux" />
+              <h6>Linux</h6>
+            </div>
 
-                        <div class="skill">
-                            <img src="images/icons/windows.png" alt="windows">
-                            <h6>Windows</h6>
-                        </div>
-                    </div>
-                </section>
+            <div class="skill">
+              <img src="images/icons/windows.png" alt="windows" />
+              <h6>Windows</h6>
+            </div>
+          </div>
+        </section>
 
-                <!-- Past Projects -->
-                <section class="box-main" id="projects">
+        <!-- Past Projects -->
+        <section class="box-main" id="projects">
+          <h4>Past Projects</h4>
+          <p>These are some of the projects I've worked on as a developer.</p>
 
-                    <h4>Past Projects</h4>
-                    <p>These are some of the projects I've worked on as a developer.</p>
-
-                    <div class="project-wrapper">
-                        
-                        <div class="project">
-                            <button class="project" onclick="toggleProject(value)"
-                            value="The SuperCDMS analysis environment requires a very specific set of dependencies, many of which can be heavy and difficult to install (cough, ROOT, cough). Historically, new analysts and developers would spend months trying to get data analysis packages installed, often to little or no success. It was therefore of significant value to streamline the installation process and allow users to more easily jump in and start analyzing data.<br><br>
+          <div class="project-wrapper">
+            <div class="project">
+              <button
+                onclick="toggleProject(value)"
+                value="The SuperCDMS analysis environment requires a very specific set of dependencies, many of which can be heavy and difficult to install (cough, ROOT, cough). Historically, new analysts and developers would spend months trying to get data analysis packages installed, often to little or no success. It was therefore of significant value to streamline the installation process and allow users to more easily jump in and start analyzing data.<br><br>
                             To accomplish this, I containerized the environment in a Dockerfile to work with an instance of JupyterHub hosted at SLAC.<br><br>
-                            &lt;a href='https://gitlab.com/supercdms/CompInfrastructure/cdms-jupyterlab' target='_blank'&gt;Click here&lt;/a&gt; to see the Dockerfile and its related files">
-                                Dockerized CDMS Analysis Environment
-                            </button>
-                        </div>
+                            &lt;a href='https://gitlab.com/supercdms/CompInfrastructure/cdms-jupyterlab' target='_blank'&gt;Click here&lt;/a&gt; to see the Dockerfile and its related files"
+              >
+                Dockerized CDMS Analysis Environment
+              </button>
+            </div>
 
-                        <div class="project">
-                            <button onclick="toggleProject(value)"
-                            value="As any collaboration expands its code and user bases, easily accessing necessary software becomes critical to workflow - one of the many reasons Git is such a powerful industry standard for code versioning and sharing. Previously, all SuperCDMS software was hosted in a local GitBlit server running at SLAC, which presented its own issues over the years, primarily regarding permissions.<br><br>
+            <div class="project">
+              <button
+                onclick="toggleProject(value)"
+                value="As any collaboration expands its code and user bases, easily accessing necessary software becomes critical to workflow - one of the many reasons Git is such a powerful industry standard for code versioning and sharing. Previously, all SuperCDMS software was hosted in a local GitBlit server running at SLAC, which presented its own issues over the years, primarily regarding permissions.<br><br>
                             With SuperCDMS making the decision to move to third-party hosting, I created a &lt;a href='https://gitlab.com/glass-ships/cdms-git-transition' target='_blank'&gt;Jupyter notebook&lt;/a&gt; to semi-automatically migrate most of the SuperCDMS code base to GitLab.<br>
-                            Larger repositories were migrated by hand, using &lt;a href='https://docs.gitlab.com/ee/topics/git/lfs/' target='_blank'&gt;Git LFS&lt;/a&gt;">
-                                Migrated CDMS Code-Base to GitLab
-                            </button>
-                        </div>
+                            Larger repositories were migrated by hand, using &lt;a href='https://docs.gitlab.com/ee/topics/git/lfs/' target='_blank'&gt;Git LFS&lt;/a&gt;"
+              >
+                Migrated CDMS Code-Base to GitLab
+              </button>
+            </div>
 
-                        <div class="project">
-                            <button onclick="toggleProject(value)"
-                            value="&lt;strong&gt;Kaitai Struct&lt;/strong&gt; is an open-source project that seeks to simplify the highly variable nature of binary data formats by generating code specific to a data format based on a YAML like description of that data format.<br><br>
+            <div class="project">
+              <button
+                onclick="toggleProject(value)"
+                value="&lt;strong&gt;Kaitai Struct&lt;/strong&gt; is an open-source project that seeks to simplify the highly variable nature of binary data formats by generating code specific to a data format based on a YAML like description of that data format.<br><br>
                             &lt;strong&gt;Awkward arrays&lt;/strong&gt;, developed by Scikit-HEP, are a way of storing data into jagged Numpy-like arrays of arbitrary types and variable sizes very efficiently.<br><br>
                             Given the scale and complexity of scientific data formats, being able to describe one's custom data format in a simple YAML, and generate code which reads a binary data file into C++/Python compatible Awkward arrays could be extremely powerful!<br><br>
-                            As a proof of concept, I began implementing Awkward as a target language for Kaitai Struct Compiler. The OSF page for this project can be found &lt;a href='https://osf.io/2sner' target='_blank'&gt;here&lt;/a&gt;">
-                                Implemented Awkward Arrays into Kaitai Struct Compiler
-                            </button>
-                        </div>
+                            As a proof of concept, I began implementing Awkward as a target language for Kaitai Struct Compiler. The OSF page for this project can be found &lt;a href='https://osf.io/2sner' target='_blank'&gt;here&lt;/a&gt;"
+              >
+                Implemented Awkward Arrays into Kaitai Struct Compiler
+              </button>
+            </div>
 
-                        <!-- <div class="project">
+            <!-- <div class="project">
                             <button onclick="toggleProject(value)"
                             value="">
                                 Debugged build process for data processing software
                             </button>
                         </div> -->
+          </div>
 
-                    </div>
+          <div id="project-blurb-wrapper" style="display: none">
+            <p id="project-blurb"></p>
+          </div>
+        </section>
 
-                    <div id="project-blurb-wrapper" style="display: none;">
-                        <p id="project-blurb"></p>
-                    </div>
-                    
-                </section>
+        <!-- Contact -->
+        <section class="box-main box-last" id="contact">
+          <h4>Contact</h4>
+          <p>
+            Interested in working together?<br />
+            Have a suggestion, or any questions?<br />
+            Find me at any of the social media links below,<br />
+            or just shoot me an email!
+          </p>
 
-                <!-- Contact -->
-                <section class="box-main box-last" id="contact">
-                    <h4>Contact</h4>
-                    <p>
-                        Interested in working together?<br>
-                        Have a suggestion, or any questions?<br>
-                        Find me at any of the social media links below,<br>
-                        or just shoot me an email!
-                    </p>
+          <div class="message-me">
+            <form
+              name="contact"
+              action="https://formspree.io/f/moqpzbzj"
+              method="POST"
+            >
+              <div class="form-group">
+                <label class="sr-only" for="inputName">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-box"
+                  id="inputName"
+                  placeholder="Name"
+                  required=""
+                />
+              </div>
 
+              <div class="form-group form-inline">
+                <label class="sr-only" for="inputEmail">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-box"
+                  id="inputEmail"
+                  placeholder="Email"
+                  required=""
+                />
+              </div>
 
-                    <div class="message-me">
-                        <form name="contact" action="https://formspree.io/f/moqpzbzj" method="POST">    
-                            <div class="form-group">
-                                <label class="sr-only" for="inputName">Name</label>
-                                <input type="text" name="name" class="form-box" id="inputName" placeholder="Name" required="">
-                            </div>
+              <div class="form-group">
+                <label class="sr-only" for="inputMessage">Message</label>
+                <textarea
+                  name="message"
+                  class="form-box"
+                  id="inputMessage"
+                  rows="5"
+                  placeholder="Message"
+                  required=""
+                ></textarea>
+              </div>
 
-                            <div class="form-group form-inline">
-                                <label class="sr-only" for="inputEmail">Email</label>
-                                <input type="email" name="email" class="form-box" id="inputEmail" placeholder="Email" required="">
-                            </div>
+              <button
+                type="submit"
+                class="form-btn"
+                style="color: rgb(0, 0, 0)"
+              >
+                Send!
+              </button>
+            </form>
+          </div>
+        </section>
 
-                            <div class="form-group">
-                                <label class="sr-only" for="inputMessage">Message</label>
-                                <textarea name="message" class="form-box" id="inputMessage" rows="5" placeholder="Message" required=""></textarea>
-                            </div>
-
-                            <button type="submit" class="form-btn" style="color: rgb(0, 0, 0);">Send!</button>
-                        </form>
-                    </div>
-                </section>
-            
-                <!-- Social links -->
-                <section class="sticky-bar">
-                    <div class="link-wrapper">
-                        <div class="links">
-                            <a href="http://twitter.com/glass__ships" target="_blank">
-                                <img src="images/buttons/twonker.png" alt="@glass__ships">
-                            </a>
-                        </div>
-                        <div class="links">
-                            <a href="http://github.com/glass-ships" target="_blank">
-                                <img src="images/buttons/github.png" alt="github">
-                            </a>
-                        </div>
-                        <div class="links">
-                            <a href="http://gitlab.com/glass-ships" target="_blank">
-                                <img src="images/buttons/gitlab.png" alt="gitlab">
-                            </a>
-                        </div>
-                        <div class="links">
-                            <a href="mailto: hello@glass-ships.com" target="_blank">
-                                <img src="images/buttons/email.png" alt="email">
-                            </a>               
-                        </div>
-                    </div>
-                </section>
-
-                <footer>
-                    <p class="copyright">
-                        logo &copy; Josh Elsarboukh 2020-<script>document.write(new Date().getFullYear());</script>
-                    </p>
-                </footer>
-
-                <!-- Literally just a line at the bottom -->
-                <div id="bottom-line"></div>
-
+        <!-- Social links -->
+        <section class="sticky-bar">
+          <div class="link-wrapper">
+            <div class="links">
+              <a href="http://twitter.com/glass__ships" target="_blank">
+                <img src="images/buttons/twonker.png" alt="@glass__ships" />
+              </a>
             </div>
-        </div>
-    </body>
+            <div class="links">
+              <a href="http://github.com/glass-ships" target="_blank">
+                <img src="images/buttons/github.png" alt="github" />
+              </a>
+            </div>
+            <div class="links">
+              <a href="http://gitlab.com/glass-ships" target="_blank">
+                <img src="images/buttons/gitlab.png" alt="gitlab" />
+              </a>
+            </div>
+            <div class="links">
+              <a href="mailto: hello@glass-ships.com" target="_blank">
+                <img src="images/buttons/email.png" alt="email" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <p class="copyright">
+            logo &copy; Josh Elsarboukh 2020-
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </p>
+        </footer>
+
+        <!-- Literally just a line at the bottom -->
+        <div id="bottom-line"></div>
+      </div>
+    </div>
+  </body>
 </html>
