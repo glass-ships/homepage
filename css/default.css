@@ -84,17 +84,6 @@ body * {
   transition: 0.2s;
 }
 
-.project {
-  transition: 0.3s;
-}
-
-.project:hover {
-  -webkit-animation: phue 0.2s linear infinite;
-  animation: phue 0.2s linear infinite;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
 @keyframes phue {
   from {
     filter: hue-rotate(0deg);
