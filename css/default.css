@@ -151,7 +151,7 @@ body * {
 
 .box-main p {
   max-width: 80%;
-  text-align: center;
+  text-align: left;
   margin: 0.4rem auto;
 }
 
