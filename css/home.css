@@ -125,7 +125,6 @@
 .continue img {
   height: 12rem;
 }
-
 .continue:hover {
   -webkit-animation: hue 3s linear infinite;
   animation: hue 3s linear infinite;
@@ -173,7 +172,7 @@
 .project {
   align-items: center;
   justify-items: center;
-  height: 20%;
+  height: 35%;
   width: 60%;
 
   margin: 1.2rem;
