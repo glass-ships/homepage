@@ -1,7 +1,26 @@
+function toggleProject(value) {
+   a = document.getElementById('project-blurb-wrapper');
+   b = document.getElementById('project-blurb'); 
+
+   if(a.style.display == 'none'){
+      a.style.display = 'block';
+      b.innerHTML = value;
+   }
+   else if(a.style.display == 'block' && b.innerHTML != value){
+      b.innerHTML = value;
+   }
+   else if(a.style.display == 'block' && b.innerHTML == value){
+      a.style.display = 'none';
+   }   
+}
+
+/*
 // Get current year
 var theDate=new Date()
 document.write(theDate.getFullYear())
+*/
 
+/*
 // Click to show/hide
 function toggleVis(id) {
     var e = document.getElementById(id);
@@ -10,11 +29,4 @@ function toggleVis(id) {
     else if(e.style.display == 'none')
        e.style.display = 'block';
  }
-
-function toggleProject(value) {
-   a = document.getElementById('project-blurb-wrapper');
-   b = document.getElementById('project-blurb'); 
-   if(a.style.display == 'none')
-      a.style.display = 'block';
-   b.innerHTML = value;
-}
+*/

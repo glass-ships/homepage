@@ -1,7 +1,8 @@
-/* Variables */
+/**** Variables ****/
 :root {
-  --mainColor: #474747;
-  --secondaryColor: rgb(31, 30, 34);
+  --mainColor: #525252;
+  --secondaryColor: rgb(41, 41, 41);
+  --bkgdColor: rgba(0, 0, 0, 0.84);
   --borderMain: #4f98a1;
   --textMain: rgb(216, 216, 216);
   --textSecondary: #c9f5fb;
@@ -9,67 +10,39 @@
   --shadowBright: #00eeff;
   --bkgd: url('../images/bkgd.jpg');
 }
+/**********************************************************************************/
 
 /* Text formatting */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
+h1, h2, h3, h4, h5, h6, strong {
   color: var(--textMain);
   font-family: 'Ubuntu', 'mono';
   margin: 2rem;
 }
 
-html {
-  font-size: 62.5%;
-}
-h1 {
-  font-size: 8rem;
-}
-h2 {
-  font-size: 7rem;
-}
-h3 {
-  font-size: 6rem;
-}
-h4 {
-  font-size: 5rem;
-}
-h5 {
-  font-size: 4rem;
-}
-h6 {
-  font-size: 3rem;
-}
-p,
-a,
-li,
-button,
-label,
-input,
-textarea,
-strong {
+html {font-size: 62.5%;}
+h1 {font-size: 8rem;}
+h2 {font-size: 7rem;}
+h3 {font-size: 6rem;}
+h4 {font-size: 5rem;}
+h5 {font-size: 4rem;}
+h6 {font-size: 3rem;}
+p, a, li, button, label, input, textarea, strong {
   font-size: 2.2rem;
   color: var(--textMain);
   font-family: 'Ubuntu', 'mono';
+  line-height: 1.5;
   text-decoration: none;
   margin: 0;
   outline: none;
 }
+code {font-size: 2.2rem;
+  padding: 0 1rem;}
+ul {list-style: disc;}
 
-code {
-  font-size: 2.2rem;
-  padding: 0 1rem;
-}
+/**********************************************************************************/
 
-ul {
-  list-style: disc;
-}
+/**** Background and General Styling ****/
 
-/* General styling */
 html,
 body {
   padding: 0;
@@ -80,21 +53,10 @@ body {
   background-size: cover;
 }
 
-body * {
-  transition: 0.2s;
-}
-
-@keyframes phue {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(60deg);
-  }
-}
+body * {transition: 0.3s;}
 
 .opaque-bkgd {
-  background-color: rgba(0, 0, 0, 0.84);
+  background-color: var(--bkgdColor);
   opacity: 0.99;
   background-attachment: local;
   overflow: hidden;
@@ -105,124 +67,6 @@ body * {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* Nav-bar */
-.navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 6rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-image: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 2%,
-    rgba(41, 4, 95, 1) 61%,
-    rgba(66, 6, 154, 1) 85%,
-    rgba(66, 6, 154, 1) 100%
-  );
-}
-
-.navbar a {
-  font-size: 7rem;
-  color: rgb(216, 216, 216);
-  padding: 1rem 1rem !important;
-}
-
-/* Main styles */
-.box-main {
-  /* max-width: 60%;
-  min-width: 60%; */
-  width: 60%;
-  margin: 2rem auto;
-  padding-bottom: 5rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  opacity: 1;
-  /*background-color: var(--mainColor);*/
-  border-radius: 5px;
-  border: 0 solid var(--borderMain);
-}
-
-.box-main p {
-  max-width: 80%;
-  text-align: left;
-  margin: 0.4rem auto;
-}
-
-.box-last {
-  margin-bottom: 0;
-  padding-bottom: 2rem;
-}
-
-#bottom-line {
-  height: 5.75rem;
-  width: 100%;
-  border: 2px solid var(--borderMain);
-  margin: 0;
-  padding: 0;
-}
-
-/* Links sticky bar */
-.sticky-bar {
-  z-index: 9;
-
-  position: fixed;
-  bottom: 0;
-
-  width: 100%;
-  height: 6rem;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  /* background-color: #42069a; */
-  background-image: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 2%,
-    rgba(41, 4, 95, 1) 61%,
-    rgba(66, 6, 154, 1) 85%,
-    rgba(66, 6, 154, 1) 100%
-  );
-  opacity: 1;
-}
-
-.link-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 40%;
-}
-
-.links {
-  transition: transform 0.3s;
-}
-
-.links:hover {
-  transform: scale(1.2);
-  -webkit-animation: hue 5s linear infinite;
-  animation: hue 5s linear infinite;
-}
-
-.links a {
-  padding: 1rem;
-}
-
-.links img {
-  height: 5rem;
-  width: auto;
-  margin: 0 1rem;
-}
-
-.rotate-hue {
-  animation: hue 6s linear infinite;
-  -webkit-animation: hue 6s linear infinite;
 }
 
 footer {
@@ -240,70 +84,122 @@ p.copyright {
   bottom: 0;
 }
 
-/*~~~~~~~~~~~ Animations ~~~~~~~~~~~ */
-@-webkit-keyframes hue {
-  0%,
-  100% {
-    -webkit-filter: hue-rotate(0deg);
-  }
+/**********************************************************************************/
 
-  50% {
-    -webkit-filter: hue-rotate(270deg);
-  }
+/**** Main Section Styles ****/
+.box-main {
+  width: 42%;
+  margin: 2rem auto;
+  padding-bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 1;
+  background-color: var(--secondaryColor);
+  border-radius: 5px;
+  border: 0 solid var(--borderMain);
+}
+
+.box-main p {
+  max-width: 80%;
+  min-width: 80%;
+  text-align: center;
+  margin: 0.4rem auto;
+
+}
+
+.box-main a {
+  font-size: 2rem;
+  color: #23cce6;  
+  padding: 0 0.5rem;
+}
+
+.box-alt {
+  /* 
+  max-width: 60%;
+  min-width: 60%; 
+  width: 60%;
+  margin: 2rem auto;
+  padding-bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 1;
+  background-color: var(--secondaryColor);
+  border-radius: 5px;
+  border: 0 solid var(--borderMain);
+  */
+}
+
+.box-last {
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
+#bottom-line {
+  height: 5.75rem;
+  width: 100%;
+  border: 2.5px solid var(--borderMain);
+  margin: 0;
+  padding: 0;
+}
+
+/**********************************************************************************/
+
+/**** Animations ****/
+
+@-webkit-keyframes hue { 
+  0%,100% {-webkit-filter: hue-rotate(0deg);}
+  50% {-webkit-filter: hue-rotate(270deg);}
 }
 
 @keyframes hue {
-  0%,
-  100% {
-    filter: hue-rotate(0deg);
-  }
-
-  50% {
-    filter: hue-rotate(270deg);
-  }
+  0%,100% {filter: hue-rotate(0deg);}
+  50% {filter: hue-rotate(270deg);}
 }
 
-/*~~~~~~~~~~~ Screen formatting ~~~~~~~~~~~~~*/
+@keyframes phue {
+  from {filter: hue-rotate(0deg);}
+  to {filter: hue-rotate(60deg);}
+}
 
-/* Desktop Styles */
+/**********************************************************************************/
+
+/******* Screen formatting *******/
+
+/**** Desktop Styles ****/
 @media screen and (max-width: 1440px) {
-}
-
-@media screen and (max-width: 991px) {
-  /* start of large tablet styles */
   html {
     font-size: 60%;
   }
-  .box-main,
-  .box-last {
+  .box-main, .box-last {
     width: 75%;
-    /* max-width: 75%;
-    min-width: 75%; */
+  }
+
+  .box-main p {
+    font-size: 2rem;
   }
 }
 
+/**** Tablet Styles */
 @media screen and (max-width: 767px) {
   /* start of medium tablet styles */
-  html {
-    font-size: 50%;
-  }
-  p {
-    font-size: 2.5rem;
-  }
-  .box-main,
-  .box-last {
+  html {font-size: 50%;}
+  p {font-size: 2.5rem;}
+  .box-main, .box-last {
     width: 95%;
     /* max-width: 90%;
     min-width: 90%; */
   }
 }
 
+/**** Phone Styles ****/
 @media screen and (max-width: 479px) {
-  /* start of phone styles */
-  html {
-    font-size: 30%;
-  }
-  p {
-    font-size: 3rem;
-  }
+  html {font-size: 30%;}
+  p {font-size: 3rem;}
 }
+/**********************************************************************************/
