@@ -36,7 +36,7 @@ p, a, li, button, label, input, textarea, strong {
   outline: none;
 }
 code {font-size: 2.2rem;
-  padding: 0 1rem;}
+      padding: 0 1rem;}
 ul {list-style: disc;}
 
 /**********************************************************************************/
@@ -172,16 +172,32 @@ p.copyright {
 /******* Screen formatting *******/
 
 /**** Desktop Styles ****/
-@media screen and (max-width: 1440px) {
+
+@media screen and (max-width: 2250px) {
   html {
-    font-size: 60%;
+    font-size: 75%;
   }
   .box-main, .box-last {
-    width: 75%;
+    width: 70%;
   }
 
   .box-main p {
     font-size: 2rem;
+    min-width: 45%;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  html {
+    font-size: 60%;
+  }
+  .box-main, .box-last {
+    width: 70%;
+  }
+
+  .box-main p {
+    font-size: 2rem;
+    width: 45%;
   }
 }
 
