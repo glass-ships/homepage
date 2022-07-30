@@ -4,17 +4,17 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   vertical-align: auto;
   background-image: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 1) 2%,
-    rgba(41, 4, 95, 1) 61%,
-    rgba(66, 6, 154, 1) 85%,
-    rgba(66, 6, 154, 1) 100%
+    rgba(0, 0, 0, 1),
+    rgb(21, 0, 51),
+    rgb(44, 3, 106),
+    rgb(40, 5, 92)
   );
 }
 
@@ -24,6 +24,7 @@
   font-size: 2.5rem !important;
   margin: 0 2rem !important;
   vertical-align: center;
+  text-decoration: none;
 }
 
 /**** Sticky Bar - Socials ****/
@@ -42,10 +43,14 @@
   /* background-color: #42069a; */
   background-image: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 1) 2%,
+    rgba(0, 0, 0, 1),
+    rgb(21, 0, 51),
+    rgb(44, 3, 106),
+    rgb(40, 5, 92)
+    /* rgba(0, 0, 0, 1) 2%,
     rgba(41, 4, 95, 1) 61%,
     rgba(66, 6, 154, 1) 85%,
-    rgba(66, 6, 154, 1) 100%
+    rgba(66, 6, 154, 1) 100% */
   );
   opacity: 1;
 }
@@ -96,6 +101,7 @@
   padding: 0;
   font-size: 4rem;
   color: var(--textMain);
+  text-decoration: underline;
 }
   
 #logo {

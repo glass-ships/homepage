@@ -48,6 +48,7 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  background-color: var(--bkgdColor);
   background-image: var(--bkgd);
   background-attachment: fixed;
   background-size: cover;
@@ -57,10 +58,11 @@ body * {transition: 0.3s;}
 
 .opaque-bkgd {
   background-color: var(--bkgdColor);
-  opacity: 0.99;
+  opacity: 1;
+  /* 0.99; */
   background-attachment: local;
   overflow: hidden;
-  z-index: -1;
+  z-index: 1;
 }
 
 .main-wrapper {
@@ -143,7 +145,7 @@ p.copyright {
 #bottom-line {
   height: 5.75rem;
   width: 100%;
-  border: 2.5px solid var(--borderMain);
+  border: 2.5px solid var(--bkgdColor);
   margin: 0;
   padding: 0;
 }
