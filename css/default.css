@@ -1,7 +1,7 @@
 /**** Variables ****/
 :root {
-  --mainColor: #525252;
-  --secondaryColor: rgb(41, 41, 41);
+  --mainColor: #505557;
+  --secondaryColor: #2d3031;
   --bkgdColor: rgba(0, 0, 0, 0.84);
   --borderMain: #4f98a1;
   --textMain: rgb(216, 216, 216);
@@ -118,8 +118,8 @@ p.copyright {
   padding: 0 0.5rem;
 }
 
+/* 
 .box-alt {
-  /* 
   max-width: 60%;
   min-width: 60%; 
   width: 60%;
@@ -134,8 +134,8 @@ p.copyright {
   background-color: var(--secondaryColor);
   border-radius: 5px;
   border: 0 solid var(--borderMain);
-  */
 }
+*/
 
 .box-last {
   margin-bottom: 0;
@@ -204,20 +204,23 @@ p.copyright {
 }
 
 /**** Tablet Styles */
+
+/* start of medium tablet styles */
 @media screen and (max-width: 767px) {
-  /* start of medium tablet styles */
   html {font-size: 50%;}
   p {font-size: 2.5rem;}
   .box-main, .box-last {
     width: 95%;
-    /* max-width: 90%;
-    min-width: 90%; */
+    max-width: 90%;
+    min-width: 90%;
   }
 }
 
 /**** Phone Styles ****/
+ 
 @media screen and (max-width: 479px) {
   html {font-size: 30%;}
   p {font-size: 3rem;}
 }
+
 /**********************************************************************************/
