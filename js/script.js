@@ -1,32 +1,31 @@
-function toggleProject(value) {
-   a = document.getElementById('project-blurb-wrapper');
-   b = document.getElementById('project-blurb'); 
-
-   if(a.style.display == 'none'){
-      a.style.display = 'block';
-      b.innerHTML = value;
+/** Toggles display of specified blurb on or off */
+toggleProject = (value) => {
+   const wrapper = document.querySelector('#projectWrapper');
+   const blurb = document.querySelector('#projectDescription'); 
+   console.log("Value", value)
+   console.log("Blurb", blurb.innerHTML)
+   if (wrapper.style.display == 'none') {
+         console.log('showing')
+         wrapper.style.display = 'block';
+         blurb.innerHTML = value;
    }
-   else if(a.style.display == 'block' && b.innerHTML != value){
-      b.innerHTML = value;
+   else if(wrapper.style.display == 'block' && blurb.innerHTML != value) {
+      console.log('changing')
+      blurb.innerHTML = value;
    }
-   else if(a.style.display == 'block' && b.innerHTML == value){
-      a.style.display = 'none';
-   }   
-}
+   else if(wrapper.style.display == 'block' && blurb.innerHTML == value) {
+      console.log('hiding')
+      wrapper.style.display = 'none';
+      blurb.innerHTML = '';
+   }
+   
+};
 
-/*
-// Get current year
-var theDate=new Date()
-document.write(theDate.getFullYear())
-*/
-
-/*
-// Click to show/hide
-function toggleVis(id) {
-    var e = document.getElementById(id);
-    if(e.style.display == 'block')
-       e.style.display = 'none';
-    else if(e.style.display == 'none')
-       e.style.display = 'block';
- }
-*/
+/** Click to show/hide */
+// function toggleVis(id) {
+//     var e = document.getElementById(id);
+//     if(e.style.display == 'block')
+//        e.style.display = 'none';
+//     else if(e.style.display == 'none')
+//        e.style.display = 'block';
+//  };

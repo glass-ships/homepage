@@ -61,10 +61,11 @@
   transition: transform 0.3s;
 }
 
-.socials:hover {
-  transform: scale(1.2);
-  -webkit-animation: hue 3s linear infinite;
-  animation: hue 3s linear infinite;
+@media (hover: hover) {
+  .socials:hover {
+    transform: scale(1.2);
+    animation: hue 3s linear infinite;
+  }
 }
 
 .socials a {
@@ -154,7 +155,7 @@
 /**********************************************************************************/
 
 /**** Past Projects ****/
-.project-wrapper {
+.projectContainer {
   max-width: 70%;
   display: flex;
   flex-direction: row wrap;
@@ -166,16 +167,17 @@
   justify-items: center;
   height: 35%;
   width: 60%;
-
   margin: 1.2rem;
   transition: 0.3s;
 }
 
-.project:hover {
-  -webkit-animation: phue 0.3s linear infinite;
-  animation: phue 0.3s linear infinite;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+@media (hover: hover) {
+  .project:hover {
+    transform: scale(1.1);
+    animation: phue 0.3s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
 }
 
 .project button{
@@ -190,7 +192,7 @@
   rgba(66,6,154,1) 100%);
 }
 
-#project-blurb-wrapper{
+#projectWrapper{
   padding: 2rem;
   max-width: 75%;
   text-align: center;
