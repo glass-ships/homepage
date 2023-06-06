@@ -25,7 +25,7 @@ const _onProjectOpened = (project: Project) => {
 </script>
 
 <style scoped lang="scss">
-// @import "scss/_theming.scss";
+@import "scss/_theming.scss";
 
 // // app should take up full width and height of the screen.
 // // this is to prevent the footer from being pushed up when the content is too short.

@@ -22,18 +22,16 @@
 import siteData from '@/data/site-data.json';
 import type { SiteData } from '@/data/SiteData';
 import {useLayout} from '@/composables/layout.js';
-import XLButton from "../components/XLButton.vue"
+import XLButton from "../components/XLButton.vue";
 // import {computed, onMounted, onUnmounted, ref} from "vue";
 // import type { Ref } from 'vue';
 
 const data: SiteData = siteData;
-
-
-const headerData = data.header
+const headerData = data.header;
 
 const _onButtonClicked = () => {
   useLayout().scrollToSection(headerData.button.targetSection);
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -41,7 +39,6 @@ const _onButtonClicked = () => {
 
 .page-header {
   min-height: 800px;
-  width: 100%;
   position: relative;
 }
 
