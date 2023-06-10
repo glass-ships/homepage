@@ -17,11 +17,11 @@ export default function About() {
         </h1>
 
         <p className="text-2xl font-mono text-gray-600 dark:text-gray-400">
-        Hi, I'm Glass - a scientific software engineer and data scientist <br/>
+        Hi, I&apos;m Glass - a scientific software engineer and data scientist <br/>
         with a Bachelor in Physics from University of Colorado Denver. <br/> <br/>
-        Currently, I'm a collaborator with the <a href="http://berkeleybop.github.io/project/monarch/">Monarch Initiative</a><br/>
+        Currently, I&apos;m a collaborator with the <a href="http://berkeleybop.github.io/project/monarch/">Monarch Initiative</a><br/>
         where I maintain the software used in data processing and database management. <br/> <br/>
-        When I'm not at work, I enjoy making music, developing and contributing to open-source projects, <br/>
+        When I&apos;m not at work, I enjoy making music, developing and contributing to open-source projects, <br/>
         and lounging with my cat.
         </p>
     </div>
