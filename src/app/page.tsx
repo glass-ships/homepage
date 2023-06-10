@@ -19,7 +19,7 @@ export default function Home() {
       className="object-cover object-center w-full h-full"
       src={bg}
       alt="Background"
-      fill="true"
+      fill={true}
       priority
     />
   </div>
