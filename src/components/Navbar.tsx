@@ -23,7 +23,7 @@ export default function Navbar() {
       alt="Logo"
       className="dark:invert transition-transform duration-300 ease-in-out transform-gpu hover:scale-110"
       width={100}
-      height={24}
+      height={100}
       priority
     />
   </a>
