@@ -1,6 +1,5 @@
 import logosvg from '@/assets/images/logo.svg';
 import Image from 'next/image';
-import Link from 'next/link'
 
 
 export default function Navbar() {
@@ -21,7 +20,7 @@ export default function Navbar() {
     <Image
       src={logosvg}
       alt="Logo"
-      className="dark:invert transition-transform duration-300 ease-in-out transform-gpu hover:scale-110"
+      className="invert transition-transform duration-300 ease-in-out transform-gpu hover:scale-110"
       width={100}
       height={100}
       priority
@@ -40,7 +39,7 @@ export default function Navbar() {
     </li>
     <li className="hidden lg:block  px-8">
       <a
-        className="font-thin text-2xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-yellow-300"
+        className="font-thin text-2xl active:text-pink-500 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-yellow-300"
         href="#skills"
       >
         Skills
@@ -57,7 +56,7 @@ export default function Navbar() {
     <li className="hidden lg:block  px-8">
       <a
         className="font-thin text-2xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-yellow-300"
-        href="https://docs.google.com/viewer?url=https://docs.google.com/document/d/1VDAvz-FiFNusu4jEtMvgrgYR5IYBe686xang7q40WiE/export?format=pdf"
+        href="https://docs.google.com/viewer?url=https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf"
         target='_blank'
       >
         Resume
