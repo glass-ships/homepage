@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { faCode, faCodeBranch, faDisplay, faCloudArrowUp as faCloud, faTerminal, faDiagramProject } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faCodeBranch, faDisplay, faCloudArrowUp as faCloud, faTerminal, faDiagramProject, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
 // import {  } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faPython, faReact } from '@fortawesome/free-brands-svg-icons';
 
@@ -61,13 +61,13 @@ export default function Skills() {
                 },
                 {
                     title: "Data Analysis",
-                    description: "I've worked with a variety of data analysis tools, including Pandas, NumPy, and Matplotlib. I'm also familiar with data analysis techniques such as machine learning and statistical analysis.",
-                    icon: faDisplay
+                    description: "I've worked with a variety of data analysis tools, including Pandas, NumPy, and Matplotlib. I'm also familiar with data analysis techniques such as statistics and computational analysis.",
+                    icon: faDiagramProject
                 },
                 {
                     title: "Physics",
-                    description: "I have a strong background in physics, including classical mechanics, quantum mechanics, and electromagnetism. I'm also familiar with computational physics techniques such as Monte Carlo methods and numerical integration.",
-                    icon: faCode
+                    description: "I have a strong background in physics, including classical mechanics, quantum mechanics, and electromagnetism, as well as a variety of mathematical techniques such as linear algebra and differential equations.",
+                    icon: faUserAstronaut
                 }
             ].map((skill, index) => (
                 // Skill Card
