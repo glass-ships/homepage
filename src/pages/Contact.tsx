@@ -21,11 +21,15 @@ export default function Contact() {
             Reach out to me at any of the links below,<br/>
             or use this form to send me an email. <br/> <br/>
         </p>
-        <form className="flex flex-col gap-4" action="https://formspree.io/f/mnqlpwng" method="POST">
-            <input className="text-xl p-2" type="email" name="email" placeholder="Your email" />
-            <input className="text-xl p-2" type="text" name="subject" placeholder="Subject" />
-            <textarea className="text-xl p-2" name="message" placeholder="Your message" rows={10} />
-            <button className="text-xl p-2" type="submit">Send</button>
+        <form 
+            className="flex flex-col gap-4 w-[75%] h-3/4 text-gray-700 dark:text-slate-300  shadow-xl" 
+            action="https://formspree.io/f/mnqlpwng" 
+            method="POST"
+        >
+            <input className="text-xl p-2 bg-slate-500 dark:bg-zinc-800/70" type="email" name="email" placeholder="Your email" />
+            <input className="text-xl p-2 bg-slate-500 dark:bg-zinc-800/70" type="text" name="subject" placeholder="Subject" />
+            <textarea className="text-xl p-2 bg-slate-500 dark:bg-zinc-800/70" name="message" placeholder="Your message" rows={10} />
+            <button className="text-xl p-2 bg-amber-200 text-black" type="submit">Send</button>
         </form>
     </div>
 </div>
