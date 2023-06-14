@@ -29,7 +29,7 @@ export default function Footbar() {
           link: 'mailto:contact@glass-ships.com',
         },
       ].map((item, index) => (
-        <li className="hidden lg:block px-4 ">
+        <li key={index} className="hidden lg:block px-4">
           <a
             className="font-thin text-2xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-yellow-300"
             href={item.link}

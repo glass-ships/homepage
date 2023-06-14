@@ -90,9 +90,10 @@ export default function About() {
             url: "https://scikit-hep.org/",
             logo: logoScikitHep,
         },
-    ].map((collaborator) => (
+    ].map((collaborator, index) => (
         // Collaborator logos
         <a
+            key={index}
             href={collaborator.url}
             className="w-32 h-32"
             target="_blank"
