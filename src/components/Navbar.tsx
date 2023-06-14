@@ -27,7 +27,6 @@ export default function Navbar() {
     />
   </a>
 
-  {/* links (glow when hover) */}
   <ul className="flex items-center gap-8 font-mono text-sm lg:gap-4 lg:text-base lg:font-thin">
     <li className="hidden lg:block px-8 ">
       <a
@@ -48,7 +47,7 @@ export default function Navbar() {
     <li className="hidden lg:block  px-8">
       <a
         className="font-thin text-2xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-yellow-300"
-        href="#projects"
+        href="#Projects"
       >
         Projects
       </a>

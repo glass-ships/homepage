@@ -1,33 +1,63 @@
-import Image from 'next/image';
-import logosvg from '@/assets/images/logo.svg';
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {faLinkedin, faGithubAlt, } from '@fortawesome/free-brands-svg-icons';
 
-export default function Footer() {
-    return (
-<div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
 
-    <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-      Get started by editing&nbsp;
-      <code className="font-mono font-bold">src/app/page.tsx</code>
-    </p>
+export default function Footbar() {
+  return (
+<nav 
+  className="
+    absolute bottom-0 flex flex-col items-center justify-evenly
+    w-full h-32
+    transition-all duration-300 ease-in-out transform translate-y-0
+">
 
-    <div className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-      Crafted with love by{' '}
-    </div>
+  {/* list of icon social links */}
+  <ul className="flex flex-row items-center gap-8 font-mono text-sm lg:gap-4 lg:text-base lg:font-thin">
+    {
+      [
+        {
+          icon: faGithubAlt,
+          link: 'https://github.com/glass-ships',
+        },
+        {
+          icon: faLinkedin,
+          link: 'https://www.linkedin.com/in/glass-ships',
+        },
+        {
+          icon: faEnvelope,
+          link: 'mailto:contact@glass-ships.com',
+        },
+      ].map((item, index) => (
+        <li className="hidden lg:block px-4 ">
+          <a
+            className="font-thin text-2xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-yellow-300"
+            href={item.link}
+            target='_blank'
+          >
+            <Icon 
+              icon={item.icon}
+              className="transition-all duration-300 ease-in-out transform hover:scale-110"
+              size="2xl"
+            />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+    <p className="flex items-center gap-2 p-12 lg:p-0 scroll-smooth text-sm lg:text-base">
+      Created with love by{' '}
       <a
-        className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
+        className="pointer-events-none flex place-items-center p-8 lg:pointer-events-auto lg:p-0"
         href="https://github.com/glass-ships"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image
-          src={logosvg}
-          alt="Logo"
-          className="dark:invert"
-          width={100}
-          height={24}
-          priority
-        />
+        Glass Ships &copy; {new Date().getFullYear()}
       </a>
-    
-</div>
-)};
+    </p>
+
+</nav>
+  )};  
+  

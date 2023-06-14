@@ -1,4 +1,3 @@
-import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faCode, faCodeBranch, faDisplay, faCloudArrowUp as faCloud, faTerminal, faDiagramProject, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
 // import {  } from '@fortawesome/free-regular-svg-icons';
@@ -46,7 +45,7 @@ export default function Skills() {
                 },
                 {
                     title: "Git",
-                    description: "Version control and code management is a must for any software project. I use Git for all of my projects, and I'm comfortable with the command line and GitHub as well as GitLab.",
+                    description: "Version control and code management is a must for any software project. I use Git for all of my Projects, and I'm comfortable with the command line and GitHub as well as GitLab.",
                     icon: faCodeBranch
                 },
                 {
@@ -56,7 +55,7 @@ export default function Skills() {
                 },
                 {
                     title: "Web Development",
-                    description: "I've worked with a variety of web technologies, including HTML, CSS, JavaScript/Typescript, React, and Vue. I'm also familiar with web hosting and deployment.",
+                    description: "I've worked with a variety of web technologies, including HTML, CSS, JavaScript/Typescript, React, and Vue. I'm also familiar with web hosting and deployment. (This website is built with React/TS!)",
                     icon: faDisplay
                 },
                 {

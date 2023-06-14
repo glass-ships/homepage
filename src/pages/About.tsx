@@ -1,3 +1,9 @@
+import logoMonarch from "@/assets/images/logo-monarch.svg";
+import logoTislab from "@/assets/images/logo-tislab.svg";
+import logoUCD from "@/assets/images/logo-ucd-white.png";
+import logoCDMS from "@/assets/images/logo-supercdms.png";
+import logoScikitHep from "@/assets/images/logo-scikit-hep.png";
+import Image from "next/image";
 // Fullscreen page with a title and a paragraph of text.
 export default function About() {
   return (
@@ -23,7 +29,7 @@ export default function About() {
         where I maintain software infrastructure used to process,<br/>
         store, procure, and serve biomedical data. <br/> <br/>
         When I&apos;m not at work, I enjoy making music,<br/>
-         developing and contributing to open-source projects, <br/>
+         developing and contributing to open-source Projects, <br/>
         and lounging with my cat.
         </p>
     </div>
@@ -53,6 +59,55 @@ export default function About() {
         </svg>
         Download my resume
     </a>
+
+    <p className="text-3xl text-gray-600 dark:text-gray-400">
+        I'm proud to have collaborated with:
+    </p>
+    <div className="flex flex-row flex-wrap items-center justify-center gap-8">
+    {[
+        {
+            name: "University of Colorado Denver",
+            url: "https://www.ucdenver.edu/",
+            logo: logoUCD,
+        },
+        {
+            name: "Monarch Initiative",
+            url: "https://github.com/monarch-initiative/",
+            logo: logoMonarch,
+        },
+        {
+            name: "TISLab",
+            url: "https://tislab.org/",
+            logo: logoTislab,
+        },
+        {
+            name: "SuperCDMS",
+            url: "https://supercdms.slac.stanford.edu/",
+            logo: logoCDMS,
+        },
+        {
+            name: "Scikit-HEP",
+            url: "https://scikit-hep.org/",
+            logo: logoScikitHep,
+        },
+    ].map((collaborator) => (
+        // Collaborator logos
+        <a
+            href={collaborator.url}
+            className="w-32 h-32"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <Image
+                src={collaborator.logo}
+                alt={collaborator.name}
+                className="object-contain align-middle h-full"
+            />
+        </a>
+        ))
+    }
+    </div>
+
 </div>
   )
 };

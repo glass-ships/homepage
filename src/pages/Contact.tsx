@@ -1,5 +1,6 @@
-// Simple contact form with sender email, subject, and message body
+import Footer from '@/components/Footer';
 
+// Simple contact form with sender email, subject, and message body
 export default function Contact() {
     return (
 <div 
@@ -32,6 +33,7 @@ export default function Contact() {
             <button className="text-xl p-2 bg-amber-200 text-black" type="submit">Send</button>
         </form>
     </div>
+    <Footer />
 </div>
     )
 };
