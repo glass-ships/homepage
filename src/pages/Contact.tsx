@@ -24,7 +24,7 @@ export default function Contact() {
         </p>
         <form 
             className="flex flex-col gap-4 w-[75%] h-3/4 text-gray-700 dark:text-slate-300  shadow-xl" 
-            action="https://formspree.io/f/mnqlpwng" 
+            action="https://formspree.io/f/moqpzbzj" 
             method="POST"
         >
             <input className="text-xl p-2 bg-slate-500 dark:bg-zinc-800/70" type="email" name="email" placeholder="Your email" />
