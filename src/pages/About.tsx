@@ -12,17 +12,17 @@ export default function About() {
     className="
         flex flex-col items-center justify-center gap-8
         min-h-screen w-7/12 px-8 py-16 text-center 
-        bg-gradient-to-b from-white via-white dark:from-black/10 dark:via-black/50 dark:to-black/30 backdrop-blur-2xl
+        bg-gradient-to-b from-black/10 via-black/50 to-black/30 backdrop-blur-2xl
         rounded-t-3xl drop-shadow-xl shadow-black
         snap-y snap-mandatory
     "
 >
     <div className="flex flex-col items-center justify-center gap-8 snap-center">
-        <h1 className="text-7xl font-thin text-gray-800 dark:text-gray-200">
+        <h1 className="text-7xl font-thin text-gray-200">
             About
         </h1>
 
-        <p className="text-2xl font-mono text-gray-600 dark:text-gray-400">
+        <p className="text-2xl font-mono text-gray-400">
         Hi, I&apos;m Glass - a scientific software engineer and data scientist <br/>
         with a Bachelor in Physics from University of Colorado Denver. <br/> <br/>
         Currently, I work with <a href="http://berkeleybop.github.io/project/monarch/" className="text-yellow-400 text-bold">Monarch Initiative</a>,<br/>
@@ -60,7 +60,7 @@ export default function About() {
         Download my resume
     </a>
 
-    <p className="text-3xl text-gray-600 dark:text-gray-400">
+    <p className="text-3xl text-gray-400">
         I'm proud to have collaborated with:
     </p>
     <div className="flex flex-row flex-wrap items-center justify-center gap-8">

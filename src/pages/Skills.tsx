@@ -11,17 +11,17 @@ export default function Skills() {
     className="
     flex flex-col items-center justify-center gap-8
     min-h-screen w-7/12 px-8 py-16 text-center 
-    bg-gradient-to-b from-white via-white dark:from-black/10 dark:via-black/50 dark:to-black/30 backdrop-blur-2xl
+    bg-gradient-to-b from-black/10 via-black/50 to-black/30 backdrop-blur-2xl
     drop-shadow-xl shadow-black
     snap-y snap-mandatory
     "
 >
     {/* add some padding on top when smaller */}
-    <h1 className="text-7xl font-thin text-gray-800 dark:text-gray-200">
+    <h1 className="text-7xl font-thin text-gray-200">
         Skills
     </h1>
 
-    <div className="text-2xl font-thin text-gray-800 dark:text-gray-200 gap-12">
+    <div className="text-2xl font-thin text-gray-200 gap-12">
         I develop software for the scientific community for various purposes,<br />
         including <b>math</b> and <b>physics models</b>, <b>data analysis</b>, and <b>visualization</b>. <br/>
         I'm comfortable working with a variety of languages, frameworks, and tools. <br/>
@@ -75,7 +75,7 @@ export default function Skills() {
                     className="
                         flex flex-col items-center justify-top gap-4
                         w-full h-full px-8 py-4
-                        bg-white dark:bg-zinc-800/20 rounded-xl
+                      bg-zinc-800/20 rounded-xl
                         shadow-xl
                     "
                 >
@@ -85,10 +85,10 @@ export default function Skills() {
                         className="text-yellow-400  bg-slate-700 shadow-black shadow-lg rounded-full p-4"
                     />
                     <div className="grid grid-col items-center justify-center gap-4 ">
-                        <h1 className="text-3xl  font-thin text-gray-800 dark:text-gray-200">
+                        <h1 className="text-3xl  font-thin text-gray-200">
                             {skill.title}
                         </h1>
-                        <div className="text-xl font-thin text-gray-800 dark:text-gray-200  overflow-auto">
+                        <div className="text-xl font-thin text-gray-200  overflow-auto">
                             {skill.description}
                         </div>
                     </div>

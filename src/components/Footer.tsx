@@ -31,7 +31,7 @@ export default function Footbar() {
       ].map((item, index) => (
         <li key={index} className="hidden lg:block px-4">
           <a
-            className="font-thin text-2xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-yellow-300"
+            className="font-thin text-2xl text-gray-400 hover:text-yellow-300"
             href={item.link}
             target='_blank'
           >
