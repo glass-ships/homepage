@@ -1,65 +1,34 @@
+import Image from "next/image";
+
+import AppButton from "@/components/AppButton";
+import AppFlex from "@/components/AppFlex";
+import AppSection from "@/components/AppSection";
+
 import logoMonarch from "@/assets/images/logo-monarch.svg";
 import logoTislab from "@/assets/images/logo-tislab.svg";
 import logoUCD from "@/assets/images/logo-ucd-white.png";
 import logoCDMS from "@/assets/images/logo-supercdms.png";
 import logoScikitHep from "@/assets/images/logo-scikit-hep.png";
-import Image from "next/image";
-// Fullscreen page with a title and a paragraph of text.
+import styles from "./About.module.scss";
+
 export default function About() {
   return (
-    <div
-      id="about"
-      className="
-        flex flex-col items-center justify-center gap-8
-        min-h-screen w-7/12 px-8 py-16 text-center 
-        bg-gradient-to-b from-black/10 via-black/50 to-black/30 
-        rounded-t-3xl drop-shadow-xl shadow-black
-        snap-y snap-mandatory
-    "
-    >
-      <div className="flex flex-col items-center justify-center gap-8 snap-center">
-        <h1 className="text-7xl font-thin text-gray-200">About</h1>
+    <AppSection id="about" width="full">
+      <span className="appsecheader">About</span>
 
-        <p className="text-2xl font-mono text-gray-400">
-          Hi, I&apos;m Glass - a scientific software engineer and data scientist <br />
-          with a Bachelor in Physics from University of Colorado Denver. <br /> <br />
-          Currently, I work with{" "}
-          <a href="http://berkeleybop.github.io/project/monarch/" className="text-yellow-400 text-bold">
-            Monarch Initiative
-          </a>
-          ,<br />
-          where I maintain software infrastructure used to process,
-          <br />
-          store, procure, and serve biomedical data. <br /> <br />
-          When I&apos;m not at work, I enjoy making music,
-          <br />
-          developing and contributing to open-source Projects, <br />
-          and lounging with my cat.
-        </p>
-      </div>
+      <p>
+        Hi, I&apos;m Glass - a scientific software engineer and data scientist with a Bachelor in Physics from University of Colorado Denver.
+        <br />
+        Currently, I work with&nbsp;
+        <a href="http://berkeleybop.github.io/project/monarch/">Monarch Initiative</a>, where I maintain software infrastructure used to process, store, procure, and serve biomedical data.
+        <br />
+        When I&apos;m not at work, I enjoy making music, developing and contributing to open-source Projects, and lounging with my cat.
+      </p>
 
-      {/* Button to download resume */}
-      <a
-        href="https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf"
-        className="
-            flex items-center justify-center gap-2
-            px-4 py-2 text-lg font-mono text-white bg-gray-800 rounded-lg hover:bg-gray-700
-        "
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M9 13h6m-3-3v6m5-13a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V4c0-1.
-                1.9 1.9 0 4.2-1.1 2.3-3.2 4.8-3.2 4.8"
-          />
-        </svg>
-        Download my resume
-      </a>
+      <AppButton text="Download my resume" icon="file-arrow-down" linkTo="https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf" />
 
-      <p className="text-3xl text-gray-400">I'm proud to have collaborated with:</p>
-      <div className="flex flex-row flex-wrap items-center justify-center gap-8">
+      <h4>I'm proud to have collaborated with:</h4>
+      <AppFlex direction="row" gap="medium">
         {[
           {
             name: "University of Colorado Denver",
@@ -88,11 +57,11 @@ export default function About() {
           },
         ].map((collaborator, index) => (
           // Collaborator logos
-          <a key={index} href={collaborator.url} className="w-32 h-32" target="_blank" rel="noopener noreferrer">
-            <Image src={collaborator.logo} alt={collaborator.name} className="object-contain align-middle h-full" />
+          <a key={index} href={collaborator.url} target="_blank" rel="noopener noreferrer">
+            <Image src={collaborator.logo} alt={collaborator.name} className={styles.collaborator} />
           </a>
         ))}
-      </div>
-    </div>
+      </AppFlex>
+    </AppSection>
   );
 }

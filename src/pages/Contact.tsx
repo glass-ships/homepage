@@ -6,12 +6,11 @@ export default function Contact() {
     <div
       id="contact"
       className="
-    flex flex-col items-center justify-center gap-8
-    min-h-screen w-7/12 px-8 py-16 text-center 
-    bg-gradient-to-b from-black/10 via-black/50 to-black/30 
-    drop-shadow-xl shadow-black rounded-b-2xl
-    snap-y snap-mandatory
-    "
+      appsection
+      bg-gradient-to-b from-black/10 via-black/50 to-black/30 
+      drop-shadow-xl shadow-black rounded-b-2xl
+      snap-y snap-mandatory
+      "
     >
       <div className="flex flex-col items-center justify-center gap-8 snap-center">
         <h1 className="text-7xl font-thin text-gray-200">Contact</h1>

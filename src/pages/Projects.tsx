@@ -9,6 +9,7 @@ export default function Projects() {
     <div
       id="projects"
       className="
+        appsection
         flex flex-col items-center justify-center gap-8
         min-h-screen w-7/12 px-8 py-16 text-center 
         bg-gradient-to-b from-black/10 via-black/50 to-black/30 

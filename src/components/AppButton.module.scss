@@ -1,0 +1,122 @@
+@import "../global/variables";
+
+// $primary: $primary;
+// $secondary: $secondary;
+// $tertiary: $tertiary;
+
+.button {
+  display: flex;
+  appearance: none;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
+  transition: color $fast, background $fast, opacity $fast, box-shadow $fast;
+
+  &.primary {
+    background: $primary-light;
+    color: $off-black;
+    &:hover,
+    &:focus {
+      background: $primary-mid;
+      outline: none;
+      box-shadow: 0 0 0 3px $desaturated1;
+    }
+  }
+  &.secondary {
+    background: $secondary-light;
+    color: $off-black;
+    &:hover,
+    &:focus {
+      background: $secondary-mid;
+      outline: none;
+      box-shadow: 0 0 0 3px $desaturated1;
+    }
+  }
+  &.tertiary {
+    background: $tertiary-light;
+    color: $off-black;
+    &:hover,
+    &:focus {
+      background: $tertiary-mid;
+      outline: none;
+      box-shadow: 0 0 0 3px $desaturated1;
+    }
+  }
+  &.none {
+    background-color: transparent;
+    color: $off-white;
+    &:hover,
+    &:focus {
+      // background: $off-white;
+      outline: none;
+      box-shadow: 0 0 0 3px $desaturated1;
+    }
+  }
+
+  &.normal {
+    min-width: min(200px, calc(100% - 40px));
+    min-height: 40px;
+    padding: 5px 20px;
+    border-radius: $rounded;
+    font-weight: $bold;
+    font-size: $medium;
+
+    // &:hover,
+    // &:focus {
+    //   outline: none;
+    //   box-shadow: 0 0 0 3px $desaturated1;
+    // }
+  }
+
+  &.circle {
+    border-radius: 999px;
+    font-size: $medium;
+    font-weight: $normal;
+    // color: $off-black;
+
+    &.text {
+      min-width: 2em;
+      min-height: 2em;
+      padding: 0.25em 0.75em;
+    }
+
+    &:not(.text) {
+      width: 2.5em;
+      height: 2.5em;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px $desaturated1;
+    }
+  }
+
+  &.small {
+    padding: 5px;
+    border-radius: $rounded;
+    font-size: $medium;
+    font-weight: $normal;
+
+    // &:hover,
+    // &:focus {
+    //   //   color: $black;
+    //   color: $off-black;
+    // }
+  }
+}
+
+// .text {
+//   text-decoration: none;
+//   color: $off-black;
+// }
+// .fill {
+//   .button.circle.primary {
+//     background: $primary-mid;
+//   }
+// }

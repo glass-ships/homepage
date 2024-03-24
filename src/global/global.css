@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic&family=Inter:wght@100..900&display=swap');
+
+
+:root > * {
+  --tiny: 0.85rem;
+  --medium: 1rem;
+  --large: 1.2rem;
+  --xl: 1.5rem;
+
+  --primary: #e91e63;
+  --primary-light: #ff80ab;
+  --secondary: #9c27b0;
+  --secondary-light: #ea80fc;
+  --tertiary: #fde047;
+  --tertiary-light: #82b1ff;
+  --hover-bg: #3730a3;
+  --off-white: #fafafa;
+  --light-gray: #d0d0e0;
+  --gray: #a0a0b0;
+  --dark-gray: #404050;
+  --off-black: #101020;
+
+  --rounded: 5px;
+  --fast: 0.35s ease;
+  --slow: 1s ease;
+  --shadow: 1px 2px 10px #40405020;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter"; 
+}
+
+body {
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-size: 1rem; */
+  /* line-height: 1.6; */
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.125rem; /* 2rem? */
+  background: url("/bg.jpg") no-repeat center fixed;
+  background-size: cover;
+  color: var(--light-gray);
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--hover-bg);
+  color: #e0e7ff;
+}
+
+.appsection {
+  padding: 2 4;
+  width: calc(7 / 12 * 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  scroll-snap-type: y mandatory;
+  border-radius: 0 0.5rem;
+  background: linear-gradient(rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  /* backdrop-filter: blur(10px); */
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.08));
+  /* filter: drop-shadow(0 8px 5px rgb(0 0 0 / 0.08)); */
+}
+
+#about .collaborator {
+  width: 10rem;
+  height: 10rem;
+  padding: var(--tiny);
+  object-fit: contain;
+  vertical-align: middle;
+  height: 100%;
+}
+#about .collaborator:hover {
+  transform: scale(1.2);
+  transition: transform var(--fast);
+}
