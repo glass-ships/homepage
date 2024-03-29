@@ -17,18 +17,26 @@ body {
   padding: 0;
 }
 
+// main {
+//   padding: 1.125rem; /* 2rem? */
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
 main {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.125rem; /* 2rem? */
   background: url("/bg.jpg") no-repeat center fixed;
   background-size: cover;
   color: $light-gray;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+  // align-items: center;
+  align-items: stretch;
 }
 
 .appsection {
@@ -79,7 +87,8 @@ main {
   text-shadow: 0 0 10px $off-black;
 }
 
-// Text styles
+/** Text styles */
+
 h1 {
   font-size: $huge;
   font-weight: $light;
@@ -114,7 +123,7 @@ p {
   font-size: $xl;
   font-weight: $normal;
   color: $light-gray;
-  line-height: 2;
+  line-height: $spacing;
   max-width: 50ch;
   align-self: center;
 }
@@ -132,7 +141,7 @@ a {
   color: #e0e7ff;
 }
 
-img { 
+img {
   max-width: 100%;
   height: auto;
 }

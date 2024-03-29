@@ -13,7 +13,7 @@ import styles from "./About.module.scss";
 
 export default function About() {
   return (
-    <AppSection id="about" width="full">
+    <AppSection id="about">
       <span className="appsecheader">About</span>
 
       <p>

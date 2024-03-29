@@ -14,7 +14,7 @@ export default function Testbed() {
         justifyContent: "center",
         textAlign: "center",
         width: "100%",
-        padding: "0",
+        padding: "10px",
         margin: "0",
       }}
     >
@@ -39,11 +39,10 @@ export default function Testbed() {
           <p>These are the icons I'm using.</p>
           <AppFlex direction="row">
             {["git", "git-alt", "python", "linkedin", "envelope", "bars", "cloud-arrow-up", "code", "code-branch", "display", "terminal", "diagram-project", "file-arrow-down"].map((icon, index) => (
-                <AppIcon icon={icon} size="3x" key={index} />
+              <AppIcon key={index} icon={icon} size="3x" color="white" background  />
             ))}
           </AppFlex>
         </div>
-
       </div>
     </div>
   );
@@ -64,7 +63,7 @@ const buttonsCircle = [
 const buttonsSmall = [
   <AppButton text="Small 5" color="primary" design="small" onClick={() => console.log("Button 4 clicked")} />,
   <AppButton text="Small 6" color="secondary" design="small" onClick={() => console.log("Button 5 clicked")} />,
-  <AppButton text="Small 7" icon="vial" color="tertiary" design="small" onClick={() => console.log("Button 6 clicked")} />,
+  <AppButton icon="vial" color="tertiary" design="small" onClick={() => console.log("Button 6 clicked")} />,
   <AppButton text="Small 8" icon="vial" color="none" design="small" linkTo="/testbed" />,
 ];
 const buttons = [buttonsNormal, buttonsCircle, buttonsSmall];

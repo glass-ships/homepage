@@ -1,11 +1,12 @@
 // "use client";
 import Image from "next/image";
-import { Button, Menu, MenuItem, MenuTrigger, Popover, Separator } from "react-aria-components";
-import type { MenuItemProps } from "react-aria-components";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+// import { Button, Menu, MenuItem, MenuTrigger, Popover, Separator } from "react-aria-components";
+// import type { MenuItemProps } from "react-aria-components";
+// import { faBars } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 
-import AppIcon from "@/components/AppIcon";
+// import AppIcon from "@/components/AppIcon";
+import AppFlex from "@/components/AppFlex";
 import Logo from "@/assets/images/logo.svg";
 import styles from "./Navbar.module.scss";
 
@@ -24,13 +25,14 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
   return (
     <nav className={styles.navbar}>
       <a href="#" rel="noopener noreferrer">
         <Image src={Logo} alt="Logo" className={styles.logo} />
       </a>
 
-      <ul>
+      <AppFlex alignH="right" flow="inline">
         {[
           {
             label: "About",
@@ -52,12 +54,12 @@ export default function Navbar() {
             label: "Contact",
             href: "#contact",
           },
-        ].map((link, index) => (
-          <li key={index} className="px-8">
+          ].map((link, index) => (
             <a href={link.href}>{link.label}</a>
-          </li>
+          // <li  key={index} className={`${styles.border}`}>
+          // </li>
         ))}
-      </ul>
+      </AppFlex>
 
       {/* <div // className={styles.dropdownsection}
       >

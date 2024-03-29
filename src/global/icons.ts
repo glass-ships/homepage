@@ -5,8 +5,8 @@ import * as fas from "@fortawesome/free-solid-svg-icons";
 
 const icons = [
     // Brand icons
-    fab.faGit,
-    fab.faGitAlt,
+    fab.faGitAlt, // diamond icon
+    fab.faGithubAlt, // GitHub cat
     fab.faLinkedin,
     fab.faPython,
     // Solid icons

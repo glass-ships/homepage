@@ -1,0 +1,49 @@
+@import "../global/variables";
+
+$wrap: 500px;
+
+.footer {
+    display: flex;
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+  z-index: 1010;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+    background: $desaturated2;
+  a {
+    color: $off-white;
+    transition: opacity $fast;
+
+    &:hover {
+      opacity: 0.7;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.social a {
+  padding: 5px;
+}
+
+.license {
+  line-height: $spacing;
+  text-align: right;
+  font-size: 0.9rem;
+  align-self: flex-end;
+}
+
+@media (max-width: $wrap) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

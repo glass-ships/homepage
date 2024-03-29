@@ -1,22 +1,5 @@
 @import "../global/variables";
 
-.about {
-  gap: 2rem;
-  scroll-snap-align: center;
-  
-  h1 {
-    font-size: $big;
-    line-height: 1;
-    font-weight: $light;
-  }
-
-  // p {
-  //   font-size: $xl;
-  //   line-height: 1.5;
-  //   max-width: 50ch;
-  // }
-}
-
 .collaborator {
   width: 10rem;
   height: 10rem;

@@ -5,9 +5,9 @@ import styles from "./Skills.module.scss";
 
 export default function Skills() {
   return (
-    <AppSection id="skills" width="full">
+    <AppSection id="skills" width="big">
       <div className={styles.skills}>
-        <span className="appsecheader full">Skills</span>
+        <span className="appsecheader">Skills</span>
 
         <p>
           I develop software for the scientific community for various purposes, including <b>math</b> and <b>physics models</b>, and <b>data processing, analysis, and visualization</b>.
@@ -27,19 +27,19 @@ export default function Skills() {
       </div>
 
       {/* <div className={styles.skillgrid}> */}
-      {/* <AppGallery cols={3}>
+      <AppGallery cols={3}>
         {skills.map((skill, index) => (
           // Skill Card
           <div key={index} className={styles.skillcard}>
-            <AppIcon icon={skill.icon} size="4x" color="#facc15" />
+            <AppIcon icon={skill.icon} size="4x" color="#facc15" background={true}/>
             <div className="grid grid-col items-center justify-center gap-4 ">
               <h5>{skill.title}</h5>
               <span className={styles.skilltext}>{skill.description}</span>
-              <div className="text-xl font-thin text-gray-200  overflow-auto">{skill.description}</div>
+              {/* <div className="text-xl font-thin text-gray-200  overflow-auto">{skill.description}</div> */}
             </div>
           </div>
         ))}
-      </AppGallery> */}
+      </AppGallery>
       {/* </div> */}
     </AppSection>
   );
@@ -56,7 +56,7 @@ const skills = [
   },
   {
     title: "Git",
-    description: "Version control and code management is a must for any software project. I use Git for all of my Projects, and I'm comfortable with the command line and GitHub as well as GitLab.",
+    description: "Version control and code management are a must for any software project. I use Git for all of my Projects, and I'm comfortable with the git CLI, and GitHub as well as GitLab.",
     icon: "code-branch",
   },
   {

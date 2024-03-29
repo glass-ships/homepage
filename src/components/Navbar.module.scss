@@ -1,23 +1,28 @@
 @import "../global/variables";
 
+.border {
+  border: 1px solid red;
+
+}
+
 .navbar {
   position: sticky;
   top: 0;
   width: 100%;
-  // height: 75px;
+  height: 75px;
   z-index: 100;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  /* padding: 1rem 0.5rem; */
   padding: 0 1rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
-  background: linear-gradient(rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  // background: linear-gradient(rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  // background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  // background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  background: $primary;
 
   .logo {
     width: 75px;
@@ -33,8 +38,8 @@
   a {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
+    gap: 2rem;
+    // padding: 1rem;
     font-weight: $normal;
     font-size: $xl;
     line-height: 2rem;
@@ -50,12 +55,13 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 2rem;
-    font-family: $sans;
+    // gap: 2rem;
+    // font-family: $sans;
     font-size: $small;
-    line-height: 1.25rem;
+    // line-height: 1.25rem;
     list-style: none;
     margin: 0;
+    padding: 0;
   }
   
   /* DROPDOWN MENU */

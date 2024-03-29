@@ -10,7 +10,7 @@ import About from "@/pages/About";
 import Skills from "@/pages/Skills";
 import Projects from "@/pages/Projects";
 import Contact from "@/pages/Contact";
-// import Footer from '@/components/Footer';
+import Footer from "@/components/Footer";
 import "@/global/styles.scss";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
       {Skills()}
       {/* {Projects()} */}
       {/* {Contact()} */}
-      {/* {Footer()} */}
+      {Footer()}
     </main>
   );
 }
