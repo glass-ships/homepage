@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-function useDarkMode() {
+function UseDarkMode() {
   const [isDark, setDark] = useState(false);
   useEffect(() => {
     if (isDark) {
@@ -14,7 +14,7 @@ function useDarkMode() {
   return <div>Dark Mode: {isDark}</div>;
 }
 
-function setShrunk() {
+function SetShrunk() {
   const [isShrunk, setShrunk] = useState(false);
   useEffect(() => {
     const onScroll = () => {
