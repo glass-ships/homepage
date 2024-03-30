@@ -20,6 +20,7 @@ const icons = [
     fas.faFileDownload,
     fas.faTerminal,
     fas.faUserAstronaut,
+    fas.faArrowUpRightFromSquare,
     // Regular icons
     
     // Icons for testing

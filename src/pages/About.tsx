@@ -17,17 +17,17 @@ export default function About() {
       <span className="appsecheader">About</span>
 
       <p>
-        Hi, I&apos;m Glass - a scientific software engineer and data scientist with a Bachelor in Physics from University of Colorado Denver.
+        Hi, I'm Glass - a scientific software engineer and data scientist with a Bachelor in Physics from University of Colorado Denver.
         <br />
         Currently, I work with&nbsp;
         <a href="http://berkeleybop.github.io/project/monarch/">Monarch Initiative</a>, where I maintain software infrastructure used to process, store, procure, and serve biomedical data.
         <br />
-        When I&apos;m not at work, I enjoy making music, developing and contributing to open-source Projects, and lounging with my cat.
+        When I'm not at work, I enjoy making music, developing and contributing to open-source Projects, and lounging with my cat.
       </p>
 
       <AppButton text="Download my resume" icon="file-arrow-down" linkTo="https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf" />
 
-      <h4>I&apos;m proud to have collaborated with:</h4>
+      <h4>I'm proud to have collaborated with:</h4>
       <AppFlex direction="row" gap="medium">
         {[
           {

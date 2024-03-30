@@ -7,7 +7,7 @@ import AppIcon from "./AppIcon";
 // Props and Types for the AppButton component
 export type ButtonColors = "primary" | "secondary" | "tertiary" | "none";
 export type ButtonDesigns = "normal" | "circle" | "small";
-export type ButtonType = "button" | "link";
+export type ButtonType = "button" | "link" | "submit";
 export interface AppButtonProps {
   text?: string;
   linkTo?: string;
@@ -25,28 +25,21 @@ export default function AppButton({ text = "", linkTo = "", type = "button", ico
   if (type === "link" || linkTo !== "") {
     return (
       <a href={linkTo} target="_blank" className={`${styles.button} ${styles[color]} ${styles[design]} ${text !== "" ? styles.text : ""}`}>
-        {icon && (
-          <AppIcon
-            icon={icon}
-            color={iconColor}
-            // size="1x"
-            // beat
-          />
-        )}
+        {icon && <AppIcon icon={icon} color={iconColor} />}
         {text && text}
       </a>
     );
-  } else {
+  } else if (type === "button") {
     return (
       <button onClick={onClick} className={`${styles.button} ${styles[color]} ${styles[design]} ${text !== "" ? styles.text : ""}`}>
-        {icon && (
-          <AppIcon
-            icon={icon}
-            color={iconColor}
-            // size="1x"
-            // beat
-          />
-        )}
+        {icon && <AppIcon icon={icon} color={iconColor} />}
+        {text && text}
+      </button>
+    );
+  } else if (type === "submit") {
+    return (
+      <button type="submit" className={`${styles.button} ${styles[color]} ${styles[design]} ${text !== "" ? styles.text : ""}`}>
+        {icon && <AppIcon icon={icon} color={iconColor} />}
         {text && text}
       </button>
     );

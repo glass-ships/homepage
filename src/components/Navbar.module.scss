@@ -58,7 +58,7 @@
   /* DROPDOWN MENU */
   .dropdownbutton {
     background-image: linear-gradient(#3b82f6, #8b5cf6);
-    /* padding: 2rem; */
+    // padding: 2rem;
     height: 75px;
     width: 75px;
     border-radius: 0.5rem;
@@ -90,6 +90,12 @@
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width: 530px) {
+  .logo {
+    display: none;
+  }
+}
 
 /* @media (min-width: 1024px) {
   .navbar a {

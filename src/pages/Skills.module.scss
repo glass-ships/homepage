@@ -1,13 +1,5 @@
 @import "../global/variables";
 
-.skillgrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-}
 .skillcard {
   display: flex;
   flex-direction: column;
@@ -20,19 +12,27 @@
   background-color: #27272a33;
   border-radius: $rounded;
   box-shadow: $shadow;
+
+  h5 {
+    // font-size: $xl;
+    font-weight: $bold;
+    // color: $off-white;
+  }
+  p {
+    // font-size: $large;
+    font-weight: $normal;
+    // color: $light-gray;
+  
+  }
 }
-.skill {
-  display: grid;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-.skillname {
+.title {
   font-size: $xl;
+  font-weight: $bold;
   color: $off-white;
 }
 .skilltext {
   font-size: $large;
+  font-weight: $normal;
   color: $light-gray;
   overflow-wrap: break-word;
   overflow: auto;

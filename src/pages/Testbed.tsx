@@ -61,7 +61,7 @@ export default function Testbed() {
         <div className={styles.section}>
           <h3>Test Icons</h3>
           <AppFlex direction="row">
-            {["git", "git-alt", "python", "linkedin", "envelope", "bars", "cloud-arrow-up", "code", "code-branch", "display", "terminal", "diagram-project", "file-arrow-down"].map((icon, index) => (
+            {["git", "git-alt", "python", "linkedin", "envelope", "bars", "cloud-arrow-up", "code", "code-branch", "display", "terminal", "diagram-project", "file-arrow-down", "arrow-up-right-from-square"].map((icon, index) => (
               <AppIcon key={index} icon={icon} size="3x" color="white" background />
             ))}
           </AppFlex>

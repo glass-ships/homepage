@@ -20,8 +20,8 @@ export default function Home() {
       {Header()}
       {About()}
       {Skills()}
-      {/* {Projects()} */}
-      {/* {Contact()} */}
+      {Projects()}
+      {Contact()}
       {Footer()}
     </main>
   );
