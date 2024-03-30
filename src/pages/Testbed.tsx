@@ -7,8 +7,8 @@ import styles from "./Testbed.module.scss";
 
 export default function Testbed() {
   return (
-    <AppSection width="medium" design="fill">
-    {/* // <div
+    <AppSection width="big" design="fill">
+      {/* // <div
     //   style={{
     //     display: "flex",
     //     flexDirection: "column",
@@ -25,43 +25,49 @@ export default function Testbed() {
 
       <div id="testbed" className={styles.bed}>
         <div className={styles.section}>
-          <h3>Test AppButtons<br/></h3>
-          {/* <AppFlex>
-            {buttons.map((buttonSet, index) => (
+          <h3>
+            Test AppButtons
+            <br />
+          </h3>
+          <AppFlex>
+            {/* {buttons.map((buttonSet, index) => (
               <AppFlex key={index} direction="row">
                 {buttonSet.map((button, index) => (
-                  <div key={index}>{button}</div>
+                  button
                 ))}
               </AppFlex>
-            ))}
-          </AppFlex> */}
-          <AppFlex>
-            {buttonsNormal.map((button, index) => (
-              <div key={index}>{button}</div>
-            ))}
-          </AppFlex>
-          <AppFlex>
-            {buttonsCircle.map((button, index) => (
-              <div key={index}>{button}</div>
-            ))}
-          </AppFlex>
-          <AppFlex>
-            {buttonsSmall.map((button, index) => (
-              <div key={index}>{button}</div>
-            ))}
+            ))} */}
+            <AppFlex direction="row">
+              <AppButton text="Button 1" color="primary" onClick={() => console.log("Button 1 clicked")} />
+              <AppButton text="Button 2" color="secondary" onClick={() => console.log("Button 2 clicked")} />
+              <AppButton text="Button 3" icon="vial" color="tertiary" linkTo="/testbed" />
+              <AppButton text="Button 4" icon="vial" color="none" linkTo="/testbed" />
+            </AppFlex>
+            <AppFlex>
+              <AppButton icon="vial" color="primary" design="circle" onClick={() => console.log("Icon clicked")} />
+              <AppButton icon="vial" text="Circle Two" color="secondary" design="circle" onClick={() => console.log("Icon clicked")} />
+              <AppButton text="Circle 3" color="tertiary" design="circle" onClick={() => console.log("Icon clicked")} />
+              <AppButton icon="vial" text="Circle 4" color="none" design="circle" linkTo="/testbed" />
+            </AppFlex>
+            <AppFlex>
+              <AppButton text="Small 5" color="primary" design="small" onClick={() => console.log("Button 4 clicked")} />
+              <AppButton text="Small 6" color="secondary" design="small" onClick={() => console.log("Button 5 clicked")} />
+              <AppButton icon="vial" color="tertiary" design="small" onClick={() => console.log("Button 6 clicked")} />
+              <AppButton text="Small 8" icon="vial" color="none" design="small" linkTo="/testbed" />
+            </AppFlex> 
           </AppFlex>
         </div>
 
         <div className={styles.section}>
-        <h3>Test Icons</h3>
-        <AppFlex direction="row">
-          {["git", "git-alt", "python", "linkedin", "envelope", "bars", "cloud-arrow-up", "code", "code-branch", "display", "terminal", "diagram-project", "file-arrow-down"].map((icon, index) => (
-            <AppIcon key={index} icon={icon} size="3x" color="white" background />
-          ))}
-        </AppFlex>
+          <h3>Test Icons</h3>
+          <AppFlex direction="row">
+            {["git", "git-alt", "python", "linkedin", "envelope", "bars", "cloud-arrow-up", "code", "code-branch", "display", "terminal", "diagram-project", "file-arrow-down"].map((icon, index) => (
+              <AppIcon key={index} icon={icon} size="3x" color="white" background />
+            ))}
+          </AppFlex>
         </div>
       </div>
-    {/* </div> */}
+      {/* </div> */}
     </AppSection>
   );
 }
