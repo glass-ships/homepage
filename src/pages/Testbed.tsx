@@ -25,14 +25,29 @@ export default function Testbed() {
 
       <div id="testbed" className={styles.bed}>
         <div className={styles.section}>
-          <h3>Test AppFlex<br/></h3>
-          <AppFlex>
+          <h3>Test AppButtons<br/></h3>
+          {/* <AppFlex>
             {buttons.map((buttonSet, index) => (
               <AppFlex key={index} direction="row">
                 {buttonSet.map((button, index) => (
                   <div key={index}>{button}</div>
                 ))}
               </AppFlex>
+            ))}
+          </AppFlex> */}
+          <AppFlex>
+            {buttonsNormal.map((button, index) => (
+              <div key={index}>{button}</div>
+            ))}
+          </AppFlex>
+          <AppFlex>
+            {buttonsCircle.map((button, index) => (
+              <div key={index}>{button}</div>
+            ))}
+          </AppFlex>
+          <AppFlex>
+            {buttonsSmall.map((button, index) => (
+              <div key={index}>{button}</div>
             ))}
           </AppFlex>
         </div>

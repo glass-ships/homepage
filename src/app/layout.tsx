@@ -1,4 +1,3 @@
-// import './main.css'
 import Head from "next/head";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
