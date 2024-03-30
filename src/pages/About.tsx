@@ -27,7 +27,7 @@ export default function About() {
 
       <AppButton text="Download my resume" icon="file-arrow-down" linkTo="https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf" />
 
-      <h4>I'm proud to have collaborated with:</h4>
+      <h4>I&apos;m proud to have collaborated with:</h4>
       <AppFlex direction="row" gap="medium">
         {[
           {

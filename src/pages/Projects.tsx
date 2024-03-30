@@ -1,6 +1,5 @@
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faCode, faCodeBranch, faDisplay, faCloudArrowUp as faCloud, faTerminal, faDiagramProject } from "@fortawesome/free-solid-svg-icons";
-// import {  } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
 
 export default function Projects() {
@@ -20,7 +19,7 @@ export default function Projects() {
       <h1 className="text-7xl font-thin text-gray-200">Projects</h1>
 
       <p className="text-2xl font-thin text-gray-200 gap-12">
-        These are some of the projects I've worked on.
+        These are some of the projects I&apos;ve worked on.
         <br />
         You can also see my recent activity on{" "}
         <a href="https://github.com/glass-ships" target="_blank" rel="noopener noreferrer" className="text-yellow-400 text-bold">
@@ -42,19 +41,19 @@ export default function Projects() {
             {
               title: "Koza",
               description:
-                "A data transformation library in Python. Koza is a library for transforming data in a functional style. It is designed to be easy to use, and to be able to handle large datasets. It is primarily used in the Monarch Initiative's data pipeline, but can be used for many data transformation tasks.",
+                "A data transformation library in Python. Koza is a library for transforming data in a functional style. It is designed to be easy to use, and to be able to handle large datasets. It is primarily used in the Monarch Initiative&apos;s data pipeline, but can be used for many data transformation tasks.",
               link: "https://monarch-initiative.github.io/koza",
             },
             {
               title: "Monarch Ingest",
               description:
-                "Worked on the Monarch Initiative's data pipeline, which integrates data from many sources into a single graph database (data processing, validation, normalization, and integration). I also work on the pipeline's infrastructure, including cloud deployment with Google Cloud Platform.",
+                "Worked on the Monarch Initiative&apos;s data pipeline, which integrates data from many sources into a single graph database (data processing, validation, normalization, and integration). I also work on the pipeline&apos;s infrastructure, including cloud deployment with Google Cloud Platform.",
               link: "https://monarch-ingest.monarchinitiative.org/",
             },
             {
               title: "Monarch UI",
               description:
-                "Worked on the Monarch Initiative's user interface, which allows users to search for genes, diseases, and other biological entities. Wrote Python library for querying the Monarch database for backend, a FastAPI wrapper for the library, and contribute to development of a Vue3/TS frontend.",
+                "Worked on the Monarch Initiative&apos;s user interface, which allows users to search for genes, diseases, and other biological entities. Wrote Python library for querying the Monarch database for backend, a FastAPI wrapper for the library, and contribute to development of a Vue3/TS frontend.",
               link: "https://monarch-app.monarchinitiative.org/",
             },
             {
