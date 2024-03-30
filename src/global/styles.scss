@@ -40,13 +40,14 @@ main {
 }
 
 .appsection {
-  // width: calc(7 / 12 * 100%);
   gap: 40px;
   min-height: 100vh;
+  // width: calc(7 / 12 * 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-items: center;
   text-align: center;
   scroll-snap-type: y mandatory;
   border-radius: 0 0.5rem;
@@ -131,10 +132,10 @@ a {
   color: $tertiary-light;
   text-decoration: none;
 }
-// h1, h2, h3, h4, h5, h6, p, a {
-//   margin: 0;
-//   // padding: 0;
-// }
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  // padding: 0;
+}
 
 ::selection {
   background-color: $hover-bg;

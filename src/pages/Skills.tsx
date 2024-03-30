@@ -1,12 +1,11 @@
 import AppSection from "@/components/AppSection";
-import AppGallery from "@/components/AppGallery";
+import AppGrid from "@/components/AppGrid";
 import AppIcon from "@/components/AppIcon";
 import styles from "./Skills.module.scss";
 
 export default function Skills() {
   return (
     <AppSection id="skills" width="big">
-      <div className={styles.skills}>
         <span className="appsecheader">Skills</span>
 
         <p>
@@ -24,10 +23,9 @@ export default function Skills() {
           <br />
           <br />
         </p>
-      </div>
 
       {/* <div className={styles.skillgrid}> */}
-      <AppGallery cols={3}>
+      <AppGrid cols={3}>
         {skills.map((skill, index) => (
           // Skill Card
           <div key={index} className={styles.skillcard}>
@@ -39,7 +37,7 @@ export default function Skills() {
             </div>
           </div>
         ))}
-      </AppGallery>
+      </AppGrid>
       {/* </div> */}
     </AppSection>
   );

@@ -1,16 +1,16 @@
 // Generic grid/gallery component that displays a list of items in a grid
 
 import React from "react";
-import styles from "./AppGallery.module.scss";
+import styles from "./AppGrid.module.scss";
 
-// Props and Types for the AppGallery component
-export interface AppGalleryProps {
+// Props and Types for the AppGrid component
+export interface AppGridProps {
   cols?: number;
   children?: React.ReactNode;
 }
 
-// AppGallery component
-export default function AppGallery({ cols = 3, children }: AppGalleryProps) {
+// AppGrid component
+export default function AppGrid({ cols = 3, children }: AppGridProps) {
   const items = React.Children.toArray(children);
   return (
     <div

@@ -15,9 +15,9 @@ export interface AppSectionProps {
 }
 
 // AppSection component
-export default function AppSection({ children, id, width = "full", design = "normal" }: AppSectionProps) {
+export default function AppSection({ children, id = "", width = "full", design = "normal" }: AppSectionProps) {
   return (
-    <div id={id ? id : ""} className={`appsection ${width} ${design}`}>
+    <div id={id} className={`appsection ${width} ${design}`}>
       {children}
     </div>
   );

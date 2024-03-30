@@ -1,50 +1,53 @@
 import AppButton from "../components/AppButton";
 import AppIcon from "../components/AppIcon";
 import AppFlex from "../components/AppFlex";
+import AppSection from "@/components/AppSection";
 import styles from "./Testbed.module.scss";
-import "@/global/styles.scss";
+// import "@/global/styles.scss";
 
 export default function Testbed() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        width: "100%",
-        padding: "10px",
-        margin: "0",
-      }}
-    >
+    <AppSection width="medium" design="fill">
+    {/* // <div
+    //   style={{
+    //     display: "flex",
+    //     flexDirection: "column",
+    //     alignItems: "center",
+    //     justifyContent: "center",
+    //     textAlign: "center",
+    //     width: "100%",
+    //     padding: "10px",
+    //     margin: "0",
+    //   }}
+    // > */}
       <h1>Testbed</h1>
       <p>This is a testbed for new components and features.</p>
 
       <div id="testbed" className={styles.bed}>
-        <div>
-          <h3>Test AppFlex</h3>
-
+        <div className={styles.section}>
+          <h3>Test AppFlex<br/></h3>
           <AppFlex>
-            {buttons.map((buttonType, index) => (
-              <AppFlex direction="row" key={index}>
-                {...buttonType}
+            {buttons.map((buttonSet, index) => (
+              <AppFlex key={index} direction="row">
+                {buttonSet.map((button, index) => (
+                  <div key={index}>{button}</div>
+                ))}
               </AppFlex>
             ))}
           </AppFlex>
         </div>
 
-        <div>
-          <h3>Test Icons</h3>
-          <p>These are the icons I'm using.</p>
-          <AppFlex direction="row">
-            {["git", "git-alt", "python", "linkedin", "envelope", "bars", "cloud-arrow-up", "code", "code-branch", "display", "terminal", "diagram-project", "file-arrow-down"].map((icon, index) => (
-              <AppIcon key={index} icon={icon} size="3x" color="white" background  />
-            ))}
-          </AppFlex>
+        <div className={styles.section}>
+        <h3>Test Icons</h3>
+        <AppFlex direction="row">
+          {["git", "git-alt", "python", "linkedin", "envelope", "bars", "cloud-arrow-up", "code", "code-branch", "display", "terminal", "diagram-project", "file-arrow-down"].map((icon, index) => (
+            <AppIcon key={index} icon={icon} size="3x" color="white" background />
+          ))}
+        </AppFlex>
         </div>
       </div>
-    </div>
+    {/* </div> */}
+    </AppSection>
   );
 }
 
@@ -56,7 +59,7 @@ const buttonsNormal = [
 ];
 const buttonsCircle = [
   <AppButton icon="vial" color="primary" design="circle" onClick={() => console.log("Icon clicked")} />,
-  <AppButton icon="vial" text="Circle 2" color="secondary" design="circle" onClick={() => console.log("Icon clicked")} />,
+  <AppButton icon="vial" text="Circle Two" color="secondary" design="circle" onClick={() => console.log("Icon clicked")} />,
   <AppButton text="Circle 3" color="tertiary" design="circle" onClick={() => console.log("Icon clicked")} />,
   <AppButton icon="vial" text="Circle 4" color="none" design="circle" linkTo="/testbed" />,
 ];

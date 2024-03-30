@@ -1,10 +1,5 @@
 @import "../global/variables";
 
-.border {
-  border: 1px solid red;
-
-}
-
 .navbar {
   position: sticky;
   top: 0;
@@ -22,7 +17,7 @@
   // background: linear-gradient(rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
   // background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
   // background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  background: $primary;
+  background: $off-black;
 
   .logo {
     width: 75px;
@@ -39,18 +34,15 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    // padding: 1rem;
-    font-weight: $normal;
-    font-size: $xl;
-    line-height: 2rem;
+    font-weight: $bold;
+    font-size: $large;
     color: $gray;
-    // scroll-behavior: smooth;
     text-decoration: none;
   }
   a:hover {
     color: $tertiary;
   }
-  
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +55,7 @@
     margin: 0;
     padding: 0;
   }
-  
+
   /* DROPDOWN MENU */
   .dropdownbutton {
     background-image: linear-gradient(#3b82f6, #8b5cf6);
@@ -72,7 +64,7 @@
     width: 75px;
     border-radius: 0.5rem;
   }
-  
+
   .dropdownicon {
     $bg-opacity: 0.5;
     display: inline-flex;
@@ -97,7 +89,6 @@
     $bg-opacity: 0.9;
   }
 }
-
 
 /* MEDIA QUERIES */
 

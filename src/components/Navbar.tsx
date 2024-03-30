@@ -55,7 +55,7 @@ export default function Navbar() {
             href: "#contact",
           },
           ].map((link, index) => (
-            <a href={link.href}>{link.label}</a>
+            <a key={index} href={link.href}>{link.label}</a>
           // <li  key={index} className={`${styles.border}`}>
           // </li>
         ))}
