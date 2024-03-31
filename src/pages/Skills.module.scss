@@ -8,34 +8,17 @@
   gap: 1rem;
   width: 100%; // calc(7 / 12 * 100);
   height: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem;
   background-color: #27272a33;
   border-radius: $rounded;
   box-shadow: $shadow;
 
-  h5 {
-    // font-size: $xl;
-    font-weight: $bold;
-    // color: $off-white;
-  }
   p {
-    // font-size: $large;
-    font-weight: $normal;
-    // color: $light-gray;
-  
+    font-weight: $light;
+    // font-size: clamp($small, -0.5rem + 4vw, $large);
+    overflow-wrap: break-word;
+    overflow: auto;
   }
-}
-.title {
-  font-size: $xl;
-  font-weight: $bold;
-  color: $off-white;
-}
-.skilltext {
-  font-size: $large;
-  font-weight: $normal;
-  color: $light-gray;
-  overflow-wrap: break-word;
-  overflow: auto;
 }
 
 @media (max-width: 500px) {

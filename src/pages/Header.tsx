@@ -6,8 +6,8 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <Image id={styles.logo} src={logo} alt="Logo" width={512} height={512} priority />
-      <h1>Glass Ships</h1>
-      <h2>Enabling science through software</h2>
+      <h2>Glass Ships</h2>
+      <h3>Enabling science through software</h3>
     </div>
   );
 }

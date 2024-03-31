@@ -14,7 +14,7 @@ import styles from "./About.module.scss";
 export default function About() {
   return (
     <AppSection id="about">
-      <span className="appsecheader">About</span>
+      <h2 className="appsecheader">About</h2>
 
       <p>
         Hi, I'm Glass - a scientific software engineer and data scientist with a Bachelor in Physics from University of Colorado Denver.
@@ -27,7 +27,7 @@ export default function About() {
 
       <AppButton text="Download my resume" icon="file-arrow-down" linkTo="https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf" />
 
-      <h4>I'm proud to have collaborated with:</h4>
+      <h5>I'm proud to have collaborated with:</h5>
       <AppFlex direction="row" gap="medium">
         {[
           {

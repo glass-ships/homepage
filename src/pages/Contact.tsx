@@ -6,7 +6,7 @@ import styles from "./Contact.module.scss";
 export default function Contact() {
   return (
     <AppSection id="contact" width="medium">
-      <span className="appsecheader">Contact</span>
+      <h2 className="appsecheader">Contact</h2>
       <AppFlex>
         <p>
           Interested in working together? <br />

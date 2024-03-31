@@ -6,7 +6,7 @@ import styles from "./Projects.module.scss";
 export default function Projects() {
   return (
     <AppSection id="projects" width="big">
-      <span className="appsecheader">Projects</span>
+      <h2 className="appsecheader">Projects</h2>
 
       <p>
         These are some of the projects I've worked on.
@@ -65,7 +65,7 @@ const projects = [
   {
     title: "Compass Bot",
     description:
-      "A general purpose Discord bot in Python with many features, including a custom command system, a music player, and a moderation system. Primarily a personal project, but is used in several servers, and allows me to experiment with new techniques and technologies.",
+      "A general purpose Discord bot in Python, including a custom command system, music player, and a moderation utilities. Mostly a personal project, but is used in several servers, and allows me to experiment with new techniques and technologies.",
     link: "https://glass-ships.gitlab.io/compass-bot",
   },
 ];

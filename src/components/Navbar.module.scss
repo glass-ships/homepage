@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -96,22 +96,3 @@
     display: none;
   }
 }
-
-/* @media (min-width: 1024px) {
-  .navbar a {
-    padding: 0px;
-  }
-} */
-
-/* @media screen and (max-width: 1024px) {
-  .navbar {
-    padding: 1rem 0.5rem;
-  }
-  .navbar a {
-    padding: 0px;
-  }
-  .navbar ul {
-    gap: 1rem;
-  }
-    
-} */

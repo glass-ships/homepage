@@ -1,17 +1,11 @@
 // "use client";
 import Image from "next/image";
-// import { Button, Menu, MenuItem, MenuTrigger, Popover, Separator } from "react-aria-components";
-// import type { MenuItemProps } from "react-aria-components";
-// import { faBars } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 
 // import AppIcon from "@/components/AppIcon";
 import AppFlex from "@/components/AppFlex";
 import Logo from "@/assets/images/logo.svg";
 import styles from "./Navbar.module.scss";
-
-import { useEffect, useState } from "react";
-// const [isDark, toggleDark] = useDarkMode();
 
 export default function Navbar() {
   const [isShrunk, setShrunk] = useState(false);
@@ -54,8 +48,10 @@ export default function Navbar() {
             label: "Contact",
             href: "#contact",
           },
-          ].map((link, index) => (
-            <a key={index} href={link.href}>{link.label}</a>
+        ].map((link, index) => (
+          <a key={index} href={link.href}>
+            {link.label}
+          </a>
           // <li  key={index} className={`${styles.border}`}>
           // </li>
         ))}

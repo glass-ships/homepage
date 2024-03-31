@@ -80,9 +80,9 @@ main {
   }
 }
 .appsecheader {
-  font-size: $xl5;
-  font-weight: $light;
-  color: $off-white;
+  // font-size: $xl5;
+  // font-weight: $light;
+  // color: $off-white;
   text-shadow: 0 0 10px $off-black;
 }
 
@@ -95,31 +95,32 @@ h1 {
   text-shadow: 0 0 10px $off-black;
 }
 h2 {
-  font-size: $big;
+  font-size: $xl5;
   font-weight: $light;
   color: $off-white;
   text-shadow: 0 0 10px $off-black;
 }
 h3 {
-  font-size: $xl3;
+  font-size: $xl4;
   font-weight: $light;
   color: $off-white;
   text-shadow: 0 0 10px $off-black;
 }
 h4 {
-  font-size: $xl2;
+  font-size: $xl3;
   font-weight: $light;
   color: $off-white;
   text-shadow: 0 0 10px $off-black;
 }
 h5 {
-  font-size: $xl;
+  font-size: $xl2;
   font-weight: $light;
   color: $off-white;
   text-shadow: 0 0 10px $off-black;
 }
 p {
-  font-size: $xl;
+  // font-size: $xl;
+  font-size: clamp($small, -0.8rem + 4vw, $xl);
   font-weight: $normal;
   color: $light-gray;
   line-height: $spacing;
@@ -128,6 +129,7 @@ p {
 }
 a {
   color: $tertiary-light;
+  font-size: clamp($small, -0.8rem + 4vw, $xl);
   text-decoration: none;
 }
 h1, h2, h3, h4, h5, h6, p, a {
@@ -146,46 +148,41 @@ img {
 }
 
 // Media queries
+
+@media (max-width: 300px) {
+  h1 { font-size: $xl2; }
+  h2 { font-size: $xl; }
+  h3 {font-size: $large;}
+  h4 {font-size: $medium;}
+  h5 {font-size: $small;}
+  // p { font-size: $tiny; }
+}
+
 @media (max-width: 500px) {
-  h1 {
-    font-size: $xl3;
-  }
-  h2 {
-    font-size: $xl;
-  }
-  p {
-    font-size: $small;
-    // line-height: 1.5;
-    // max-width: 50ch;
-  }
+  h1 { font-size: $xl3; }
+  h2 { font-size: $xl2; }
+  h3 { font-size: $xl;}
+  h4 { font-size: $large;}
+  h5 { font-size: $medium;}
+  // p { font-size: $small; }
 }
 
 @media (max-width: 900px) {
-  h1 {
-    font-size: $xl4;
-  }
-  h2 {
-    font-size: $xl2;
-  }
-  p {
-    font-size: $medium;
-    // line-height: 1.5;
-    // max-width: 50ch;
-  }
+  h1 { font-size: $xl5; }
+  h2 { font-size: $xl4; }
+  h3 { font-size: $xl3;}
+  h4 { font-size: $xl2;}
+  h5 { font-size: $xl;}
+  // p { font-size: $medium; }
 }
 
-@media (max-width: 1024) {
-  h1 {
-    font-size: $xl5;
-  }
-  h2 {
-    font-size: $xl3;
-  }
-  p {
-    font-size: $large;
-    // line-height: 1.5;
-    // max-width: 50ch;
-  }
+@media (max-width: 1024px) {
+  h1 { font-size: $xl6; }
+  h2 { font-size: $xl5; }
+  h3 { font-size: $xl4;}
+  h4 { font-size: $xl3;}
+  h5 { font-size: $xl;}
+  // p { font-size: $large; }
 }
 
 // @media (min-width: 1024px) {

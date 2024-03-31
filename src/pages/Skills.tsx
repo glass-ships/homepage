@@ -6,7 +6,7 @@ import styles from "./Skills.module.scss";
 export default function Skills() {
   return (
     <AppSection id="skills" width="big">
-      <span className="appsecheader">Skills</span>
+      <h2 className="appsecheader">Skills</h2>
       <p>
         I develop software for the scientific community for various purposes, including <b>math</b> and <b>physics models</b>, and <b>data processing, analysis, and visualization</b>.
         <br />
@@ -28,7 +28,7 @@ export default function Skills() {
           <div key={index} className={styles.skillcard}>
             <AppIcon icon={skill.icon} size="4x" color="#facc15" background={true} />
             <h5>{skill.title}</h5>
-            <p className={styles.skilltext}>{skill.description}</p>
+            <p>{skill.description}</p>
           </div>
         ))}
       </AppGrid>
