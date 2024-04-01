@@ -17,7 +17,7 @@ body {
 
 main {
   min-height: 100vh;
-  background: url("/bg.jpg") no-repeat center fixed;
+  background: url("/images/bg.jpg") no-repeat center fixed;
   background-size: cover;
   color: $light-gray;
   margin: 0;
@@ -51,14 +51,14 @@ main {
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.08));
   // backdrop-filter: blur(10px);
   &.full {
-    padding: 50px 40px;
+    padding: 75px 40px;
     // width: 100%;
   }
   &.big {
-    padding: 50px max(40px, calc((100% - $section-big) / 2));
+    padding: 75px max(40px, calc((100% - $section-big) / 2));
   }
   &.medium {
-    padding: 50px max(40px, calc((100% - $section) / 2));
+    padding: 75px max(40px, calc((100% - $section) / 2));
   }
   // &.normal {
   //   &:nth-child(odd) {
@@ -76,9 +76,6 @@ main {
   }
 }
 .appsecheader {
-  // font-size: $xl5;
-  // font-weight: $light;
-  // color: $off-white;
   text-shadow: 0 0 10px $off-black;
 }
 
@@ -145,46 +142,46 @@ img {
 
 // Media queries
 
-@media (max-width: 300px) {
-  h1 { font-size: $xl2; }
-  h2 { font-size: $xl; }
-  h3 {font-size: $large;}
-  h4 {font-size: $medium;}
-  h5 {font-size: $small;}
-  // p { font-size: $tiny; }
-}
-
-@media (max-width: 500px) {
-  h1 { font-size: $xl3; }
-  h2 { font-size: $xl2; }
-  h3 { font-size: $xl;}
-  h4 { font-size: $large;}
-  h5 { font-size: $medium;}
-  // p { font-size: $small; }
-}
-
-@media (max-width: 900px) {
-  h1 { font-size: $xl5; }
-  h2 { font-size: $xl4; }
-  h3 { font-size: $xl3;}
-  h4 { font-size: $xl2;}
-  h5 { font-size: $xl;}
-  // p { font-size: $medium; }
-}
-
 @media (max-width: 1024px) {
-  h1 { font-size: $xl6; }
-  h2 { font-size: $xl5; }
-  h3 { font-size: $xl4;}
-  h4 { font-size: $xl3;}
-  h5 { font-size: $xl;}
+  * > h1 { font-size: $xl6; }
+  * > h2 { font-size: $xl5; }
+  * > h3 { font-size: $xl4;}
+  * > h4 { font-size: $xl3;}
+  * > h5 { font-size: $xl;}
   // p { font-size: $large; }
 }
 
+@media (max-width: 900px) {
+  * > h1 { font-size: $xl5; }
+  * > h2 { font-size: $xl4; }
+  * > h3 { font-size: $xl3;}
+  * > h4 { font-size: $xl2;}
+  * > h5 { font-size: $xl;}
+  // p { font-size: $medium; }
+}
+
+@media (max-width: 500px) {
+  * > h1 { font-size: $xl3; }
+  * > h2 { font-size: $xl2; }
+  * > h3 { font-size: $xl;}
+  * > h4 { font-size: $large;}
+  * > h5 { font-size: $medium;}
+  // p { font-size: $small; }
+}
+
+@media (max-width: 300px) {
+  * > h1 { font-size: $xl2; }
+  * > h2 { font-size: $xl; }
+  * > h3 {font-size: $large;}
+  * > h4 {font-size: $medium;}
+  * > h5 {font-size: $small;}
+  // p { font-size: $tiny; }
+}
+
 // @media (min-width: 1024px) {
-//   h1 {
-//     font-size: 8rem;
-//   }
+  //   h1 {
+    //     font-size: 8rem;
+    //   }
 //   h2 {
 //     font-size: 4rem;
 //   }

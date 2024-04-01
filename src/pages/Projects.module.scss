@@ -12,16 +12,18 @@
   background-color: #27272a33;
   border-radius: $rounded;
   box-shadow: $shadow;
-//   transition-property: all;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-//   transition-duration: 300ms;
-//   &:hover {
-//     transform: scale(1.05);
-//     // background-image: linear-gradient(to right, rgb(99 102 241 / 0.3) 0%, rgb(168 85 247 / 0.3) 50%, rgb(236 72 153 / 0.3) 100%);
-//   }
+  //   transition-property: all;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  //   transition-duration: 300ms;
+  //   &:hover {
+  //     transform: scale(1.05);
+  //     // background-image: linear-gradient(to right, rgb(99 102 241 / 0.3) 0%, rgb(168 85 247 / 0.3) 50%, rgb(236 72 153 / 0.3) 100%);
+  //   }
 
   p {
     // font-size: $large;
     font-weight: $light;
+    overflow-wrap: break-word;
+    overflow: auto;
   }
 }
