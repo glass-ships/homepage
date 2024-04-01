@@ -30,8 +30,7 @@ export default function AppFlex({ children, flow = "block", direction = "row", a
   const alignItems = direction === "row" ? alignMap[alignV] : alignMap[alignH];
   return (
     <div id={id}
-      className={`${styles.flex} ${styles[flow]} ${styles[direction]} ${styles[gap]} `}
-      //   ${styles[alignItems]} ${styles[gap]}`}
+      className={`${styles.flex} ${styles[flow]} ${styles[direction]} ${styles[gap]}`}
       style={{ justifyContent, alignItems }}
     >
       {children}
