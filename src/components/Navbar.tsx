@@ -52,8 +52,6 @@ export default function Navbar() {
           <a key={index} href={link.href}>
             {link.label}
           </a>
-          // <li  key={index} className={`${styles.border}`}>
-          // </li>
         ))}
       </AppFlex>
 

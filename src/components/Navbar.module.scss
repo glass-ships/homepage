@@ -34,8 +34,8 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    font-weight: $bold;
-    font-size: $large;
+    // font-weight: $bold;
+    // font-size: $large;
     color: $gray;
     text-decoration: none;
   }
@@ -43,17 +43,6 @@
     color: $tertiary;
   }
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    // gap: 2rem;
-    font-size: $small;
-    // line-height: 1.25rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
 
   /* DROPDOWN MENU */
   .dropdownbutton {

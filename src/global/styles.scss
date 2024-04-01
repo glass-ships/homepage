@@ -15,12 +15,6 @@ body {
   padding: 0;
 }
 
-// main {
-//   padding: 1.125rem; /* 2rem? */
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-// }
 main {
   min-height: 100vh;
   background: url("/bg.jpg") no-repeat center fixed;
@@ -28,13 +22,15 @@ main {
   color: $light-gray;
   margin: 0;
   padding: 0;
+  // padding: 1.125rem; /* 2rem? */
 
   display: flex;
   flex-direction: column;
   position: relative;
   flex-grow: 1;
-  // align-items: center;
   align-items: stretch;
+  // align-items: center;
+  // justify-content: space-between;
 }
 
 .appsection {

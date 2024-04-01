@@ -8,16 +8,10 @@ import styles from "@/styles/Footer.module.scss";
 
 export default function Footbar() {
   return (
-    <footer
-      className={`${styles.footer}
-    absolute bottom-0 flex flex-col items-center justify-evenly
-    w-full h-32
-    transition-all duration-300 ease-in-out transform translate-y-0
-  `}
-    >
-      {/* <div></div> */}
+    <footer className={styles.footer}>
       {/* list of icon social links */}
-      <div className={styles.social}>
+      {/* <div className={styles.social}> */}
+      <AppFlex flow="inline" alignH="stretch"> 
         {[
           {
             icon: "github-alt",
@@ -36,13 +30,13 @@ export default function Footbar() {
             <AppIcon icon={item.icon} size="2xl" color="#facc15" />
           </a>
         ))}
-      </div>
-        <p className={styles.license}>
-          Created with love by{" "}
-          <a className="pointer-events-none flex place-items-center p-8 lg:pointer-events-auto lg:p-0" href="https://github.com/glass-ships" target="_blank" rel="noopener noreferrer">
-            Glass Ships &copy; {new Date().getFullYear()}
-          </a>
-        </p>
+      </AppFlex>
+      <p className={styles.license}>
+        Created with love by{" "}
+        <a href="https://github.com/glass-ships" target="_blank" rel="noopener noreferrer">
+          Glass Ships &copy; {new Date().getFullYear()}
+        </a>
+      </p>
     </footer>
   );
 }
