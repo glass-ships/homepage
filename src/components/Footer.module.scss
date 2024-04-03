@@ -3,12 +3,13 @@
 $wrap: 500px;
 
 .footer {
+  z-index: 1010;
   display: flex;
   // display: grid;
   // grid-template-columns: repeat(3, 1fr);
-  z-index: 1010;
-  // align-items: center;
-  // align-content: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
   justify-content: space-between;
   padding: 15px 25px;
   background: $desaturated2;

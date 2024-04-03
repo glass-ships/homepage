@@ -25,12 +25,14 @@ export default function Footbar() {
           },
         ].map((item, index) => (
           <AppTooltip key={index} content={item.label} position="top">
-          <a key={index} href={item.link} target="_blank">
-            <AppIcon icon={item.icon} size="small" color="#facc15" />
-          </a>
+            <a href={item.link} target="_blank">
+              <AppIcon icon={item.icon} size="small" color="#facc15" />
+            </a>
           </AppTooltip>
         ))}
       </AppFlex>
+
+      <div>
 
       <p className={styles.license}>
         Created with love by{" "}
@@ -38,6 +40,7 @@ export default function Footbar() {
           Glass Ships &copy; {new Date().getFullYear()}
         </a>
       </p>
+      </div>
     </footer>
   );
 }
