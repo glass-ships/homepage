@@ -9,9 +9,9 @@
   width: max-content;
   .tooltip {
     position: absolute;
-    box-sizing: content-box;
-    width: auto;
     text-align: center;
+    width: max-content;
+    max-width: 20ch;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid $off-white;
