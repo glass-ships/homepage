@@ -1,0 +1,49 @@
+@import "../global/variables";
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  #logo {
+    position: relative;
+    filter: drop-shadow(0 0 0.3rem #ffffff70);
+  }
+
+  h2 {
+    padding-bottom: 1rem;
+    color: $light-gray;
+  }
+  h3 {
+    padding-bottom: 4rem;
+    color: $light-gray;
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  #logo {
+    width: 15rem;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  #logo {
+    width: 20rem;
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  #logo {
+    width: 25rem;
+  }
+}
