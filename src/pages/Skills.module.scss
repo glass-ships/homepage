@@ -14,8 +14,8 @@
   box-shadow: $shadow;
 
   p {
+    color: $off-white;
     font-weight: $light;
-    // font-size: clamp($small, -0.5rem + 4vw, $large);
     overflow-wrap: break-word;
     overflow: auto;
   }

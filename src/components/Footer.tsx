@@ -1,5 +1,6 @@
 import AppFlex from "./AppFlex";
 import AppIcon from "./AppIcon";
+import AppTooltip from "./AppTooltip";
 import styles from "./Footer.module.scss";
 
 export default function Footbar() {
@@ -9,20 +10,25 @@ export default function Footbar() {
         {[
           {
             icon: "github-alt",
+            label: "GitHub",
             link: "https://github.com/glass-ships",
           },
           {
             icon: "linkedin",
+            label: "LinkedIn",
             link: "https://www.linkedin.com/in/glass-ships",
           },
           {
             icon: "envelope",
+            label: "Email",
             link: "mailto:contact@glass-ships.com",
           },
         ].map((item, index) => (
+          <AppTooltip key={index} content={item.label} position="top">
           <a key={index} href={item.link} target="_blank">
             <AppIcon icon={item.icon} size="small" color="#facc15" />
           </a>
+          </AppTooltip>
         ))}
       </AppFlex>
 

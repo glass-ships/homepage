@@ -35,19 +35,19 @@ const projects = [
   {
     title: "Koza",
     description:
-      "A data transformation library in Python. Koza is a library for transforming data in a functional style. It is designed to be easy to use, and to be able to handle large datasets. It is primarily used in the Monarch Initiative's data pipeline, but can be used for many data transformation tasks.",
+      "A functionally designed data transformation library in Python. Koza is intended to be easy to use and capable of handling large datasets. It is primarily used in the Monarch Initiative's data ingest pipeline, but can be used for many data transformation tasks.",
     link: "https://monarch-initiative.github.io/koza",
   },
   {
     title: "Monarch Ingest",
     description:
-      "Monarch Initiative's data pipeline, which integrates data from many sources into a single graph database (data processing, validation, normalization, and integration). I also work on the pipeline's infrastructure, including deployment with Google Cloud Platform.",
+      "A collection of Koza ingests integrating several data sources into a single knowledge graph. I contribute to data processing, validation, normalization, and integration, as well as the pipeline's infrastructure, including deployment with Google Cloud Platform.",
     link: "https://monarch-initiative.github.io/monarch-ingest/",
   },
   {
     title: "Monarch UI",
     description:
-      "Monarch Initiative's user interface, which allows users to search for genes, diseases, and other biological entities. Wrote Python library for querying the Monarch database for backend, a FastAPI wrapper for the library, and contribute to development of a Vue/TS frontend.",
+      "Monarch Initiative's webpage, which allows users to search for genes, diseases, and other biological entities. I wrote the Python library for querying the Monarch database for backend, a FastAPI wrapper for the library, and contribute to development of a Vue/TS frontend.",
     link: "https://monarch-app.monarchinitiative.org/",
   },
   {

@@ -3,6 +3,7 @@ import Image from "next/image";
 import AppButton from "@/components/AppButton";
 import AppFlex from "@/components/AppFlex";
 import AppSection from "@/components/AppSection";
+import AppTooltip from "@/components/AppTooltip";
 
 import logoMonarch from "@/assets/images/logo-monarch.svg";
 import logoTislab from "@/assets/images/logo-tislab.svg";
@@ -20,7 +21,7 @@ export default function About() {
         Hi, I'm Glass - a scientific software engineer and data scientist with a Bachelor in Physics from University of Colorado Denver.
         <br />
         Currently, I work with&nbsp;
-        <a href="http://berkeleybop.github.io/project/monarch/">Monarch Initiative</a>, where I maintain software infrastructure used to process, store, procure, and serve biomedical data.
+        <a href="http://berkeleybop.github.io/project/monarch/">Monarch Initiative</a>, where I maintain the software infrastructure used to process, store, procure, and serve biomedical data.
         <br />
         When I'm not at work, I enjoy making music, developing and contributing to open-source projects, and lounging with my cat.
       </p>

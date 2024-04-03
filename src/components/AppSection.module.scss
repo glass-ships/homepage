@@ -19,9 +19,9 @@
   // backdrop-filter: blur(10px);
   // &.normal {}
   &.fill {
-    background: $off-black;
-    // &:nth-child(odd) { background: $desaturated2; }
-    // &:nth-child(even) { background: $gray; }
+    // background: $off-black;
+    &:nth-child(odd) { background: $off-black; }
+    &:nth-child(even) { background: $dark-gray; }
   }
   &:last-of-type { flex-grow: 1; }
 }
@@ -33,5 +33,6 @@
 
 // Height of the section
 .hFull { min-height: 100vh; }
+.hAuto { min-height: auto; }
 // .hBig { min-height: 75vh; }
 // .hMedium {  }

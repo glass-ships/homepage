@@ -1,7 +1,8 @@
 import AppButton from "../components/AppButton";
-import AppIcon from "../components/AppIcon";
 import AppFlex from "../components/AppFlex";
+import AppIcon from "../components/AppIcon";
 import AppSection from "@/components/AppSection";
+import AppTooltip from "@/components/AppTooltip";
 import styles from "./Testbed.module.scss";
 
 export default function Testbed() {
@@ -55,6 +56,28 @@ export default function Testbed() {
           </AppFlex>
         </div>
         {/* </div> */}
+      </AppSection>
+
+      <AppSection width="big" height="auto" design="fill">
+        <h3>Test Tooltip</h3>
+        <AppFlex direction="row">
+          <AppTooltip content="Tooltip content" position="left">
+            <AppButton text="Tooltip Left" color="primary" />
+          </AppTooltip>
+          <AppTooltip content="This is an example of a tooltip with longer text content" position="top">
+            <AppButton text="Tooltip Top" color="primary" />
+          </AppTooltip>
+          <AppTooltip content="This is an example of a tooltip with longer text content" position="bottom">
+            <AppButton design="circle" icon="vial" color="primary" />
+          </AppTooltip>
+          <AppTooltip content="Tooltip content" position="right">
+            <AppButton design="small" icon="vial" color="primary" />
+          </AppTooltip>
+        </AppFlex>
+
+        <AppTooltip content="Tooltip content" position="top">
+          <p>Hover over me too.</p>
+        </AppTooltip>
       </AppSection>
     </>
   );

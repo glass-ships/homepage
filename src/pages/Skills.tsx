@@ -47,7 +47,7 @@ const skills = [
   },
   {
     title: "Git",
-    description: "Version control and code management are a must for any software project. I use Git for all of my Projects, and I'm comfortable with the git CLI, and GitHub as well as GitLab.",
+    description: "Version control and code management are a must for any software project. I use Git for all of my projects, and I'm comfortable with the git CLI, and GitHub as well as GitLab.",
     icon: "code-branch",
   },
   {
@@ -59,7 +59,7 @@ const skills = [
   {
     title: "Web Development",
     description:
-      "I've worked with a variety of web technologies, including HTML, CSS, JavaScript/Typescript, React, and Vue. I'm also familiar with web hosting and deployment. (This website is built with React/TS!)",
+      "I've worked with a variety of web technologies, including HTML, SCSS, JavaScript/Typescript, React, and Vue. I'm also familiar with web hosting and deployment. (This website is built with React/TS!)",
     icon: "display",
   },
   {
