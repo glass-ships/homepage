@@ -1,7 +1,7 @@
 @import "../global/variables";
 
 $clamped: clamp($tiny, -0.8rem + 4vw, $medium);
-
+$bold: 550;
 .button {
   display: flex;
   appearance: none;
