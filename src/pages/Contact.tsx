@@ -18,7 +18,7 @@ export default function Contact() {
           <input className={styles.textbox} type="email" name="email" placeholder="Your email" />
           <input className={styles.textbox} type="text" name="subject" placeholder="Subject" />
           <textarea className={styles.textbox} name="message" placeholder="Your message" rows={10} />
-          <AppButton text="Send" type="submit" color="tertiary"/>
+          <AppButton text="Send" type="submit" icon="paper-plane" color="tertiary"/>
         </form>
       </AppFlex>
     </AppSection>

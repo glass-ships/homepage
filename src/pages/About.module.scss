@@ -1,8 +1,8 @@
 @import "../global/variables";
 
 .collaborator {
-  width: 10rem;
-  height: 10rem;
+  width: clamp(6rem, 15vw, 10rem);
+  // height: 10rem;
   padding: $tiny;
   object-fit: contain;
   vertical-align: middle;

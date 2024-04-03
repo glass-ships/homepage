@@ -3,6 +3,15 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import styles from "./AppIcon.module.scss";
 import "@/global/icons";
 
+type AppIconProps = {
+  icon: string;
+  // size?: SizeProp;
+  size?: "tiny" | "small" | "medium" | "large";
+  color?: string;
+  className?: string;
+  background?: boolean;
+};
+
 function getFontAwesomeIcon(iconName: string) {
   for (const prefix of ["fas", "far", "fab"]) {
     const match = findIconDefinition({ prefix: prefix as IconPrefix, iconName: iconName as IconName });
@@ -11,8 +20,27 @@ function getFontAwesomeIcon(iconName: string) {
   return null;
 }
 
-export default function AppIcon({ icon = "", size = "1x", color = "yellow", className = "", background = false }) {
+export default function AppIcon({
+  icon = "",
+  // size = "1x",
+  size = "small",
+  color = "yellow",
+  className = "",
+  background = false,
+}: AppIconProps) {
   const iconDef = getFontAwesomeIcon(icon);
   if (!iconDef) return null;
-  return <Icon icon={iconDef} size={size as SizeProp} color={color} className={`${className} ${background ? styles.background : ""}`} />;
+  return (
+    <Icon
+      icon={iconDef}
+      // size={size as SizeProp}
+      color={color}
+      // fa-fw
+      className={`
+      ${styles.appicon} ${styles[size]}
+      ${background ? styles.background : ""}
+      ${className}
+    `}
+    />
+  );
 }

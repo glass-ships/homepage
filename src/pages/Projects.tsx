@@ -65,7 +65,7 @@ const projects = [
   {
     title: "Compass Bot",
     description:
-      "A general purpose Discord bot in Python, including a custom command system, music player, and a moderation utilities. Mostly a personal project, but is used in several servers, and allows me to experiment with new techniques and technologies.",
+      "A general purpose Discord bot in Python, including custom commands, music player, and moderation utilities. Mostly a personal project, but is used in several servers, and allows me to experiment with new techniques and technologies.",
     link: "https://glass-ships.gitlab.io/compass-bot",
   },
 ];

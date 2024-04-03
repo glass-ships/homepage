@@ -25,22 +25,22 @@ export default function AppButton({ text = "", linkTo = "", type = "button", ico
   if (type === "link" || linkTo !== "") {
     return (
       <a href={linkTo} target="_blank" className={`${styles.button} ${styles[color]} ${styles[design]} ${text !== "" ? styles.text : ""}`}>
-        {icon && <AppIcon icon={icon} color={iconColor} />}
+        {icon && <AppIcon icon={icon} color={iconColor} size="tiny" />}
         {text && text}
       </a>
     );
   } else if (type === "button") {
     return (
       <button onClick={onClick} className={`${styles.button} ${styles[color]} ${styles[design]} ${text !== "" ? styles.text : ""}`}>
-        {icon && <AppIcon icon={icon} color={iconColor} />}
-        {text && text}
+        {icon && <AppIcon icon={icon} color={iconColor} size="tiny" />}
+        {text && <span className={styles.text}>{text}</span>}
       </button>
     );
   } else if (type === "submit") {
     return (
       <button type="submit" className={`${styles.button} ${styles[color]} ${styles[design]} ${text !== "" ? styles.text : ""}`}>
-        {icon && <AppIcon icon={icon} color={iconColor} />}
-        {text && text}
+        {icon && <AppIcon icon={icon} color={iconColor} size="tiny" />}
+        {text && <span className={styles.text}>{text}</span>}
       </button>
     );
   }

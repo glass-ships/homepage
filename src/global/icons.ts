@@ -1,7 +1,7 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import * as fab from "@fortawesome/free-brands-svg-icons";
 import * as fas from "@fortawesome/free-solid-svg-icons";
-// import * as far from "@fortawesome/free-regular-svg-icons";
+import * as far from "@fortawesome/free-regular-svg-icons";
 
 const icons = [
     // Brand icons
@@ -10,6 +10,7 @@ const icons = [
     fab.faLinkedin,
     fab.faPython,
     // Solid icons
+    fas.faArrowUpRightFromSquare,
     fas.faBars,
     fas.faCloudArrowUp,
     fas.faCode,
@@ -20,9 +21,8 @@ const icons = [
     fas.faFileDownload,
     fas.faTerminal,
     fas.faUserAstronaut,
-    fas.faArrowUpRightFromSquare,
     // Regular icons
-    
+    far.faPaperPlane,
     // Icons for testing
     fas.faVial,
 ]

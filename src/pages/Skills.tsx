@@ -26,7 +26,7 @@ export default function Skills() {
       <AppGrid cols={3}>
         {skills.map((skill, index) => (
           <div key={index} className={styles.skillcard}>
-            <AppIcon icon={skill.icon} size="4x" color="#facc15" background={true} />
+            <AppIcon icon={skill.icon} size="medium" color="#facc15" background={true} />
             <h5>{skill.title}</h5>
             <p>{skill.description}</p>
           </div>

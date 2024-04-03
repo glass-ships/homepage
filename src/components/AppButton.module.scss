@@ -1,5 +1,7 @@
 @import "../global/variables";
 
+$clamped: clamp($tiny, -0.8rem + 4vw, $medium);
+
 .button {
   display: flex;
   appearance: none;
@@ -9,10 +11,15 @@
   justify-content: center;
   max-width: 100%;
   gap: 10px;
-  text-decoration: none;
+  // text-decoration: none;
   border: none;
   transition: color $fast, background $fast, opacity $fast, box-shadow $fast;
+  cursor: pointer;
 
+  &.text {
+    font-size: $clamped;
+    font-weight: $bold;
+  }
   &.primary {
     background: $primary-light;
     color: $off-black;
@@ -48,7 +55,8 @@
     color: $off-white;
     &:hover,
     &:focus {
-      // background: $off-white;
+      background: $light-gray;
+      color: $off-black;
       outline: none;
       box-shadow: 0 0 0 3px $desaturated1;
     }
@@ -59,9 +67,6 @@
     min-height: 40px;
     padding: 5px 20px;
     border-radius: $rounded;
-    font-weight: $bold;
-    font-size: $medium;
-
     // &:hover,
     // &:focus {
     //   outline: none;
@@ -71,21 +76,15 @@
 
   &.circle {
     border-radius: 999px;
-    font-weight: $normal;
-    font-size: $medium;
-    // color: $off-black;
-
     &.text {
       min-width: 2em;
       min-height: 2em;
       padding: 0.25em 0.75em;
     }
-
     &:not(.text) {
       width: 2.5em;
       height: 2.5em;
     }
-
     &:hover,
     &:focus {
       outline: none;
@@ -96,9 +95,6 @@
   &.small {
     padding: 5px;
     border-radius: $rounded;
-    font-size: $medium;
-    font-weight: $normal;
-
     // &:hover,
     // &:focus {
     //   //   color: $black;
@@ -107,9 +103,13 @@
   }
 }
 
-// .text {
-//   text-decoration: none;
-//   color: $off-black;
+// button {
+//   &.text {
+//     text-decoration: none;
+//     color: $off-black;
+//     font-weight: $bold;
+//     font-size: $clamped;
+//   }
 // }
 // .fill {
 //   .button.circle.primary {

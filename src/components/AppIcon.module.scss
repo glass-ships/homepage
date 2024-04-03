@@ -7,3 +7,18 @@
   //   box-shadow: $shadow;
   box-shadow: 5px 5px 10px 1px #000;
 }
+
+.appicon {
+  &.tiny {
+    height: 1em;
+  }
+  &.small {
+    height: 1.5em;
+  }
+  &.medium {
+    height: 2em;
+  }
+  &.large {
+    height: 3em;
+  }  
+}
