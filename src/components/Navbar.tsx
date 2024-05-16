@@ -74,8 +74,8 @@ const links = [
     label: "Contact",
     href: "#contact",
   },
-  {
-    label: "Resume",
-    href: "https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf",
-  },
+  // {
+  //   label: "Resume",
+  //   href: "https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf",
+  // },
 ];
