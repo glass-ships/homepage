@@ -3,6 +3,7 @@ import AppFlex from "../components/AppFlex";
 import AppIcon from "../components/AppIcon";
 import AppSection from "@/components/AppSection";
 import AppTooltip from "@/components/AppTooltip";
+import faIcons from "@/global/icons";
 import styles from "./Testbed.module.scss";
 
 export default function Testbed() {
@@ -83,25 +84,4 @@ export default function Testbed() {
   );
 }
 
-const icons = [
-  // brand icons
-  "git",
-  "git-alt",
-  "linkedin",
-  "python",
-  // solid icons
-  "arrow-up-right-from-square",
-  "bars",
-  "cloud-arrow-up",
-  "code",
-  "code-branch",
-  "diagram-project",
-  "display",
-  "envelope",
-  "file-arrow-down",
-  "terminal",
-  "user-astronaut",
-  // regular icons
-  "paper-plane",
-  "vial",
-];
+const icons = Object.keys(faIcons);

@@ -27,17 +27,7 @@ export default function Navbar() {
         <Image src={Logo} alt="Logo" className={styles.logo} />
       </a>
 
-      {isThin ? null : (
-        <AppFlex alignH="right" flow="inline">
-          {links.map((link, index) => (
-            <a key={index} href={link.href}>
-              {link.label}
-            </a>
-          ))}
-        </AppFlex>
-      )}
-
-      {!isThin ? null : (
+      {isThin ? (
         <MenuTrigger>
           <Button aria-label="Menu" className={styles.dropdownbutton}>
             <AppIcon icon="bars" size="medium" color="#fff" />
@@ -52,6 +42,14 @@ export default function Navbar() {
             </Menu>
           </Popover>
         </MenuTrigger>
+      ) : (
+        <AppFlex alignH="right" flow="inline">
+          {links.map((link, index) => (
+            <a key={index} href={link.href}>
+              {link.label}
+            </a>
+          ))}
+        </AppFlex>
       )}
     </nav>
   );
@@ -74,8 +72,4 @@ const links = [
     label: "Contact",
     href: "#contact",
   },
-  // {
-  //   label: "Resume",
-  //   href: "https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf",
-  // },
 ];

@@ -3,7 +3,7 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import styles from "./AppIcon.module.scss";
 import "@/global/icons";
 
-type AppIconProps = {
+export type AppIconProps = {
   icon: string;
   // size?: SizeProp;
   size?: "tiny" | "small" | "medium" | "large";

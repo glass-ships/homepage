@@ -3,30 +3,36 @@ import * as fab from "@fortawesome/free-brands-svg-icons";
 import * as fas from "@fortawesome/free-solid-svg-icons";
 import * as far from "@fortawesome/free-regular-svg-icons";
 
-const icons = [
+const faIcons: { [key: string]: fab.IconDefinition } = {
     // Brand icons
-    fab.faGitAlt, // diamond icon
-    fab.faGithubAlt, // GitHub cat
-    fab.faLinkedin,
-    fab.faPython,
-    // Solid icons
-    fas.faArrowUpRightFromSquare,
-    fas.faBars,
-    fas.faCloudArrowUp,
-    fas.faCode,
-    fas.faCodeBranch,
-    fas.faDiagramProject,
-    fas.faDisplay,
-    fas.faEnvelope,
-    fas.faFileDownload,
-    fas.faTerminal,
-    fas.faUserAstronaut,
+    "git": fab.faGitAlt,
+    "git-alt": fab.faGitAlt,
+    "linkedin": fab.faLinkedin,
+    "python": fab.faPython,
     // Regular icons
-    far.faPaperPlane,
-    // Icons for testing
-    fas.faVial,
-]
-library.add(...icons)
+    "paper-plane": far.faPaperPlane,
+    "square": far.faSquare,
+    "vial": fas.faVial,
+    // Solid icons
+    "arrow-up-right-from-square": fas.faArrowUpRightFromSquare,
+    "bars": fas.faBars,
+    "chevron-down": fas.faChevronDown,
+    "cloud-arrow-up": fas.faCloudArrowUp,
+    "code": fas.faCode,
+    "code-branch": fas.faCodeBranch,
+    "diagram-project": fas.faDiagramProject,
+    "display": fas.faDisplay,
+    "envelope": fas.faEnvelope,
+    "file-arrow-down": fas.faFileDownload,
+    "filter": fas.faFilter,
+    "magnifying-glass": fas.faMagnifyingGlass,
+    "square-check": fas.faSquareCheck,
+    "terminal": fas.faTerminal,
+    "user-astronaut": fas.faUserAstronaut,
+  };
+  
+library.add(...Object.values(faIcons));
+export default faIcons;
 
 /** MONARCH ICONS */
 // const icons = [
