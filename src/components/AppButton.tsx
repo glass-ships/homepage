@@ -17,7 +17,7 @@ export interface AppButtonProps {
   linkTo?: string;
   text?: string;
   type?: ButtonType;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 // AppButton component
