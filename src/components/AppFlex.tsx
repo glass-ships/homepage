@@ -26,11 +26,21 @@ const alignMap = {
 };
 
 // AppFlex component
-export default function AppFlex({ children, id = "", className = "", flow = "block", direction = "row", alignH = "center", alignV = "center", gap = "medium"}: AppFlexProps) {
+export default function AppFlex({
+  children,
+  id = "",
+  className = "",
+  flow = "block",
+  direction = "row",
+  alignH = "center",
+  alignV = "center",
+  gap = "medium",
+}: AppFlexProps) {
   const justifyContent = direction === "row" ? alignMap[alignH] : alignMap[alignV];
   const alignItems = direction === "row" ? alignMap[alignV] : alignMap[alignH];
   return (
-    <div id={id}
+    <div
+      id={id}
       className={`${styles.flex} ${styles[flow]} ${styles[direction]} ${styles[gap]} ${className}`}
       style={{ justifyContent, alignItems }}
     >

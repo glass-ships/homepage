@@ -1,4 +1,9 @@
-import { IconName, IconPrefix, SizeProp, findIconDefinition } from "@fortawesome/fontawesome-svg-core";
+import {
+  IconName,
+  IconPrefix,
+  // SizeProp,
+  findIconDefinition,
+} from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import styles from "./AppIcon.module.scss";
 import "@/global/icons";

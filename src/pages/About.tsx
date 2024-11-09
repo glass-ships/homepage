@@ -3,7 +3,7 @@ import Image from "next/image";
 import AppButton from "@/components/AppButton";
 import AppFlex from "@/components/AppFlex";
 import AppSection from "@/components/AppSection";
-import AppTooltip from "@/components/AppTooltip";
+// import AppTooltip from "@/components/AppTooltip";
 
 import logoCDMS from "@/assets/images/logo-supercdms.png";
 import logoMonarch from "@/assets/images/logo-monarch.svg";
@@ -19,17 +19,24 @@ export default function About() {
       <h2 className="appsecheader">About</h2>
 
       <p>
-        Hi, I'm Glass - a scientific software engineer and data scientist with a Bachelor in Physics from University of Colorado Denver.
+        Hi, I'm Glass - a scientific software engineer and data scientist with a Bachelor in Physics from University of
+        Colorado Denver.
       </p>
       <p>
         Currently, I work with&nbsp;
-        <a href="https://neutrons.ornl.gov">Oak Ridge National Lab</a>, where I develop analysis software, web apps, and infrastructure for one of the world's leading neutron science research facilities.
+        <a href="https://neutrons.ornl.gov">Oak Ridge National Lab</a>, where I develop analysis software, web apps, and
+        infrastructure for one of the world's leading neutron science research facilities.
       </p>
       <p>
-        When I'm not at work, I enjoy making music, developing and contributing to open-source projects, and lounging with my cat.
+        When I'm not at work, I enjoy making music, developing and contributing to open-source projects, and lounging
+        with my cat.
       </p>
 
-      <AppButton text="Download my resume" icon="file-arrow-down" linkTo="https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf" />
+      <AppButton
+        text="Download my resume"
+        icon="file-arrow-down"
+        linkTo="https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf"
+      />
 
       <h5>I'm proud to have collaborated with:</h5>
       <AppFlex direction="row" gap="tiny">

@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 
-function UseDarkMode() {
-  const [isDark, setDark] = useState(false);
+export function UseDarkMode() {
+  const [isDark, setDark] = useState(false); // eslint-disable-line  @typescript-eslint/no-unused-vars
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add("dark");
@@ -14,7 +14,7 @@ function UseDarkMode() {
   return <div>Dark Mode: {isDark}</div>;
 }
 
-function SetShrunk() {
+export function SetShrunk() {
   const [isShrunk, setShrunk] = useState(false);
   useEffect(() => {
     const onScroll = () => {
@@ -37,13 +37,11 @@ function SetShrunk() {
   return <div>Shrunk: {isShrunk}</div>;
 }
 
-function SetThin() {
+export function SetThin() {
   const [isThin, setThin] = useState(window.innerWidth < 768);
   useEffect(() => {
     const onResize = () => {
-      setThin((isThin) => {
-        return window.innerWidth < 768;
-      });
+      setThin(window.innerWidth < 768);
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);

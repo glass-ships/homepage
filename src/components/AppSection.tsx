@@ -18,7 +18,13 @@ export interface AppSectionProps {
 }
 
 // AppSection component
-export default function AppSection({ children, id = "", width = "full", height = "full", design = "normal" }: AppSectionProps) {
+export default function AppSection({
+  children,
+  id = "",
+  width = "full",
+  height = "full",
+  design = "normal",
+}: AppSectionProps) {
   const hStyle = height === "full" ? styles.hFull : styles.hAuto;
   return (
     <div id={id} className={`${styles.appsection} ${styles[width]} ${hStyle} ${styles[design]}`}>

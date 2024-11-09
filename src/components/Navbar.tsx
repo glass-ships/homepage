@@ -1,7 +1,14 @@
 // "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Button, Menu, MenuItem, MenuItemProps, MenuTrigger, Popover } from "react-aria-components";
+import {
+  Button,
+  Menu,
+  MenuItem,
+  //MenuItemProps,
+  MenuTrigger,
+  Popover,
+} from "react-aria-components";
 
 import AppIcon from "@/components/AppIcon";
 import AppFlex from "@/components/AppFlex";
@@ -13,9 +20,7 @@ export default function Navbar() {
   useEffect(() => {
     setThin(window.innerWidth < 600);
     const onResize = () => {
-      setThin((isThin) => {
-        return window.innerWidth < 600;
-      });
+      setThin(window.innerWidth < 600);
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
@@ -27,7 +32,7 @@ export default function Navbar() {
         <Image src={Logo} alt="Logo" className={styles.logo} />
       </a>
 
-      {isThin ? (
+      {isThin ?
         <MenuTrigger>
           <Button aria-label="Menu" className={styles.dropdownbutton}>
             <AppIcon icon="bars" size="medium" color="#fff" />
@@ -42,15 +47,14 @@ export default function Navbar() {
             </Menu>
           </Popover>
         </MenuTrigger>
-      ) : (
-        <AppFlex alignH="right" flow="inline">
+      : <AppFlex alignH="right" flow="inline">
           {links.map((link, index) => (
             <a key={index} href={link.href}>
               {link.label}
             </a>
           ))}
         </AppFlex>
-      )}
+      }
     </nav>
   );
 }

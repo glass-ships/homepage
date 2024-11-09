@@ -27,13 +27,29 @@ export default function Testbed() {
             </AppFlex>
             <AppFlex>
               <AppButton icon="vial" color="primary" design="circle" onClick={() => console.log("Icon clicked")} />
-              <AppButton icon="vial" text="Circle Two" color="secondary" design="circle" onClick={() => console.log("Icon clicked")} />
+              <AppButton
+                icon="vial"
+                text="Circle Two"
+                color="secondary"
+                design="circle"
+                onClick={() => console.log("Icon clicked")}
+              />
               <AppButton text="Circle 3" color="tertiary" design="circle" onClick={() => console.log("Icon clicked")} />
               <AppButton icon="vial" text="Circle 4" color="none" design="circle" linkTo="/testbed" />
             </AppFlex>
             <AppFlex>
-              <AppButton text="Small 5" color="primary" design="small" onClick={() => console.log("Button 4 clicked")} />
-              <AppButton text="Small 6" color="secondary" design="small" onClick={() => console.log("Button 5 clicked")} />
+              <AppButton
+                text="Small 5"
+                color="primary"
+                design="small"
+                onClick={() => console.log("Button 4 clicked")}
+              />
+              <AppButton
+                text="Small 6"
+                color="secondary"
+                design="small"
+                onClick={() => console.log("Button 5 clicked")}
+              />
               <AppButton icon="vial" color="tertiary" design="small" onClick={() => console.log("Button 6 clicked")} />
               <AppButton text="Small 8" icon="vial" color="none" design="small" linkTo="/testbed" />
             </AppFlex>

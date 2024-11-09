@@ -4,33 +4,33 @@ import * as fas from "@fortawesome/free-solid-svg-icons";
 import * as far from "@fortawesome/free-regular-svg-icons";
 
 const faIcons: { [key: string]: fab.IconDefinition } = {
-    // Brand icons
-    "git": fab.faGitAlt,
-    "git-alt": fab.faGitAlt,
-    "linkedin": fab.faLinkedin,
-    "python": fab.faPython,
-    // Regular icons
-    "paper-plane": far.faPaperPlane,
-    "square": far.faSquare,
-    "vial": fas.faVial,
-    // Solid icons
-    "arrow-up-right-from-square": fas.faArrowUpRightFromSquare,
-    "bars": fas.faBars,
-    "chevron-down": fas.faChevronDown,
-    "cloud-arrow-up": fas.faCloudArrowUp,
-    "code": fas.faCode,
-    "code-branch": fas.faCodeBranch,
-    "diagram-project": fas.faDiagramProject,
-    "display": fas.faDisplay,
-    "envelope": fas.faEnvelope,
-    "file-arrow-down": fas.faFileDownload,
-    "filter": fas.faFilter,
-    "magnifying-glass": fas.faMagnifyingGlass,
-    "square-check": fas.faSquareCheck,
-    "terminal": fas.faTerminal,
-    "user-astronaut": fas.faUserAstronaut,
-  };
-  
+  // Brand icons
+  git: fab.faGitAlt,
+  "git-alt": fab.faGitAlt,
+  linkedin: fab.faLinkedin,
+  python: fab.faPython,
+  // Regular icons
+  "paper-plane": far.faPaperPlane,
+  square: far.faSquare,
+  vial: fas.faVial,
+  // Solid icons
+  "arrow-up-right-from-square": fas.faArrowUpRightFromSquare,
+  bars: fas.faBars,
+  "chevron-down": fas.faChevronDown,
+  "cloud-arrow-up": fas.faCloudArrowUp,
+  code: fas.faCode,
+  "code-branch": fas.faCodeBranch,
+  "diagram-project": fas.faDiagramProject,
+  display: fas.faDisplay,
+  envelope: fas.faEnvelope,
+  "file-arrow-down": fas.faFileDownload,
+  filter: fas.faFilter,
+  "magnifying-glass": fas.faMagnifyingGlass,
+  "square-check": fas.faSquareCheck,
+  terminal: fas.faTerminal,
+  "user-astronaut": fas.faUserAstronaut,
+};
+
 library.add(...Object.values(faIcons));
 export default faIcons;
 

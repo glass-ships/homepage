@@ -34,38 +34,45 @@ export default function Projects() {
 const projects = [
   {
     title: "Koza",
-    description:
-      "A functionally designed data transformation library in Python. Koza is intended to be easy to use and capable of handling large datasets. It is primarily used in the Monarch Initiative's data ingest pipeline, but can be used for many data transformation tasks.",
+    description: `A functionally designed data transformation library in Python. 
+      Koza is intended to be easy to use and capable of handling large datasets.
+      It is primarily used in the Monarch Initiative's data ingest pipeline, 
+      but can be used for many data transformation tasks.`,
     link: "https://monarch-initiative.github.io/koza",
   },
   {
     title: "Monarch Ingest",
-    description:
-      "A collection of Koza ingests integrating several data sources into a single knowledge graph. I contribute to data processing, validation, normalization, and integration, as well as the pipeline's infrastructure, including deployment with Google Cloud Platform.",
+    description: `A collection of Koza ingests integrating several data sources into a single knowledge graph.
+      I contribute to data processing, validation, normalization, and integration,
+      as well as the pipeline's infrastructure, including deployment with Google Cloud Platform.`,
     link: "https://monarch-initiative.github.io/monarch-ingest/",
   },
   {
     title: "Monarch UI",
-    description:
-      "Monarch Initiative's webpage, which allows users to search for genes, diseases, and other biological entities. I wrote the Python library for querying the Monarch database for backend, a FastAPI wrapper for the library, and contribute to development of a Vue/TS frontend.",
+    description: `Monarch Initiative's webpage, which allows users to search for genes, diseases,
+      and other biological entities.I wrote the Python library for querying the Monarch database for backend,
+      a FastAPI wrapper for the library, and contribute to development of a Vue/TS frontend.`,
     link: "https://monarch-app.monarchinitiative.org/",
   },
   {
     title: "CDMS JupyterLab",
-    description:
-      "Dark matter data analysis requires a complex and fragile system of dependencies. To streamline the analysis process, I containerized the environment in a Dockerfile to work with an instance of JupyterHub hosted at SLAC.",
+    description: `Dark matter data analysis requires a complex and fragile system of dependencies. 
+      To streamline the analysis process, I containerized the environment in a Dockerfile
+       to work with an instance of JupyterHub hosted at SLAC.`,
     link: "https://github.com/glass-ships/cdms-jupyterlab",
   },
   {
     title: "LinkML",
-    description:
-      "A language for describing data models, generating classes in several languages and formats. I contributed to several aspects of the project, including documentation, bug fixes, and new features for the Python, Typescript generators.",
+    description: `A language for describing data models, generating classes in several languages and formats.
+       I contributed to several aspects of the project, including documentation, bug fixes,
+        and new features for the Python, Typescript generators.`,
     link: "https://linkml.github.io/linkml",
   },
   {
     title: "Compass Bot",
-    description:
-      "A general purpose Discord bot in Python, including custom commands, music player, and moderation utilities. Mostly a personal project, but is used in several servers, and allows me to experiment with new techniques and technologies.",
+    description: `A general purpose Discord bot in Python, including custom commands, music player, 
+      and moderation utilities. Mostly a personal project, but is used in several servers,
+       and allows me to experiment with new techniques and technologies.`,
     link: "https://glass-ships.gitlab.io/compass-bot",
   },
 ];
