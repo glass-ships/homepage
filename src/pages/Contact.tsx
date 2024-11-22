@@ -12,7 +12,7 @@ export default function Contact() {
           Interested in working together? <br />
           Reach out to me at any of the links below,
           <br />
-          or use this form to send me an email.
+          or send me an email:
         </p>
         <form className={styles.form} action="https://formspree.io/f/moqpzbzj" method="POST">
           <input className={styles.textbox} type="email" name="email" placeholder="Your email" />

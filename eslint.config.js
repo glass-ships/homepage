@@ -17,8 +17,8 @@ export default [
     // "next/typescript",
     "prettier"
   ),
-  eslintPluginPrettierRecommended,
   ...tseslint.configs.recommended,
+  eslintPluginPrettierRecommended,
   {
     languageOptions: {
       parserOptions: {
