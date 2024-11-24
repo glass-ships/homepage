@@ -1,14 +1,13 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import tseslint from 'typescript-eslint';
+import tseslint, { parser } from "typescript-eslint";
 import url from "url";
 
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-  // allConfig: js.configs.all,
 });
 
 export default [
@@ -21,9 +20,10 @@ export default [
   eslintPluginPrettierRecommended,
   {
     languageOptions: {
+      parser: parser,
       parserOptions: {
         ecmaVersion: "latest",
-        sourceType: "script",
+        sourceType: "module",
       },
     },
     files: ["src/**/*.ts", "src/**/*.tsx"],
