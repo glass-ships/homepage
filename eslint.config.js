@@ -5,17 +5,13 @@ import tseslint, { parser } from "typescript-eslint";
 import url from "url";
 
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
+// const compat = new FlatCompat({
+//   baseDirectory: __dirname,
+//   recommendedConfig: js.configs.recommended,
+// });
 
-export default [
-  ...compat.extends(
-    // "next/core-web-vitals",
-    // "next/typescript",
-    "prettier"
-  ),
+const eslintConfig = [
+  // ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   ...tseslint.configs.recommended,
   eslintPluginPrettierRecommended,
   {
@@ -41,3 +37,5 @@ export default [
     },
   },
 ];
+
+export default eslintConfig;
