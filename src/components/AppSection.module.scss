@@ -19,9 +19,9 @@
   // backdrop-filter: blur(10px);
   // &.normal {}
   &.fill {
-    // background: $off-black;
-    &:nth-child(odd) { background: $off-black; }
-    &:nth-child(even) { background: $dark-gray; }
+    // background: $black;
+    &:nth-child(odd) { background: $black; }
+    &:nth-child(even) { background: $dark-grey; }
   }
   &:last-of-type { flex-grow: 1; }
 }

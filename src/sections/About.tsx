@@ -28,8 +28,8 @@ export default function About() {
         infrastructure for one of the world's leading neutron science research facilities.
       </p>
       <p>
-        When I'm not at work, I enjoy making music, developing and contributing to open-source projects, and lounging
-        with my cat.
+        When I'm not at work, I enjoy making music, gaming, developing and contributing to open-source projects, and
+        lounging with my cats.
       </p>
 
       <AppButton
@@ -48,7 +48,7 @@ export default function About() {
           },
           {
             name: "Monarch Initiative",
-            url: "https://github.com/monarch-initiative/",
+            url: "https://monarchinitiative.org",
             logo: logoMonarch,
           },
           {

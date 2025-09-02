@@ -15,6 +15,7 @@ export interface AppSectionProps {
   width?: AppSectionWidth;
   height?: AppSectionHeight;
   design?: AppSectionDesign;
+  onScroll?: (event: React.UIEvent<HTMLDivElement>) => void;
 }
 
 // AppSection component
@@ -24,10 +25,15 @@ export default function AppSection({
   width = "full",
   height = "full",
   design = "normal",
+  onScroll,
 }: AppSectionProps) {
   const hStyle = height === "full" ? styles.hFull : styles.hAuto;
   return (
-    <div id={id} className={`${styles.appsection} ${styles[width]} ${hStyle} ${styles[design]}`}>
+    <div
+      id={id}
+      className={`${styles.appsection} ${styles[width]} ${hStyle} ${styles[design]}`}
+      onScroll={onScroll ? onScroll : undefined}
+    >
       {children}
     </div>
   );

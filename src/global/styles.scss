@@ -19,7 +19,7 @@ main {
   min-height: 100vh;
   background: url("/images/bg.jpg") no-repeat center fixed;
   background-size: cover;
-  color: $light-gray;
+  color: $light-grey;
   margin: 0;
   padding: 0;
   // padding: 1.125rem; /* 2rem? */
@@ -34,7 +34,7 @@ main {
 }
 
 .appsecheader {
-  text-shadow: 0 0 10px $off-black;
+  text-shadow: 0 0 10px $black;
 }
 
 /** Text styles */
@@ -42,38 +42,38 @@ main {
 h1 {
   font-size: $huge;
   font-weight: $light;
-  color: $off-white;
-  text-shadow: 0 0 10px $off-black;
+  color: $white;
+  text-shadow: 0 0 10px $black;
 }
 h2 {
   font-size: 5rem;
   font-weight: $light;
-  color: $off-white;
-  text-shadow: 0 0 10px $off-black;
+  color: $white;
+  text-shadow: 0 0 10px $black;
 }
 h3 {
   font-size: 4rem;
   font-weight: $light;
-  color: $off-white;
-  text-shadow: 0 0 10px $off-black;
+  color: $white;
+  text-shadow: 0 0 10px $black;
 }
 h4 {
   font-size: 3rem;
   font-weight: $light;
-  color: $off-white;
-  text-shadow: 0 0 10px $off-black;
+  color: $white;
+  text-shadow: 0 0 10px $black;
 }
 h5 {
   font-size: 2rem;
   font-weight: $light;
-  color: $off-white;
-  text-shadow: 0 0 10px $off-black;
+  color: $white;
+  text-shadow: 0 0 10px $black;
 }
 p {
   // font-size: $xl;
   font-size: clamp($small, -0.8rem + 4vw, $xl);
   font-weight: $normal;
-  color: $light-gray;
+  color: $light-grey;
   line-height: $spacing;
   max-width: 50ch;
   align-self: center;
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 ::selection {
-  background-color: $hover-bg;
+  background-color: $highlight-bg;
   color: #e0e7ff;
 }
 

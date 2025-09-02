@@ -11,53 +11,67 @@ $bold: 550;
   justify-content: center;
   max-width: 100%;
   gap: 10px;
-  // text-decoration: none;
   border: none;
-  transition: color $fast, background $fast, opacity $fast, box-shadow $fast;
+  transition:
+    color $fast,
+    background $fast,
+    opacity $fast,
+    box-shadow $fast;
   cursor: pointer;
 
   &.text {
     font-size: $clamped;
     font-weight: $bold;
   }
+
   &.primary {
     background: $primary-light;
-    color: $off-black;
+    color: $black;
     &:hover,
-    &:focus {
+    &:active {
       background: $primary-mid;
-      outline: none;
+      box-shadow: 0 0 0 3px $tertiary;
+    }
+    &:focus {
       box-shadow: 0 0 0 3px $desaturated1;
     }
   }
+
   &.secondary {
     background: $secondary-light;
-    color: $off-black;
+    color: $black;
     &:hover,
-    &:focus {
+    &:active {
       background: $secondary-mid;
-      outline: none;
+      box-shadow: 0 0 0 3px $tertiary;
+    }
+    &:focus {
       box-shadow: 0 0 0 3px $desaturated1;
     }
   }
+
   &.tertiary {
     background: $tertiary-light;
-    color: $off-black;
+    color: $black;
     &:hover,
-    &:focus {
+    &:active {
       background: $tertiary-mid;
-      outline: none;
+      box-shadow: 0 0 0 3px $tertiary;
+    }
+    &:focus {
       box-shadow: 0 0 0 3px $desaturated1;
     }
   }
+
   &.none {
     background-color: transparent;
-    color: $off-white;
+    color: $white;
     &:hover,
+    &:active {
+      background: $grey;
+      box-shadow: 0 0 0 3px $tertiary;
+    }
     &:focus {
-      background: $light-gray;
-      color: $off-black;
-      outline: none;
       box-shadow: 0 0 0 3px $desaturated1;
     }
   }
@@ -67,11 +81,6 @@ $bold: 550;
     min-height: 40px;
     padding: 5px 20px;
     border-radius: $rounded;
-    // &:hover,
-    // &:focus {
-    //   outline: none;
-    //   box-shadow: 0 0 0 3px $desaturated1;
-    // }
   }
 
   &.circle {
@@ -85,34 +94,10 @@ $bold: 550;
       width: 2.5em;
       height: 2.5em;
     }
-    &:hover,
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px $desaturated1;
-    }
   }
 
   &.small {
     padding: 5px;
     border-radius: $rounded;
-    // &:hover,
-    // &:focus {
-    //   //   color: $black;
-    //   color: $off-black;
-    // }
   }
 }
-
-// button {
-//   &.text {
-//     text-decoration: none;
-//     color: $off-black;
-//     font-weight: $bold;
-//     font-size: $clamped;
-//   }
-// }
-// .fill {
-//   .button.circle.primary {
-//     background: $primary-mid;
-//   }
-// }

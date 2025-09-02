@@ -22,14 +22,11 @@ export default function AppGrid({ cols = 3, children }: AppGridProps) {
         } as React.CSSProperties
       }
     >
-      {/* <div className={styles.grid} style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}> */}
       {items.map((item, index) => (
         <div key={index} className={styles.item}>
           {item}
         </div>
       ))}
-      {/* {items} */}
-      {/* </div> */}
     </div>
   );
 }

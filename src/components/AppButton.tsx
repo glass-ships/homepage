@@ -9,23 +9,23 @@ export type ButtonColors = "primary" | "secondary" | "tertiary" | "none";
 export type ButtonDesigns = "normal" | "circle" | "small";
 export type ButtonType = "button" | "link" | "submit";
 export interface AppButtonProps {
-  classes?: string;
   color?: ButtonColors;
   design?: ButtonDesigns;
   icon?: string;
   iconColor?: string;
+  id?: string;
   linkTo?: string;
   text?: string;
   type?: ButtonType;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement> | null) => void;
 }
 
 // AppButton component
 export default function AppButton({
-  // classes = "",
   color = "primary",
   design = "normal",
   icon = "",
+  id = "",
   linkTo = "",
   text = "",
   type = "button",
@@ -33,24 +33,28 @@ export default function AppButton({
 }: AppButtonProps) {
   const iconColor = color === "none" ? "#facc15" : "black";
   const buttonClass = `${styles.button} ${styles[color]} ${styles[design]} ${text ? styles.text : ""}`;
-  const iconArgs: AppIconProps = { icon, color: iconColor, size: text ? "tiny" : "small" };
+  const iconArgs: AppIconProps = {
+    icon,
+    color: iconColor,
+    size: text ? "tiny" : "small",
+  };
   if (type === "link" || linkTo !== "") {
     return (
-      <a href={linkTo} target="_blank" className={buttonClass}>
+      <a id={id} href={linkTo} target="_blank" className={buttonClass}>
         {icon && <AppIcon {...iconArgs} />}
         {text && text}
       </a>
     );
   } else if (type === "button") {
     return (
-      <button onClick={onClick} className={buttonClass}>
+      <button id={id} onClick={onClick} className={buttonClass}>
         {icon && <AppIcon {...iconArgs} />}
         {text && <span className={styles.text}>{text}</span>}
       </button>
     );
   } else if (type === "submit") {
     return (
-      <button type="submit" className={buttonClass}>
+      <button id={id} type="submit" className={buttonClass}>
         {icon && <AppIcon {...iconArgs} />}
         {text && <span className={styles.text}>{text}</span>}
       </button>

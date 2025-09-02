@@ -41,7 +41,11 @@ export default function AppFlex({
   return (
     <div
       id={id}
-      className={`${styles.flex} ${styles[flow]} ${styles[direction]} ${styles[gap]} ${className}`}
+      className={`${styles.flex}
+        ${styles[flow]}
+        ${styles[direction]}
+        ${styles[gap]}
+        ${className}`}
       style={{ justifyContent, alignItems }}
     >
       {children}

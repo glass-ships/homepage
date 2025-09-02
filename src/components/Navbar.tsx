@@ -1,30 +1,25 @@
-// "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import {
-  Button,
-  Menu,
-  MenuItem,
-  //MenuItemProps,
-  MenuTrigger,
-  Popover,
-} from "react-aria-components";
+// import { useEffect, useState } from "react";
+import { Button, Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
 
 import AppIcon from "@/components/AppIcon";
 import AppFlex from "@/components/AppFlex";
 import Logo from "@/assets/images/logo.svg";
 import styles from "./Navbar.module.scss";
+import { useIsThin } from "@/hooks/useIsThin";
 
 export default function Navbar() {
-  const [isThin, setThin] = useState(false);
-  useEffect(() => {
-    setThin(window.innerWidth < 600);
-    const onResize = () => {
-      setThin(window.innerWidth < 600);
-    };
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
+  // const [isThin, setThin] = useState(false);
+  // useEffect(() => {
+  //   setThin(window.innerWidth < 600);
+  //   const onResize = () => {
+  //     setThin(window.innerWidth < 600);
+  //   };
+  //   window.addEventListener("resize", onResize);
+  //   return () => window.removeEventListener("resize", onResize);
+  // }, []);
+
+  const isThin = useIsThin();
 
   return (
     <nav className={styles.navbar}>

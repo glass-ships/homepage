@@ -14,11 +14,11 @@
     max-width: 20ch;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid $off-white;
+    border: 1px solid $white;
     opacity: 0;
     transition: opacity $fast, visibility $fast;
-    background-color: $off-black;
-    color: $off-white;
+    background-color: $black;
+    color: $white;
     z-index: 1;
   }
 }
