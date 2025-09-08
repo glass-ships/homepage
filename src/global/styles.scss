@@ -21,15 +21,12 @@ main {
   color: v.$light-grey;
   margin: 0;
   padding: 0;
-  // padding: 1.125rem; /* 2rem? */
 
   display: flex;
   flex-direction: column;
   position: relative;
   flex-grow: 1;
   align-items: stretch;
-  // align-items: center;
-  // justify-content: space-between;
 }
 
 /** Text styles */
@@ -74,8 +71,8 @@ p {
   align-self: center;
 }
 a {
-  color: v.$tertiary-light;
-  font-weight: v.$light;
+  color: v.$tertiary-mid;
+  font-weight: v.$normal;
   font-size: clamp(v.$small, -0.8rem + 4vw, v.$xl);
   text-decoration: none;
 }

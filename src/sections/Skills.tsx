@@ -36,7 +36,8 @@ export default function Skills() {
             <AppIcon
               icon={skill.icon}
               size="large"
-              background={true}
+              color="#facc15"
+              background
             />
             <h5>{skill.title}</h5>
             <p>{skill.description}</p>

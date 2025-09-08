@@ -16,18 +16,17 @@ export default function About() {
       <h2 className="appsecheader">About</h2>
 
       <p>
-        Hi, I'm Glass - a scientific software engineer and data scientist with a
-        Bachelor in Physics from University of Colorado Denver.
+        I'm Glass - a scientific software engineer and data scientist with a Bachelor in Physics from University of
+        Colorado Denver.
       </p>
       <p>
         Currently, I work with&nbsp;
-        <a href="https://neutrons.ornl.gov">Oak Ridge National Lab</a>, where I
-        develop analysis software, web apps, and infrastructure for one of the
-        world's leading neutron science research facilities.
+        <a href="https://neutrons.ornl.gov">Oak Ridge National Lab</a>, where I develop analysis software, web apps, and
+        infrastructure for one of the world's leading neutron science research facilities.
       </p>
       <p>
-        When I'm not at work, I enjoy making music, gaming, developing and
-        contributing to open-source projects, and lounging with my cats.
+        When I'm not at work, I enjoy making music, gaming, developing and contributing to open-source projects, and
+        lounging with my cats.
       </p>
 
       <AppButton
@@ -38,53 +37,45 @@ export default function About() {
 
       <h5>I'm proud to have collaborated with:</h5>
       <AppFlex direction="row" gap="tiny">
-        {[
-          {
-            name: "Oak Ridge National Laboratory",
-            url: "https://neutrons.ornl.gov/",
-            logo: logoORNL,
-          },
-          {
-            name: "Monarch Initiative",
-            url: "https://monarchinitiative.org",
-            logo: logoMonarch,
-          },
-          {
-            name: "TISLab",
-            url: "https://tislab.org/",
-            logo: logoTislab,
-          },
-          {
-            name: "SuperCDMS",
-            url: "https://supercdms.slac.stanford.edu/",
-            logo: logoCDMS,
-          },
-          {
-            name: "Scikit-HEP",
-            url: "https://scikit-hep.org/",
-            logo: logoScikitHep,
-          },
-          {
-            name: "University of Colorado Denver",
-            url: "https://www.ucdenver.edu/",
-            logo: logoUCD,
-          },
-        ].map((collaborator, index) => (
-          // Collaborator logos
-          <a
-            key={index}
-            href={collaborator.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={collaborator.logo}
-              alt={collaborator.name}
-              className={styles.collaborator}
-            />
+        {collaborations.map((collaborator, index) => (
+          <a key={index} href={collaborator.url} target="_blank" rel="noopener noreferrer">
+            <img src={collaborator.logo} alt={collaborator.name} className={styles.collaborator} />
           </a>
         ))}
       </AppFlex>
     </AppSection>
   );
 }
+
+const collaborations = [
+  {
+    name: "Oak Ridge National Laboratory",
+    url: "https://neutrons.ornl.gov/",
+    logo: logoORNL,
+  },
+  {
+    name: "Monarch Initiative",
+    url: "https://monarchinitiative.org",
+    logo: logoMonarch,
+  },
+  {
+    name: "TISLab",
+    url: "https://tislab.org/",
+    logo: logoTislab,
+  },
+  {
+    name: "SuperCDMS",
+    url: "https://supercdms.slac.stanford.edu/",
+    logo: logoCDMS,
+  },
+  {
+    name: "Scikit-HEP",
+    url: "https://scikit-hep.org/",
+    logo: logoScikitHep,
+  },
+  {
+    name: "University of Colorado Denver",
+    url: "https://www.ucdenver.edu/",
+    logo: logoUCD,
+  },
+];

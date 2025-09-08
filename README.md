@@ -1,4 +1,10 @@
-# React + TypeScript + Vite
+# Glass Portfolio Page
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b5ed339-077e-4bed-88b0-9a53e6476ebb/deploy-status)](https://app.netlify.com/projects/gs-deploy/deploys)
+
+Built using Vite + React + TS
+
+## Default Documentation
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

@@ -2,6 +2,7 @@ import AppSection from "@/components/AppSection";
 import AppGrid from "@/components/AppGrid";
 import AppButton from "@/components/AppButton";
 import styles from "./Projects.module.scss";
+import { title } from "process";
 
 export default function Projects() {
   return (
@@ -12,11 +13,7 @@ export default function Projects() {
         These are some of the projects I've worked on.
         <br />
         You can also see my recent activity on{" "}
-        <a
-          href="https://github.com/glass-ships"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/glass-ships" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
         .
@@ -27,11 +24,7 @@ export default function Projects() {
           <div key={index} className={styles.project}>
             <h5>{project.title}</h5>
             <p>{project.description}</p>
-            <AppButton
-              text="View Project"
-              icon="arrow-up-right-from-square"
-              linkTo={project.link}
-            />
+            <AppButton text="View Project" icon="arrow-up-right-from-square" linkTo={project.link} />
           </div>
         ))}
       </AppGrid>
@@ -41,6 +34,13 @@ export default function Projects() {
 
 const projects = [
   {
+    title: "Semsimian Server",
+    description: `A web server written in Rust which serves a RESTful API for the Semsimian
+      library, which provides efficient semantic similarity calculations for semantic similarity,
+      such as Jaccard and Reznik similarity scores.`,
+    link: "https://github.com/monarch-initiative/semsimian-server",
+  },
+  {
     title: "Koza",
     description: `A functionally designed data transformation library in Python. 
       Koza is intended to be easy to use and capable of handling large datasets.
@@ -49,17 +49,10 @@ const projects = [
     link: "https://monarch-initiative.github.io/koza",
   },
   {
-    title: "Monarch Ingest",
-    description: `A collection of Koza ingests integrating several data sources into a single knowledge graph.
-      I contribute to data processing, validation, normalization, and integration,
-      as well as the pipeline's infrastructure, including deployment with Google Cloud Platform.`,
-    link: "https://monarch-initiative.github.io/monarch-ingest/",
-  },
-  {
     title: "Monarch UI",
     description: `Monarch Initiative's webpage, which allows users to search for genes, diseases,
-      and other biological entities.I wrote the Python library for querying the Monarch database for backend,
-      a FastAPI wrapper for the library, and contribute to development of a Vue/TS frontend.`,
+      and other biological entities. Wrote the Python library for querying the Monarch database,
+      a FastAPI web server, and contribute to development of a Vue/TS frontend.`,
     link: "https://monarch-app.monarchinitiative.org/",
   },
   {

@@ -41,7 +41,7 @@ export default function Contact() {
             text="Send"
             type="submit"
             icon="paper-plane"
-            color="tertiary"
+            // color="tertiary"
           />
         </form>
       </AppFlex>
