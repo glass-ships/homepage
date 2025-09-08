@@ -36,7 +36,8 @@ export default function AppFlex({
   alignV = "center",
   gap = "medium",
 }: AppFlexProps) {
-  const justifyContent = direction === "row" ? alignMap[alignH] : alignMap[alignV];
+  const justifyContent =
+    direction === "row" ? alignMap[alignH] : alignMap[alignV];
   const alignItems = direction === "row" ? alignMap[alignV] : alignMap[alignH];
   return (
     <div

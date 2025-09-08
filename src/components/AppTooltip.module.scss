@@ -1,4 +1,4 @@
-@import "../global/variables";
+@use "../global/variables" as v;
 
 /** Main tooltip styles */
 .tooltip-trigger {
@@ -14,11 +14,11 @@
     max-width: 20ch;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid $white;
+    border: 1px solid v.$white;
     opacity: 0;
-    transition: opacity $fast, visibility $fast;
-    background-color: $black;
-    color: $white;
+    transition: opacity v.$fast, visibility v.$fast;
+    background-color: v.$black;
+    color: v.$white;
     z-index: 1;
   }
 }

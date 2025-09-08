@@ -18,7 +18,10 @@ export default function AppGrid({ cols = 3, children }: AppGridProps) {
       style={
         {
           "--max-cols": cols.toString(),
-          "--content-cols": Math.min(React.Children.count(children), cols).toString(),
+          "--content-cols": Math.min(
+            React.Children.count(children),
+            cols,
+          ).toString(),
         } as React.CSSProperties
       }
     >

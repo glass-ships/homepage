@@ -14,11 +14,35 @@ export default function Contact() {
           <br />
           or send me an email:
         </p>
-        <form className={styles.form} action="https://formspree.io/f/moqpzbzj" method="POST">
-          <input className={styles.textbox} type="email" name="email" placeholder="Your email" />
-          <input className={styles.textbox} type="text" name="subject" placeholder="Subject" />
-          <textarea className={styles.textbox} name="message" placeholder="Your message" rows={10} />
-          <AppButton text="Send" type="submit" icon="paper-plane" color="tertiary" />
+        <form
+          className={styles.form}
+          action="https://formspree.io/f/moqpzbzj"
+          method="POST"
+        >
+          <input
+            className={styles.textbox}
+            type="email"
+            name="email"
+            placeholder="Your email"
+          />
+          <input
+            className={styles.textbox}
+            type="text"
+            name="subject"
+            placeholder="Subject"
+          />
+          <textarea
+            className={styles.textbox}
+            name="message"
+            placeholder="Your message"
+            rows={10}
+          />
+          <AppButton
+            text="Send"
+            type="submit"
+            icon="paper-plane"
+            color="tertiary"
+          />
         </form>
       </AppFlex>
     </AppSection>

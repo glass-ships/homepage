@@ -1,4 +1,4 @@
-@import "../global/variables";
+@use "../global/variables" as v;
 
 .navbar {
   position: sticky;
@@ -17,7 +17,7 @@
   // background: linear-gradient(rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
   // background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
   // background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  background: $black;
+  background: v.$black;
 
   .logo {
     width: 75px;
@@ -34,13 +34,13 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    font-weight: $normal;
-    // font-size: $large;
-    color: $grey;
+    font-weight: v.$normal;
+    // font-size: v.$large;
+    color: v.$grey;
     text-decoration: none;
   }
   a:hover {
-    color: $tertiary;
+    color: v.$tertiary;
   }
 }
 
@@ -51,9 +51,13 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
-  transition: color $fast, background $fast, opacity $fast, box-shadow $fast;
+  transition:
+    color v.$fast,
+    background v.$fast,
+    opacity v.$fast,
+    box-shadow v.$fast;
   &:hover {
-    background: linear-gradient(#3b82f6, #8b5cf6);  
+    background: linear-gradient(#3b82f6, #8b5cf6);
   }
 }
 
@@ -65,7 +69,7 @@
   min-width: 100px;
   box-sizing: border-box;
   outline: none;
-  background-color: $desaturated2;
+  background-color: v.$desaturated2;
   border-radius: 6px;
 }
 
@@ -75,19 +79,20 @@
   padding: 0.286rem 0.571rem;
   position: relative;
   display: grid;
-  grid-template-areas: "label kbd"
-                      "desc  kbd";
+  grid-template-areas:
+    "label kbd"
+    "desc  kbd";
   align-items: center;
   column-gap: 20px;
   border-radius: 6px;
   outline: none;
   forced-color-adjust: none;
-  color: $white;
+  color: v.$white;
   font-size: 1.072rem;
-  font-weight: $normal;
+  font-weight: v.$normal;
   &[data-focused] {
-    background: $primary-light;
-    color: $black
+    background: v.$primary-light;
+    color: v.$black;
   }
 }
 
@@ -95,14 +100,5 @@
   padding: 0.25rem;
   width: 14rem;
   overflow: auto;
-  box-shadow: $shadow;
-
+  box-shadow: v.$shadow;
 }
-
-/* MEDIA QUERIES */
-
-// @media (max-width: 530px) {
-//   .logo {
-//     display: none;
-//   }
-// }

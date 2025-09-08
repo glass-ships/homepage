@@ -8,15 +8,21 @@ export default function Skills() {
     <AppSection id="skills" width="big">
       <h2 className="appsecheader">Skills</h2>
       <p>
-        I develop software for the scientific community for various purposes, including <b>math</b> and{" "}
-        <b>physics models</b>, and <b>data processing, analysis, and visualization</b>.
+        I develop software for the scientific community for various purposes,
+        including <b>math</b> and <b>physics models</b>, and{" "}
+        <b>data processing, analysis, and visualization</b>.
         <br />
-        I'm comfortable working with a variety of languages, frameworks, and tools.
+        I'm comfortable working with a variety of languages, frameworks, and
+        tools.
         <br />
         I'm always learning new things, so this list is always growing!
         <br />
         You can also see my Credly badges{" "}
-        <a href="https://credly.com/users/glass-ships/badges" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://credly.com/users/glass-ships/badges"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           here
         </a>
         .
@@ -27,7 +33,11 @@ export default function Skills() {
       <AppGrid cols={3}>
         {skills.map((skill, index) => (
           <div key={index} className={styles.skillcard}>
-            <AppIcon icon={skill.icon} size="medium" color="#facc15" background={true} />
+            <AppIcon
+              icon={skill.icon}
+              size="large"
+              background={true}
+            />
             <h5>{skill.title}</h5>
             <p>{skill.description}</p>
           </div>

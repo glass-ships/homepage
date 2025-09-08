@@ -1,0 +1,27 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="-256 -256 512 512"
+  data-spinner="true"
+  id="loading"
+>
+  <style>
+    [data-spinner="true"] {
+      animation: spin 2s linear infinite forwards;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <path
+    fill="none"
+    stroke="currentColor"
+    stroke-width="50"
+    d="M 0 205 A 205 205 0 1 1 205 0"
+  />
+</svg>

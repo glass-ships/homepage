@@ -5,8 +5,7 @@ import * as far from "@fortawesome/free-regular-svg-icons";
 
 const faIcons: { [key: string]: fab.IconDefinition } = {
   // Brand icons
-  git: fab.faGitAlt,
-  "git-alt": fab.faGitAlt,
+  github: fab.faGithub,
   linkedin: fab.faLinkedin,
   python: fab.faPython,
   // Regular icons

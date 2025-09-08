@@ -1,4 +1,4 @@
-@import "../global/variables";
+@use "../global/variables" as v;
 
 .skillcard {
   display: flex;
@@ -10,12 +10,12 @@
   height: 100%;
   padding: 1rem;
   background-color: #27272a33;
-  border-radius: $rounded;
-  box-shadow: $shadow;
+  border-radius: v.$rounded;
+  box-shadow: v.$shadow;
 
   p {
-    color: $white;
-    font-weight: $light;
+    color: v.$white;
+    font-weight: v.$light;
     overflow-wrap: break-word;
     overflow: auto;
   }

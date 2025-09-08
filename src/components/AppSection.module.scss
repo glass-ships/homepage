@@ -1,4 +1,4 @@
-@import "../global/variables";
+@use "../global/variables" as v;
 
 .appsection {
   gap: 40px;
@@ -19,17 +19,17 @@
   // backdrop-filter: blur(10px);
   // &.normal {}
   &.fill {
-    // background: $black;
-    &:nth-child(odd) { background: $black; }
-    &:nth-child(even) { background: $dark-grey; }
+    // background: v.$black;
+    &:nth-child(odd) { background: v.$black; }
+    &:nth-child(even) { background: v.$dark-grey; }
   }
   &:last-of-type { flex-grow: 1; }
 }
 
 // Width of the section
 .full { padding: 75px 40px; }
-.big { padding: 75px max(40px, calc((100% - $section-big) / 2)); }
-.medium { padding: 75px max(40px, calc((100% - $section) / 2)); }
+.big { padding: 75px max(40px, calc((100% - v.$section-big) / 2)); }
+.medium { padding: 75px max(40px, calc((100% - v.$section) / 2)); }
 
 // Height of the section
 .hFull { min-height: 100vh; }

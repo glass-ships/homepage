@@ -1,4 +1,4 @@
-@import "../global/variables";
+@use "../global/variables" as v;
 
 .header {
   width: 100%;
@@ -18,11 +18,11 @@
 
   h2 {
     padding-bottom: 1rem;
-    color: $light-grey;
+    color: v.$light-grey;
   }
   h3 {
     padding-bottom: 4rem;
-    color: $light-grey;
+    color: v.$light-grey;
   }
 }
 

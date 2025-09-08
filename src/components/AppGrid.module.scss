@@ -1,4 +1,4 @@
-@import "../global/variables";
+@use "../global/variables" as v;
 
 .gallery {
   --gap: 40px;
@@ -23,11 +23,11 @@
     --screen-cols: 1;
   }
 
-  @media (min-width: $phone) {
+  @media (min-width: v.$phone) {
     --screen-cols: 2;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: v.$tablet) {
     --screen-cols: var(--max-cols) !important;
   }
 
@@ -39,7 +39,7 @@
       --screen-cols: 2;
     }
 
-    @media (min-width: $phone) {
+    @media (min-width: v.$phone) {
       --screen-cols: 3;
     }
   }

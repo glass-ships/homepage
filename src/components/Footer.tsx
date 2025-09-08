@@ -9,7 +9,7 @@ export default function Footbar() {
       <AppFlex flow="inline" alignH="stretch" className={styles.social}>
         {[
           {
-            icon: "github-alt",
+            icon: "github",
             label: "GitHub",
             link: "https://github.com/glass-ships",
           },
@@ -35,7 +35,11 @@ export default function Footbar() {
       <div>
         <p className={styles.license}>
           Created with love by{" "}
-          <a href="https://github.com/glass-ships" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/glass-ships"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Glass Ships &copy; {new Date().getFullYear()}
           </a>
         </p>

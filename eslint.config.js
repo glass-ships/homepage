@@ -1,28 +1,27 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
+import { defineConfig } from "eslint/config";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import tseslint, { parser } from "typescript-eslint";
-import url from "url";
 
-const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
-// const compat = new FlatCompat({
-//   baseDirectory: __dirname,
-//   recommendedConfig: js.configs.recommended,
-// });
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+import { globalIgnores } from "eslint/config";
 
-const eslintConfig = [
-  // ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
-  ...tseslint.configs.recommended,
-  eslintPluginPrettierRecommended,
+export default defineConfig([
+  globalIgnores(["dist"]),
   {
+    files: ["**/*.{ts,tsx}"],
+    extends: [
+      eslintPluginPrettierRecommended,
+      tseslint.configs.recommended,
+      reactHooks.configs["recommended-latest"],
+      reactRefresh.configs.vite,
+    ],
     languageOptions: {
-      parser: parser,
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-      },
+      ecmaVersion: "latest",
+      globals: globals.browser,
+      parser: tseslint.parser,
     },
-    files: ["src/**/*.ts", "src/**/*.tsx"],
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "max-len": ["error", { code: 120 }],
@@ -36,6 +35,4 @@ const eslintConfig = [
       "react/no-unescaped-entities": "off",
     },
   },
-];
-
-export default eslintConfig;
+]);

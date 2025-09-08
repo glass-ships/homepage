@@ -1,7 +1,8 @@
-@import "../global/variables";
+@use "../global/variables" as v;
 
-$clamped: clamp($tiny, -0.8rem + 4vw, $medium);
+$clamped: clamp(v.$tiny, -0.8rem + 4vw, v.$medium);
 $bold: 550;
+
 .button {
   display: flex;
   appearance: none;
@@ -13,10 +14,10 @@ $bold: 550;
   gap: 10px;
   border: none;
   transition:
-    color $fast,
-    background $fast,
-    opacity $fast,
-    box-shadow $fast;
+    color v.$fast,
+    background v.$fast,
+    opacity v.$fast,
+    box-shadow v.$fast;
   cursor: pointer;
 
   &.text {
@@ -25,54 +26,54 @@ $bold: 550;
   }
 
   &.primary {
-    background: $primary-light;
-    color: $black;
+    background: v.$primary-light;
+    color: v.$black;
     &:hover,
     &:active {
-      background: $primary-mid;
-      box-shadow: 0 0 0 3px $tertiary;
+      background: v.$primary-mid;
+      box-shadow: 0 0 0 3px v.$tertiary;
     }
     &:focus {
-      box-shadow: 0 0 0 3px $desaturated1;
+      box-shadow: 0 0 0 3px v.$desaturated1;
     }
   }
 
   &.secondary {
-    background: $secondary-light;
-    color: $black;
+    background: v.$secondary-light;
+    color: v.$black;
     &:hover,
     &:active {
-      background: $secondary-mid;
-      box-shadow: 0 0 0 3px $tertiary;
+      background: v.$secondary-mid;
+      box-shadow: 0 0 0 3px v.$tertiary;
     }
     &:focus {
-      box-shadow: 0 0 0 3px $desaturated1;
+      box-shadow: 0 0 0 3px v.$desaturated1;
     }
   }
 
   &.tertiary {
-    background: $tertiary-light;
-    color: $black;
+    background: v.$tertiary-light;
+    color: v.$black;
     &:hover,
     &:active {
-      background: $tertiary-mid;
-      box-shadow: 0 0 0 3px $tertiary;
+      background: v.$tertiary-mid;
+      box-shadow: 0 0 0 3px v.$tertiary;
     }
     &:focus {
-      box-shadow: 0 0 0 3px $desaturated1;
+      box-shadow: 0 0 0 3px v.$desaturated1;
     }
   }
 
   &.none {
     background-color: transparent;
-    color: $white;
+    color: v.$white;
     &:hover,
     &:active {
-      background: $grey;
-      box-shadow: 0 0 0 3px $tertiary;
+      background: v.$grey;
+      box-shadow: 0 0 0 3px v.$tertiary;
     }
     &:focus {
-      box-shadow: 0 0 0 3px $desaturated1;
+      box-shadow: 0 0 0 3px v.$desaturated1;
     }
   }
 
@@ -80,7 +81,7 @@ $bold: 550;
     min-width: min(200px, calc(100% - 40px));
     min-height: 40px;
     padding: 5px 20px;
-    border-radius: $rounded;
+    border-radius: v.$rounded;
   }
 
   &.circle {
@@ -98,6 +99,6 @@ $bold: 550;
 
   &.small {
     padding: 5px;
-    border-radius: $rounded;
+    border-radius: v.$rounded;
   }
 }

@@ -1,4 +1,3 @@
-import Image from "next/image";
 // import { useEffect, useState } from "react";
 import { Button, Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
 
@@ -24,7 +23,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <a href="#" rel="noopener noreferrer">
-        <Image src={Logo} alt="Logo" className={styles.logo} />
+        <img src={Logo} alt="Logo" className={styles.logo} />
       </a>
 
       {isThin ?

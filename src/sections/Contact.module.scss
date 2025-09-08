@@ -1,4 +1,4 @@
-@import "../global/variables";
+@use "../global/variables" as v;
 
 .form {
   display: flex;
@@ -10,7 +10,7 @@
 }
 .textbox {
   background-color: rgb(39 39 42 / 70%);
-  color: $white;
+  color: v.$white;
   padding: 0.5rem;
-  font-size: $large;
+  font-size: v.$large;
 }

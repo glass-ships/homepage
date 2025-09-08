@@ -1,9 +1,8 @@
-@import "variables";
-// @import url("https://fonts.googleapis.com/css2?family=Antic&family=Inter:wght@100..900&display=swap");
+@use "variables" as v;
 
 * {
   box-sizing: border-box;
-  // font-family: $sans;
+  font-family: v.$sans;
 }
 
 html {
@@ -19,7 +18,7 @@ main {
   min-height: 100vh;
   background: url("/images/bg.jpg") no-repeat center fixed;
   background-size: cover;
-  color: $light-grey;
+  color: v.$light-grey;
   margin: 0;
   padding: 0;
   // padding: 1.125rem; /* 2rem? */
@@ -33,55 +32,51 @@ main {
   // justify-content: space-between;
 }
 
-.appsecheader {
-  text-shadow: 0 0 10px $black;
-}
-
 /** Text styles */
 
 h1 {
-  font-size: $huge;
-  font-weight: $light;
-  color: $white;
-  text-shadow: 0 0 10px $black;
+  font-size: v.$huge;
+  font-weight: v.$light;
+  color: v.$white;
+  text-shadow: 0 0 10px v.$black;
 }
 h2 {
   font-size: 5rem;
-  font-weight: $light;
-  color: $white;
-  text-shadow: 0 0 10px $black;
+  font-weight: v.$light;
+  color: v.$white;
+  text-shadow: 0 0 10px v.$black;
 }
 h3 {
   font-size: 4rem;
-  font-weight: $light;
-  color: $white;
-  text-shadow: 0 0 10px $black;
+  font-weight: v.$light;
+  color: v.$white;
+  text-shadow: 0 0 10px v.$black;
 }
 h4 {
   font-size: 3rem;
-  font-weight: $light;
-  color: $white;
-  text-shadow: 0 0 10px $black;
+  font-weight: v.$light;
+  color: v.$white;
+  text-shadow: 0 0 10px v.$black;
 }
 h5 {
   font-size: 2rem;
-  font-weight: $light;
-  color: $white;
-  text-shadow: 0 0 10px $black;
+  font-weight: v.$light;
+  color: v.$white;
+  text-shadow: 0 0 10px v.$black;
 }
 p {
-  // font-size: $xl;
-  font-size: clamp($small, -0.8rem + 4vw, $xl);
-  font-weight: $normal;
-  color: $light-grey;
-  line-height: $spacing;
+  // font-size: v.$xl;
+  font-size: clamp(v.$small, -0.8rem + 4vw, v.$xl);
+  font-weight: v.$normal;
+  color: v.$light-grey;
+  line-height: v.$spacing;
   max-width: 50ch;
   align-self: center;
 }
 a {
-  color: $tertiary-light;
-  font-weight: $light;
-  font-size: clamp($small, -0.8rem + 4vw, $xl);
+  color: v.$tertiary-light;
+  font-weight: v.$light;
+  font-size: clamp(v.$small, -0.8rem + 4vw, v.$xl);
   text-decoration: none;
 }
 h1, h2, h3, h4, h5, h6, p, a {
@@ -90,7 +85,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 ::selection {
-  background-color: $highlight-bg;
+  background-color: v.$highlight-bg;
   color: #e0e7ff;
 }
 
@@ -106,8 +101,8 @@ img {
   * > h2 { font-size: 5rem; }
   * > h3 { font-size: 4rem;}
   * > h4 { font-size: 3rem;}
-  * > h5 { font-size: $xl;}
-  // p { font-size: $large; }
+  * > h5 { font-size: v.$xl;}
+  // p { font-size: v.$large; }
 }
 
 @media (max-width: 900px) {
@@ -115,26 +110,26 @@ img {
   * > h2 { font-size: 4rem; }
   * > h3 { font-size: 3rem;}
   * > h4 { font-size: 2rem;}
-  * > h5 { font-size: $xl;}
-  // p { font-size: $medium; }
+  * > h5 { font-size: v.$xl;}
+  // p { font-size: v.$medium; }
 }
 
 @media (max-width: 500px) {
   * > h1 { font-size: 3rem; }
   * > h2 { font-size: 2rem; }
-  * > h3 { font-size: $xl;}
-  * > h4 { font-size: $large;}
-  * > h5 { font-size: $medium;}
-  // p { font-size: $small; }
+  * > h3 { font-size: v.$xl;}
+  * > h4 { font-size: v.$large;}
+  * > h5 { font-size: v.$medium;}
+  // p { font-size: v.$small; }
 }
 
 @media (max-width: 300px) {
   * > h1 { font-size: 2rem; }
-  * > h2 { font-size: $xl; }
-  * > h3 {font-size: $large;}
-  * > h4 {font-size: $medium;}
-  * > h5 {font-size: $small;}
-  // p { font-size: $tiny; }
+  * > h2 { font-size: v.$xl; }
+  * > h3 {font-size: v.$large;}
+  * > h4 {font-size: v.$medium;}
+  * > h5 {font-size: v.$small;}
+  // p { font-size: v.$tiny; }
 }
 
 // @media (min-width: 1024px) {
@@ -145,7 +140,7 @@ img {
 //     font-size: 4rem;
 //   }
 //   p {
-//     font-size: $xl;
+//     font-size: v.$xl;
 //     line-height: 1.5;
 //     max-width: 50ch;
 //   }

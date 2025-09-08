@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import Header from "@/sections/Header";
 import About from "@/sections/About";
@@ -12,14 +10,13 @@ import "@/global/styles.scss";
 export default function Home() {
   return (
     <main>
-      {/* <AppTestIframe /> */}
-      {Navbar()}
-      {Header()}
-      {About()}
-      {Skills()}
-      {Projects()}
-      {Contact()}
-      {Footer()}
+      <Navbar />
+      <Header />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
     </main>
   );
 }

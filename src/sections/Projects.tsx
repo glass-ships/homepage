@@ -12,7 +12,11 @@ export default function Projects() {
         These are some of the projects I've worked on.
         <br />
         You can also see my recent activity on{" "}
-        <a href="https://github.com/glass-ships" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/glass-ships"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub
         </a>
         .
@@ -23,7 +27,11 @@ export default function Projects() {
           <div key={index} className={styles.project}>
             <h5>{project.title}</h5>
             <p>{project.description}</p>
-            <AppButton text="View Project" icon="arrow-up-right-from-square" linkTo={project.link} />
+            <AppButton
+              text="View Project"
+              icon="arrow-up-right-from-square"
+              linkTo={project.link}
+            />
           </div>
         ))}
       </AppGrid>
