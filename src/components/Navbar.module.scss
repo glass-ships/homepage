@@ -14,10 +14,7 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
-  // background: linear-gradient(rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  // background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  // background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  background: v.$black;
+  background: #101020;
 
   .logo {
     width: 75px;
@@ -47,7 +44,9 @@
 /** DROPDOWN MENU */
 .dropdownbutton {
   background: none;
+  border: none;
   border-radius: 5px;
+
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -56,6 +55,7 @@
     background v.$fast,
     opacity v.$fast,
     box-shadow v.$fast;
+
   &:hover {
     background: linear-gradient(#3b82f6, #8b5cf6);
   }
@@ -68,9 +68,9 @@
   padding: 2px;
   min-width: 100px;
   box-sizing: border-box;
-  outline: none;
   background-color: v.$desaturated2;
-  border-radius: 6px;
+  outline: 1px solid v.$dark-grey;
+  border-radius: 3px;
 }
 
 .menuitem {

@@ -2,7 +2,6 @@ import { lazy, Suspense, useMemo } from "react";
 import { IconName, IconPrefix, findIconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon as FaIcon } from "@fortawesome/react-fontawesome";
 import styles from "./AppIcon.module.scss";
-import "@/global/icons";
 
 export type AppIconProps = {
   icon: string;
@@ -62,23 +61,20 @@ export default function AppIcon({
     () => [
       styles.appicon,
       styles[size],
-      // background ? styles.background : "",
       className
     ].filter(Boolean).join(" "),
-    [size, background, className]
+    [size, className]
   );
 
   // Check if icon is FontAwesome first
   const faIcon = getFontAwesomeIcon(icon);
   if (faIcon) {
-    // const boxStyle = { width: sizePx[size], height: sizePx[size], fontSize: sizePx[size] };
     return (
     <div className={`${styles[size]} ${background ? styles.background : ""}`}>
       <FaIcon 
       icon={faIcon}
       color={color}
       className={computedClassName}
-      // style={boxStyle}
       />
       </div>
   )}

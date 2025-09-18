@@ -24,7 +24,7 @@ export default function Projects() {
           <div key={index} className={styles.project}>
             <h5>{project.title}</h5>
             <p>{project.description}</p>
-            <AppButton text="View Project" icon="arrow-up-right-from-square" linkTo={project.link} />
+            <AppButton text="View Project" icon="arrow-up-right-from-square" linkTo={project.link} newTab />
           </div>
         ))}
       </AppGrid>

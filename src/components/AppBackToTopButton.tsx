@@ -1,0 +1,74 @@
+import React, { useState, useEffect, useMemo } from "react";
+import AppButton from "./AppButton";
+import "./AppBackToTopButton.scss";
+import AppTooltip from "./AppTooltip";
+
+interface AppBackToTopButtonProps {
+  targetId?: string;
+  thresholdVH?: number;
+  label?: string;
+  ariaLabel?: string;
+}
+
+const AppBackToTopButton: React.FC<AppBackToTopButtonProps> = ({
+  targetId = "top",
+  thresholdVH = 0.1,
+  label, //= "Back to top",
+  ariaLabel = "Back to top",
+}) => {
+  const [scrollY, setScrollY] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  // Custom hooks equivalent to @vueuse/core
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    const handleResize = () => setWindowHeight(window.innerHeight);
+
+    // Initial values
+    setScrollY(window.scrollY);
+    setWindowHeight(window.innerHeight);
+
+    // Event listeners
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // Computed equivalent - show control after threshold
+  const show = useMemo(() => {
+    return scrollY > windowHeight * thresholdVH;
+  }, [scrollY, windowHeight, thresholdVH]);
+
+  // Smooth scroll to anchor or page top
+  const scrollTop = () => {
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div className="toc-top" style={{ display: show ? "flex" : "none" }} aria-label={ariaLabel}>
+      <AppTooltip content={ariaLabel} position="left">
+        <AppButton
+          // design="circle"
+          color="primary"
+          text={label ? label : undefined}
+          icon="angles-up"
+          iconPosition="left"
+          iconColor="yellow"
+          onClick={scrollTop}
+        />
+      </AppTooltip>
+    </div>
+  );
+};
+
+export default AppBackToTopButton;

@@ -81,7 +81,7 @@ $bold: 550;
     min-width: min(200px, calc(100% - 40px));
     min-height: 40px;
     padding: 5px 20px;
-    border-radius: v.$rounded;
+    border-radius: 8px;
   }
 
   &.circle {

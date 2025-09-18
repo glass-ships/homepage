@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "@/pages/Home";
 import Testbed from "@/pages/Testbed";
+import NotFound from "@/pages/NotFound";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -11,6 +12,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/testbed" element={<Testbed />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
