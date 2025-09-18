@@ -3,6 +3,11 @@ import AppSection from "@/components/AppSection";
 import AppFlex from "@/components/AppFlex";
 import styles from "./Contact.module.scss";
 
+const buttonStyle = {
+  display: "flex",
+  justifyContent: "center"
+};
+
 export default function Contact() {
   return (
     <AppSection id="contact" width="medium">
@@ -14,35 +19,18 @@ export default function Contact() {
           <br />
           or send me an email:
         </p>
-        <form
-          className={styles.form}
-          action="https://formspree.io/f/moqpzbzj"
-          method="POST"
-        >
-          <input
-            className={styles.textbox}
-            type="email"
-            name="email"
-            placeholder="Your email"
-          />
-          <input
-            className={styles.textbox}
-            type="text"
-            name="subject"
-            placeholder="Subject"
-          />
-          <textarea
-            className={styles.textbox}
-            name="message"
-            placeholder="Your message"
-            rows={10}
-          />
-          <AppButton
-            text="Send"
-            type="submit"
-            icon="paper-plane"
-            // color="tertiary"
-          />
+        <form className={styles.form} action="https://formspree.io/f/moqpzbzj" method="POST">
+          <input className={styles.textbox} type="email" name="email" placeholder="Your email" />
+          <input className={styles.textbox} type="text" name="subject" placeholder="Subject" />
+          <textarea className={styles.textbox} name="message" placeholder="Your message" rows={10} />
+          <div style={buttonStyle}>
+            <AppButton
+              text="Send"
+              type="submit"
+              icon="paper-plane"
+              color="tertiary"
+            />
+          </div>
         </form>
       </AppFlex>
     </AppSection>
