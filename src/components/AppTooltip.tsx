@@ -11,17 +11,11 @@ export interface AppTooltipProps {
 }
 
 // AppTooltip component
-export default function AppTooltip({
-  children,
-  content,
-  position = "top",
-}: AppTooltipProps) {
+export default function AppTooltip({ children, content, position = "top" }: AppTooltipProps) {
   return (
     <div className={styles["tooltip-trigger"]}>
       {children}
-      <div className={`${styles.tooltip} ${styles[`tooltip-${position}`]}`}>
-        {content}
-      </div>
+      <div className={`${styles.tooltip} ${styles[`tooltip-${position}`]}`}>{content}</div>
     </div>
   );
 }

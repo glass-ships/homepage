@@ -1,3 +1,4 @@
+import AppBackToTopButton from "@/components/AppBackToTopButton";
 import Navbar from "@/components/Navbar";
 import Header from "@/sections/Header";
 import About from "@/sections/About";
@@ -10,6 +11,7 @@ import "@/global/styles.scss";
 export default function Home() {
   return (
     <main>
+      <AppBackToTopButton />
       <Navbar />
       <Header />
       <About />

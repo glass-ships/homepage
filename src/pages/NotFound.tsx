@@ -11,7 +11,7 @@ export default function NotFound() {
           <img src={img404} alt="404 Not Found" />
         </picture>
         <h1>Page Not Found</h1>
-        <AppButton linkTo="/" text="Return to Home"/>
+        <AppButton linkTo="/" text="Return to Home" />
       </AppSection>
     </main>
   );

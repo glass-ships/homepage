@@ -2,7 +2,6 @@ import AppSection from "@/components/AppSection";
 import AppGrid from "@/components/AppGrid";
 import AppButton from "@/components/AppButton";
 import styles from "./Projects.module.scss";
-import { title } from "process";
 
 export default function Projects() {
   return (

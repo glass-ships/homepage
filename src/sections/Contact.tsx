@@ -5,7 +5,7 @@ import styles from "./Contact.module.scss";
 
 const buttonStyle = {
   display: "flex",
-  justifyContent: "center"
+  justifyContent: "center",
 };
 
 export default function Contact() {
@@ -24,12 +24,7 @@ export default function Contact() {
           <input className={styles.textbox} type="text" name="subject" placeholder="Subject" />
           <textarea className={styles.textbox} name="message" placeholder="Your message" rows={10} />
           <div style={buttonStyle}>
-            <AppButton
-              text="Send"
-              type="submit"
-              icon="paper-plane"
-              color="tertiary"
-            />
+            <AppButton text="Send" type="submit" icon="paper-plane" color="tertiary" />
           </div>
         </form>
       </AppFlex>

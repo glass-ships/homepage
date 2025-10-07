@@ -1,8 +1,8 @@
 // Generic button component that either does something (<button>) or goes somewhere (<a>)
 
-/** 
+/**
  * TODO: add copy
- * TODO: add tooltip 
+ * TODO: add tooltip
  */
 import React from "react";
 import styles from "./AppButton.module.scss";
