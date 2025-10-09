@@ -11,7 +11,7 @@ main {
   padding: 0;
   z-index: 1;
 
-  background: v.$desaturated2;
+  background: oklch(0.26 0.08 260);
   color: v.$light-grey;
 
   display: flex;
