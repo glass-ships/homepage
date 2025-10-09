@@ -1,3 +1,4 @@
+@use "../global/styles.scss";
 @use "../global/variables" as v;
 
 .skillcard {
@@ -5,13 +6,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
-  width: 100%; // calc(7 / 12 * 100);
+  // gap: 1rem;
+  width: 100%; // calc(7 / 12 * 100);"
   height: 100%;
   padding: 1rem;
-  background-color: #27272a33;
-  border-radius: v.$rounded;
-  box-shadow: v.$shadow;
 
   p {
     color: v.$white;

@@ -6,26 +6,29 @@ import styles from "./Projects.module.scss";
 export default function Projects() {
   return (
     <AppSection id="projects" width="big">
-      <h2 className="appsecheader">Projects</h2>
-
-      <p>
-        These are some of the projects I've worked on.
-        <br />
-        You can also see my recent activity on{" "}
-        <a href="https://github.com/glass-ships" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-        .
-      </p>
+      <div className={styles.card}>
+        <h2 className="appsecheader">Projects</h2>
+        <p>
+          These are some of the projects I've worked on.
+          <br />
+          You can also see my recent activity on{" "}
+          <a href="https://github.com/glass-ships" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          .
+        </p>
+      </div>
 
       <AppGrid cols={3}>
-        {projects.map((project, index) => (
-          <div key={index} className={styles.project}>
-            <h5>{project.title}</h5>
-            <p>{project.description}</p>
-            <AppButton text="View Project" icon="arrow-up-right-from-square" linkTo={project.link} newTab />
-          </div>
-        ))}
+        {projects.map((project, index) => {
+          return (
+            <div key={index} className={`${styles.card} ${styles.project}`}>
+              <h5>{project.title}</h5>
+              <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
+              <AppButton text="View Project" icon="arrow-up-right-from-square" linkTo={project.link} newTab />
+            </div>
+          );
+        })}
       </AppGrid>
     </AppSection>
   );
@@ -43,7 +46,7 @@ const projects = [
     title: "Koza",
     description: `A functionally designed data transformation library in Python. 
       Koza is intended to be easy to use and capable of handling large datasets.
-      It is primarily used in the Monarch Initiative's data ingest pipeline, 
+      <br /> It is primarily used in the Monarch Initiative's data ingest pipeline, 
       but can be used for many data transformation tasks.`,
     link: "https://monarch-initiative.github.io/koza",
   },

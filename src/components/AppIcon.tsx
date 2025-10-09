@@ -1,6 +1,8 @@
 import { lazy, Suspense, useMemo } from "react";
+
 import { IconName, IconPrefix, findIconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon as FaIcon } from "@fortawesome/react-fontawesome";
+
 import styles from "./AppIcon.module.scss";
 
 export type AppIconProps = {
@@ -58,6 +60,7 @@ export default function AppIcon({
     [size, className]
   );
 
+  // Check if icon is FontAwesome first
   const faIcon = getFontAwesomeIcon(icon);
   if (faIcon) {
     return (
@@ -67,8 +70,9 @@ export default function AppIcon({
     );
   }
 
+  // if file exists in @/assets/icons
   const SvgComponent = getCustomIcon(icon);
-  // console.debug({ SvgComponent });
+  // console.log({ SvgComponent });
 
   if (!SvgComponent) {
     console.log("No svg component found, falling back to `?`");

@@ -3,7 +3,7 @@
 $wrap: 500px;
 
 .footer {
-  z-index: 1010;
+  z-index: 100;
   display: flex;
   // display: grid;
   // grid-template-columns: repeat(3, 1fr);
@@ -12,7 +12,7 @@ $wrap: 500px;
   vertical-align: middle;
   justify-content: space-between;
   padding: 15px 25px;
-  background: v.$desaturated2;
+  background: v.$primary;
   a {
     color: v.$white;
     transition: opacity v.$fast;

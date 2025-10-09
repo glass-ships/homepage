@@ -11,14 +11,19 @@ const buttonStyle = {
 export default function Contact() {
   return (
     <AppSection id="contact" width="medium">
+      <div className={styles.card}>
       <h2 className="appsecheader">Contact</h2>
-      <AppFlex>
         <p>
           Interested in working together? <br />
           Reach out to me at any of the links below,
           <br />
-          or send me an email:
+          or send me an email using the form below!
         </p>
+        <p>
+          I'll do my best to get back to you as soon as I can!
+        </p>
+      </div>
+      <AppFlex>
         <form className={styles.form} action="https://formspree.io/f/moqpzbzj" method="POST">
           <input className={styles.textbox} type="email" name="email" placeholder="Your email" />
           <input className={styles.textbox} type="text" name="subject" placeholder="Subject" />
@@ -28,6 +33,7 @@ export default function Contact() {
           </div>
         </form>
       </AppFlex>
+      
     </AppSection>
   );
 }

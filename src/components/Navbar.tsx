@@ -8,16 +8,6 @@ import styles from "./Navbar.module.scss";
 import { useIsThin } from "@/hooks/useIsThin";
 
 export default function Navbar() {
-  // const [isThin, setThin] = useState(false);
-  // useEffect(() => {
-  //   setThin(window.innerWidth < 600);
-  //   const onResize = () => {
-  //     setThin(window.innerWidth < 600);
-  //   };
-  //   window.addEventListener("resize", onResize);
-  //   return () => window.removeEventListener("resize", onResize);
-  // }, []);
-
   const isThin = useIsThin();
 
   return (

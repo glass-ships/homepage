@@ -19,13 +19,10 @@ const AppBackToTopButton: React.FC<AppBackToTopButtonProps> = ({
   const [scrollY, setScrollY] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
 
+  // Custom hooks equivalent to @vueuse/core
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     const handleResize = () => setWindowHeight(window.innerHeight);
-
-    // // Initial values
-    // setScrollY(window.scrollY);
-    // setWindowHeight(window.innerHeight);
 
     // Event listeners
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -54,7 +51,7 @@ const AppBackToTopButton: React.FC<AppBackToTopButtonProps> = ({
   };
 
   return (
-    <div className="toc-top" style={{ display: show ? "flex" : "none" }} aria-label={ariaLabel}>
+    <div className="to-top" style={{ display: show ? "flex" : "none" }} aria-label={ariaLabel}>
       <AppTooltip content={ariaLabel} position="left">
         <AppButton
           // design="circle"
