@@ -2,8 +2,6 @@
 
 .appsection {
   gap: 40px;
-  // min-height: 100vh;
-  // width: calc(7 / 12 * 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,30 +9,30 @@
   justify-items: center;
   text-align: center;
   scroll-snap-type: y mandatory;
-  border-radius: 0 0.5rem;
-  background: linear-gradient(rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.08));
-  // backdrop-filter: blur(10px);
-  // &.normal {}
+  &.normal {
+    background: linear-gradient(rgb(0, 0, 0, 0.1) 10%, rgb(0, 0, 0, 0.3) 50%, rgb(0, 0, 0, 0.1) 100%);
+    background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.3) 50%, rgb(0, 0, 0, 0.1) 100%);
+    background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.3) 50%, rgb(0, 0, 0, 0.1) 100%);
+    filter: drop-shadow(0 20px 13px rgba(0, 0, 0, 0.253));
+    // backdrop-filter: blur(3px);
+  }
   &.fill {
-    // &:nth-child(odd) { background: v.$black; }
-    // &:nth-child(even) { background: v.$dark-grey; }
-    &:nth-child(odd) { background: v.$dark-grey; }
-    &:nth-child(even) { background: v.$off-black; }
-    
+    &:nth-child(odd) { background: v.$off-black; }
+    &:nth-child(even) { background: v.$dark-grey; }
+    // &:nth-child(odd) { background: color-mix(in oklch, v.$off-black 80%, transparent); }
+    // &:nth-child(even) { background: color-mix(in srgb, v.$dark-grey 80%, transparent); }
   }
   &:last-of-type { flex-grow: 1; }
+  
+  // Width of the section
+  &.full { padding: 75px 40px; }
+  &.big { padding: 75px max(40px, calc((100% - v.$section-big) / 2)); }
+  &.medium { padding: 75px max(40px, calc((100% - v.$section) / 2)); }
+  
+  // Height of the section
+  &.hFull { min-height: 100dvh; }
+  &.hAuto { min-height: auto; }
+  // .hBig { min-height: 75vh; }
+  // .hMedium {  }
 }
 
-// Width of the section
-.full { padding: 75px 40px; }
-.big { padding: 75px max(40px, calc((100% - v.$section-big) / 2)); }
-.medium { padding: 75px max(40px, calc((100% - v.$section) / 2)); }
-
-// Height of the section
-.hFull { min-height: 100vh; }
-.hAuto { min-height: auto; }
-// .hBig { min-height: 75vh; }
-// .hMedium {  }

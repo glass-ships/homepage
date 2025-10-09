@@ -1,33 +1,32 @@
 @use "variables" as v;
+@import "normalize.css";
 
 * {
-  box-sizing: border-box;
   font-family: v.$sans;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
 main {
-  min-height: 100vh;
-  background: url("/images/bg.jpg") no-repeat center fixed;
-  background-size: cover;
-  color: v.$light-grey;
+  min-height: 100dvh;
   margin: 0;
   padding: 0;
+  z-index: 1;
+
+  background: v.$desaturated2;
+  color: v.$light-grey;
 
   display: flex;
   flex-direction: column;
   position: relative;
   flex-grow: 1;
   align-items: stretch;
-  justify-content: center;
+  // justify-content: space-between;
+}
+
+// If using react-toastify
+.Toastify__toast-container {
+  position: absolute;
+  top: 5rem;
+  // z-index: 9999;
 }
 
 /**------------ 
@@ -65,20 +64,27 @@ h5 {
   text-shadow: 0 0 10px v.$black;
 }
 p {
-  font-size: clamp(v.$small, -0.8rem + 4vw, v.$xl);
+  font-size: clamp(v.$tiny, -0.8rem + 4vw, v.$xl);
   font-weight: v.$normal;
   color: v.$light-grey;
   line-height: v.$spacing;
   max-width: 50ch;
-  align-self: center;
+  text-align: center;
 }
 a {
-  font-size: clamp(v.$small, -0.8rem + 4vw, v.$xl);
+  font-size: clamp(v.$tiny, -0.8rem + 4vw, v.$xl);
   font-weight: v.$normal;
   color: v.$tertiary-mid;
   text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6, p, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
   margin: 0;
   // padding: 0;
 }
@@ -88,15 +94,20 @@ h1, h2, h3, h4, h5, h6, p, a {
   color: #e0e7ff;
 }
 
-/**--------------
-  Media styles
-----------------*/
+/**------------ 
+  Utility classes 
+--------------*/
 
-img {
-  max-width: 100%;
-  height: auto;
+/* Card style for sections */
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  justify-items: center;
+  background-color: oklch(0.274 0.005 286 / 0.8);
+  border-radius: v.$rounded;
+  box-shadow: v.$shadow;
+  padding: v.$medium;
 }
-
-/**--------------
-  Media queries
-----------------*/

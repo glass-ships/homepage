@@ -1,8 +1,14 @@
 @use "../global/variables" as v;
 
-.header {
+.header {  
+  background: linear-gradient(rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
+  // background: oklch(0% 0 0 / 0.5);
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.08));
+
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;

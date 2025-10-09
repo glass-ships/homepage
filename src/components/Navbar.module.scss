@@ -14,7 +14,7 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
-  background: #101020;
+  background: v.$primary;
 
   .logo {
     width: 75px;
@@ -33,7 +33,7 @@
     gap: 2rem;
     font-weight: v.$normal;
     // font-size: v.$large;
-    color: v.$grey;
+    color: v.$light-grey;
     text-decoration: none;
   }
   a:hover {
