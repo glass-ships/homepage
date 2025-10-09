@@ -7,11 +7,14 @@ import Projects from "@/sections/Projects";
 import Contact from "@/sections/Contact";
 import Footer from "@/components/Footer";
 import "@/global/styles.scss";
+import Nexus from "@/components/Nexus";
 
 export default function Home() {
   return (
     <main>
       <AppBackToTopButton />
+      <Nexus />
+      
       <Navbar />
       <Header />
       <About />

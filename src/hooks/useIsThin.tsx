@@ -1,20 +1,5 @@
 import { useEffect, useState } from "react";
 
-// export function useIsThin() {
-//   // const [isThin, setThin] = useState(false);
-//   const [isThin, setThin] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 768 : false));
-
-//   useEffect(() => {
-//     const onResize = () => {
-//       setThin(window.innerWidth < 768);
-//     };
-//     window.addEventListener("resize", onResize);
-//     return () => window.removeEventListener("resize", onResize);
-//   }, []);
-
-//   return isThin;
-// }
-
 export function useIsThin() {
   const [isThin, setThin] = useState(() =>
     typeof window !== "undefined" ? window.matchMedia("(max-width: 767px)").matches : false
