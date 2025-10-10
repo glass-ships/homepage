@@ -42,7 +42,7 @@ function getCustomIcon(props: AppIconProps) {
 
   return (
     <Suspense fallback={<FallbackSvg size={size} color={color} className={className} background={background} />}>
-      <div className={`${styles[size]} ${background ? styles.background : ""}`}>
+      <div className={`${styles[size || "small"]} ${background ? styles.background : ""}`}>
         <SvgComponent className={className} style={{ color: color }} width="100%" height="100%" />
       </div>
     </Suspense>
