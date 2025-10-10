@@ -1,5 +1,5 @@
 /** euclidean distance between two points */
-export const dist = (x1 = 0, y1 = 0, x2 = 0, y2 = 0): number => Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+export const dist = (x1 = 0, y1 = 0, x2 = 0, y2 = 0): number => Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 
 /** trig funcs in degrees */
 export const sin = (degrees = 0): number => Math.sin((2 * Math.PI * degrees) / 360);

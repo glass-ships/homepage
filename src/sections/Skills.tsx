@@ -1,6 +1,6 @@
-import AppSection from "@/components/AppSection";
 import AppGrid from "@/components/AppGrid";
 import AppIcon from "@/components/AppIcon";
+import AppSection from "@/components/AppSection";
 import styles from "./Skills.module.scss";
 
 export default function Skills() {
@@ -12,8 +12,8 @@ export default function Skills() {
           I develop software for the scientific community for various purposes, including <b>math</b> and{" "}
           <b>physics models</b>, and <b>data processing, analysis, and visualization</b>.
           <br />
-          I'm comfortable working with a variety of programming languages, frameworks, and tools.
-          I'm always learning new things, so this list is always growing!
+          I'm comfortable working with a variety of programming languages, frameworks, and tools. I'm always learning
+          new things, so this list is always growing!
           <br />
           You can also see my Credly badges{" "}
           <a href="https://credly.com/users/glass-ships/badges" target="_blank" rel="noopener noreferrer">
@@ -26,8 +26,8 @@ export default function Skills() {
       </div>
 
       <AppGrid cols={3}>
-        {skills.map((skill, index) => (
-          <div key={index} className={`${styles.card} ${styles.skillcard}`}>
+        {skills.map((skill) => (
+          <div key={`skill-${skill.icon}`} className={`${styles.card} ${styles.skillcard}`}>
             <AppIcon icon={skill.icon} size="large" color="#facc15" background />
             <h5>{skill.title}</h5>
             <p>{skill.description}</p>

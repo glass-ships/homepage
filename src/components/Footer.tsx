@@ -23,8 +23,8 @@ export default function Footbar() {
             label: "Email",
             link: "mailto:contact@glass-ships.com",
           },
-        ].map((item, index) => (
-          <AppTooltip key={index} content={item.label} position="top">
+        ].map((item, _index) => (
+          <AppTooltip key={`footer-icon-${item.label}`} content={item.label} position="top">
             <a href={item.link} target="_blank">
               <AppIcon icon={item.icon} size="small" color="#facc15" />
             </a>

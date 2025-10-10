@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function useIsThin() {
   const [isThin, setThin] = useState(() =>
-    typeof window !== "undefined" ? window.matchMedia("(max-width: 767px)").matches : false
+    typeof window !== "undefined" ? window.matchMedia("(max-width: 767px)").matches : false,
   );
 
   useEffect(() => {

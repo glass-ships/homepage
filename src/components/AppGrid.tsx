@@ -23,7 +23,7 @@ export default function AppGrid({ cols = 3, children }: AppGridProps) {
       }
     >
       {items.map((item, index) => (
-        <div key={index} className={styles.item}>
+        <div key={React.isValidElement(item) && item.key ? item.key : `grid-item-${index}`} className={styles.item}>
           {item}
         </div>
       ))}

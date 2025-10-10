@@ -1,6 +1,6 @@
 /** Tooltip component to show content on hover */
 
-import React from "react";
+import type React from "react";
 import styles from "./AppTooltip.module.scss";
 
 // Props and Types for the AppTooltip component

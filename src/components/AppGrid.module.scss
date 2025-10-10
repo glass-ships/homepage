@@ -17,7 +17,7 @@
   // e.g. on team page, so portraits in groups with only 1-2 members aren't bigger than portraits in groups with 3+ members
   max-width: calc((var(--cell)) * var(--content-cols) + (var(--content-cols) - 1) * var(--gap));
   gap: var(--gap);
-  // padding: 20px;
+  padding: 20px;
 
   @media (min-width: 0) {
     --screen-cols: 1;

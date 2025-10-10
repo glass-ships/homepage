@@ -1,6 +1,6 @@
-import AppSection from "@/components/AppSection";
-import AppGrid from "@/components/AppGrid";
 import AppButton from "@/components/AppButton";
+import AppGrid from "@/components/AppGrid";
+import AppSection from "@/components/AppSection";
 import styles from "./Projects.module.scss";
 
 export default function Projects() {
@@ -20,11 +20,18 @@ export default function Projects() {
       </div>
 
       <AppGrid cols={3}>
-        {projects.map((project, index) => {
+        {projects.map((project) => {
           return (
-            <div key={index} className={`${styles.card} ${styles.project}`}>
+            <div key={`project-${project.title}`} className={`${styles.card} ${styles.project}`}>
               <h5>{project.title}</h5>
-              <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
+              <p>
+                {project.description.split("\n").map((line, index) => (
+                  <span key={`project-${project.title}-line-${index}`}>
+                    {line}
+                    {index < project.description.split("\n").length - 1 && <br />}
+                  </span>
+                ))}
+              </p>
               <AppButton text="View Project" icon="arrow-up-right-from-square" linkTo={project.link} newTab />
             </div>
           );
@@ -37,8 +44,8 @@ export default function Projects() {
 const projects = [
   {
     title: "Semsimian Server",
-    description: `A web server written in Rust which serves a RESTful API for the Semsimian
-      library, which provides efficient semantic similarity calculations for semantic similarity,
+    description: `A web server written in Rust which serves a RESTful API for the Semsimian library,
+      which provides efficient semantic similarity calculations for semantic similarity,
       such as Jaccard and Reznik similarity scores.`,
     link: "https://github.com/monarch-initiative/semsimian-server",
   },
@@ -46,15 +53,14 @@ const projects = [
     title: "Koza",
     description: `A functionally designed data transformation library in Python. 
       Koza is intended to be easy to use and capable of handling large datasets.
-      <br /> It is primarily used in the Monarch Initiative's data ingest pipeline, 
+      It is primarily used in the Monarch Initiative's data ingest pipeline, 
       but can be used for many data transformation tasks.`,
     link: "https://monarch-initiative.github.io/koza",
   },
   {
     title: "Monarch UI",
-    description: `Monarch Initiative's webpage, which allows users to search for genes, diseases,
-      and other biological entities. Wrote the Python library for querying the Monarch database,
-      a FastAPI web server, and contribute to development of a Vue/TS frontend.`,
+    description: `Monarch Initiative's webpage, which allows users to search for genes, diseases, and other biological entities.
+      Wrote the Python library for querying the Monarch database, a FastAPI web server, and contribute to development of a Vue/TS frontend.`,
     link: "https://monarch-app.monarchinitiative.org/",
   },
   {

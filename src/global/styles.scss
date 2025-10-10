@@ -22,13 +22,6 @@ main {
   // justify-content: space-between;
 }
 
-// If using react-toastify
-.Toastify__toast-container {
-  position: absolute;
-  top: 5rem;
-  // z-index: 9999;
-}
-
 /**------------ 
   Text styles 
 --------------*/
@@ -77,14 +70,7 @@ a {
   color: v.$tertiary-mid;
   text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
+h1, h2, h3, h4, h5, h6, p, a {
   margin: 0;
   // padding: 0;
 }
@@ -94,9 +80,9 @@ a {
   color: #e0e7ff;
 }
 
-/**------------ 
+/**-------------- 
   Utility classes 
---------------*/
+-----------------*/
 
 /* Card style for sections */
 .card {

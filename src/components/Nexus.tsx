@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-
 import { debounce, sortBy } from "lodash";
+import { useEffect } from "react";
 
 import type { Point2d, Point3d } from "@/utils/math";
 import { cos, dist, getMidpoint, project, sin } from "@/utils/math";
@@ -211,8 +210,12 @@ function pulse() {
     const start = dist(center.x - width / 2, center.y - height / 2) / speed / band;
     const reset = start + 100 / speed;
     /** set timers */
-    window.setTimeout(() => (entity.colorTarget = [...pulseColor]), start);
-    window.setTimeout(() => (entity.colorTarget = [...baseColor]), reset);
+    window.setTimeout(() => {
+      entity.colorTarget = [...pulseColor];
+    }, start);
+    window.setTimeout(() => {
+      entity.colorTarget = [...baseColor];
+    }, reset);
   }
 }
 

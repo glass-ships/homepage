@@ -2,7 +2,7 @@
 // Spans width of the page and contains, aligns, and evenly vertically spaces its children.
 // All content should be wrapped in this component.
 
-import React from "react";
+import type React from "react";
 import styles from "./AppSection.module.scss";
 
 // Props and Types for the AppSection component
