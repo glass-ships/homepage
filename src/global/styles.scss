@@ -1,8 +1,12 @@
 @use "variables" as v;
-@import "normalize.css";
+@use "normalize.css";
 
 * {
   font-family: v.$sans;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 main {
@@ -22,42 +26,49 @@ main {
   // justify-content: space-between;
 }
 
+// If using react-toastify
+.Toastify__toast-container {
+  position: absolute;
+  top: 5rem;
+  z-index: 9999;
+}
+
 /**------------ 
   Text styles 
 --------------*/
 
 h1 {
-  font-size: clamp(2rem, -0.8rem + 4vw, v.$huge);
+  font-size: clamp(2rem, 1rem + 4vw, 8rem);
   font-weight: v.$light;
   color: v.$white;
   text-shadow: 0 0 10px v.$black;
 }
 h2 {
-  font-size: clamp(v.$xl, -0.8rem + 4vw, 5rem);
+  font-size: clamp(1.75rem, 1rem + 3vw, 5rem);
   font-weight: v.$light;
   color: v.$white;
   text-shadow: 0 0 10px v.$black;
 }
 h3 {
-  font-size: clamp(v.$large, -0.8rem + 4vw, 4rem);
+  font-size: clamp(1.5rem, 0.8rem + 3vw, 4rem);
   font-weight: v.$light;
   color: v.$white;
   text-shadow: 0 0 10px v.$black;
 }
 h4 {
-  font-size: clamp(v.$medium, -0.8rem + 4vw, 3rem);
+  font-size: clamp(1.25rem, 0.7rem + 3vw, 3rem);
   font-weight: v.$light;
   color: v.$white;
   text-shadow: 0 0 10px v.$black;
 }
 h5 {
-  font-size: clamp(v.$small, -0.8rem + 4vw, 2rem);
+  font-size: clamp(1rem, 1.2rem + 2vw, 2rem);
   font-weight: v.$light;
   color: v.$white;
   text-shadow: 0 0 10px v.$black;
 }
 p {
-  font-size: clamp(v.$tiny, -0.8rem + 4vw, v.$xl);
+  font-size: clamp(0.8rem, 0.7rem + 2vw, 1.25rem);
   font-weight: v.$normal;
   color: v.$light-grey;
   line-height: v.$spacing;
@@ -65,10 +76,13 @@ p {
   text-align: center;
 }
 a {
-  font-size: clamp(v.$tiny, -0.8rem + 4vw, v.$xl);
+  font-size: clamp(0.8rem, 0.7rem + 2vw, 1.25rem);
   font-weight: v.$normal;
   color: v.$tertiary-mid;
   text-decoration: none;
+}
+code {
+  font-size: clamp(0.8rem, 0.5rem + 2vw, 1rem);
 }
 h1, h2, h3, h4, h5, h6, p, a {
   margin: 0;
@@ -84,6 +98,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   Utility classes 
 -----------------*/
 
+[disabled] {
+  filter: saturate(0);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
 /* Card style for sections */
 .card {
   width: 100%;
@@ -95,5 +115,5 @@ h1, h2, h3, h4, h5, h6, p, a {
   background-color: oklch(0.274 0.005 286 / 0.8);
   border-radius: v.$rounded;
   box-shadow: v.$shadow;
-  padding: v.$medium;
+  padding: v.$fs-medium;
 }

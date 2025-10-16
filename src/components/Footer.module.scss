@@ -41,7 +41,7 @@ $wrap: 500px;
   line-height: v.$spacing;
   text-align: right;
   // font-size: 0.9rem;
-  font-size: clamp(v.$tiny, -0.8rem + 4vw, v.$medium);
+  font-size: clamp(v.$fs-tiny, -0.8rem + 4vw, v.$fs-medium);
   align-self: flex-end;
 }
 

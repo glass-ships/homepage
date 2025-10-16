@@ -1,24 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /** =========
   Typography
 ============= */
 
+// Uncomment to use GeistVF and GeistVFMono locally
+@font-face {
+  font-family: "GeistVF";
+  src: url("/assets/fonts/GeistVF.woff") format("woff");
+  font-weight: 100 300 500 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GeistVFMono";
+  src: url("/assets/fonts/GeistVFMono.woff") format("woff");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /** Font Families */
 $sans: "Roboto";
 $mono: "Courier Prime", monospace;
+// $sans: "GeistVF", sans-serif;
+// $mono: "GeistVFMono", monospace;
 
 /** Font Sizes */
-$tiny: 0.85rem;
-$small: 0.9rem;
-$medium: 1rem;
-$large: 1.2rem;
-$xl: 1.5rem;
-$big: 4rem;
-$huge: 8rem;
-$massive: 10rem;
-$clamped: clamp($small, 4vw - 0.8rem, $xl);
+$fs-tiny: 0.8rem;
+$fs-small: 0.9rem;
+$fs-medium: 1rem;
+$fs-large: 1.2rem;
+$fs-xl: 1.5rem;
+$fs-2xl: 4rem;
+$fs-3xl: 8rem;
+$clamped: clamp($fs-small, 4vw - 0.8rem, $fs-xl);
 
 /** Font Weights */
 $light: 100;
@@ -33,17 +50,21 @@ $spacing: 1.5;
 ================ */
 
 /* Theme Colors */
-$primary: oklch(0.398 0.177 277);
-$primary-mid: oklch(0.585 0.204 277);
-$primary-light: oklch(0.785 0.104 275);
+$primary: oklch(0.5 0.2 280);
+$primary-dark: oklch(from $primary calc(l - 0.1) c h);
+$primary-light: oklch(from $primary calc(l + 0.1) c h);
 $secondary: oklch(0.6 0.104 185);
 $secondary-mid: oklch(0.704 0.123 183);
-$secondary-light: oklch(0.785 0.133 182);
+$secondary-dark: oklch(from $secondary calc(l - 0.1) c h);
+$secondary-light: oklch(from $secondary calc(l + 0.1) c h);
 $tertiary: oklch(0.861 0.173 92);
 $tertiary-mid: oklch(0.905 0.166 98);
-$tertiary-light: oklch(0.945 0.124 102);
+$tertiary-dark: oklch(from $tertiary calc(l - 0.1) c h);
+$tertiary-light: oklch(from $tertiary calc(l + 0.1) c h);
 $desaturated1: oklch(0.67 0.04 245);
 $desaturated2: oklch(0.36 0.08 260);
+$desaturated1: oklch(from $primary l calc(c - 0.15) h);
+$desaturated2: oklch(from $primary calc(l + 0.2) calc(c - 0.15) calc(h));
 
 /* Neutrals */
 $white: oklch(1 0 0);
@@ -55,7 +76,7 @@ $off-black: oklch(0.37 0 0);
 $black: oklch(0 0 0);
 
 /* Misc */
-$success: $primary-mid;
+$success: oklch(0.75 0.18 150);
 $error: oklch(0.661 0.225 17);
 $highlight-bg: oklch(0.398 0.177 277);
 
@@ -64,15 +85,13 @@ $highlight-bg: oklch(0.398 0.177 277);
 ================== */
 
 /** Width of main content column on page */
-$section: 900px;
-$section-big: 1400px;
-// $section: 800px;
-// $section-big: 1200px;
+$section: 900px; // 800px;
+$section-big: 1400px; // 1200px;
 
 /** Effects */
-$rounded: 10px;
+$rounded: 5px;
 $outline: 0 0 0 3px $tertiary-light;
-$shadow: 1px 2px 10px #40405020;
+$shadow: 1px 2px 10px oklch(0.378 0.027 285 / 0.13);
 
 /** Gradient fade size */
 $fade: 15px;

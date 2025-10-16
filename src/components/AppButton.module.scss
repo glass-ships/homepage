@@ -1,10 +1,7 @@
 @use "../global/variables" as v;
 
-$clamped: clamp(v.$tiny, -0.8rem + 4vw, v.$medium);
-$bold: 550;
-
 .button {
-  display: flex;
+  display: inline-flex;
   appearance: none;
   flex-grow: 0;
   flex-shrink: 0;
@@ -13,68 +10,42 @@ $bold: 550;
   max-width: 100%;
   gap: 10px;
   border: none;
+  box-shadow: 0 0 0px transparent;
   transition:
     color v.$fast,
     background v.$fast,
     opacity v.$fast,
-    box-shadow v.$fast;
+    box-shadow v.$fast,
+    filter v.$fast;
   cursor: pointer;
 
   &.text {
-    font-size: $clamped;
-    font-weight: $bold;
+    font-size: 1rem;
+    font-weight: 500;
+    color: inherit;
   }
 
   &.primary {
     background: v.$primary-light;
-    color: v.$black;
-    &:hover,
-    &:active {
-      background: v.$primary-mid;
-      box-shadow: 0 0 0 3px v.$tertiary;
-    }
-    &:focus {
-      box-shadow: 0 0 0 3px v.$desaturated1;
-    }
   }
-
   &.secondary {
     background: v.$secondary-light;
-    color: v.$black;
-    &:hover,
-    &:active {
-      background: v.$secondary-mid;
-      box-shadow: 0 0 0 3px v.$tertiary;
-    }
-    &:focus {
-      box-shadow: 0 0 0 3px v.$desaturated1;
-    }
   }
-
   &.tertiary {
     background: v.$tertiary-light;
-    color: v.$black;
-    &:hover,
-    &:active {
-      background: v.$tertiary-mid;
-      box-shadow: 0 0 0 3px v.$tertiary;
-    }
-    &:focus {
-      box-shadow: 0 0 0 3px v.$desaturated1;
-    }
+    color: v.$off-black;
   }
-
   &.none {
     background-color: transparent;
-    color: v.$white;
-    &:hover,
-    &:active {
-      background: v.$grey;
-      box-shadow: 0 0 0 3px v.$tertiary;
-    }
-    &:focus {
-      box-shadow: 0 0 0 3px v.$desaturated1;
-    }
+  }
+
+  &:hover,
+  &:active {
+    filter: brightness(80%) contrast(120%);
+    box-shadow: 0 0 5px v.$tertiary;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px v.$grey;
   }
 
   &.normal {
@@ -98,7 +69,8 @@ $bold: 550;
   }
 
   &.small {
-    padding: 5px;
-    border-radius: v.$rounded;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    width: fit-content;
   }
 }
