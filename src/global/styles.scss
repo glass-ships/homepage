@@ -26,13 +26,6 @@ main {
   // justify-content: space-between;
 }
 
-// If using react-toastify
-.Toastify__toast-container {
-  position: absolute;
-  top: 5rem;
-  z-index: 9999;
-}
-
 /**------------ 
   Text styles 
 --------------*/
@@ -78,7 +71,7 @@ p {
 a {
   font-size: clamp(0.8rem, 0.7rem + 2vw, 1.25rem);
   font-weight: v.$normal;
-  color: v.$tertiary-mid;
+  color: v.$tertiary;
   text-decoration: none;
 }
 code {
@@ -94,15 +87,38 @@ h1, h2, h3, h4, h5, h6, p, a {
   color: #e0e7ff;
 }
 
-/**-------------- 
-  Utility classes 
------------------*/
+/**------------ 
+  Global styles 
+---------------*/
 
 [disabled] {
   filter: saturate(0);
   opacity: 0.35;
   pointer-events: none;
 }
+
+/**------------- 
+  Library styles 
+----------------*/
+
+/* react-toastify styles */
+.Toastify__toast-container {
+  position: absolute;
+  top: 5rem;
+  z-index: 9999;
+}
+
+/* react-tooltip styles */
+.tooltip {
+  background-color: v.$dark-grey;
+  color: v.$off-white;
+  border-radius: v.$rounded;
+  box-shadow: v.$shadow;
+}
+
+/**---------- 
+  Misc styles 
+-------------*/
 
 /* Card style for sections */
 .card {
@@ -115,5 +131,5 @@ h1, h2, h3, h4, h5, h6, p, a {
   background-color: oklch(0.274 0.005 286 / 0.8);
   border-radius: v.$rounded;
   box-shadow: v.$shadow;
-  padding: v.$fs-medium;
+  padding: v.$fs-large;
 }

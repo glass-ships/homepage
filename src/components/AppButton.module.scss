@@ -1,5 +1,11 @@
 @use "../global/variables" as v;
 
+@property --fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
 .button {
   display: inline-flex;
   appearance: none;
@@ -10,14 +16,10 @@
   max-width: 100%;
   gap: 10px;
   border: none;
-  box-shadow: 0 0 0px transparent;
-  transition:
-    color v.$fast,
-    background v.$fast,
-    opacity v.$fast,
-    box-shadow v.$fast,
-    filter v.$fast;
+  box-shadow: 0 0 2px light-dark(v.$black, v.$white);
+  transition: color v.$fast, background v.$fast, opacity v.$fast, box-shadow v.$fast, filter v.$fast;
   cursor: pointer;
+  position: relative;
 
   &.text {
     font-size: 1rem;
@@ -25,29 +27,40 @@
     color: inherit;
   }
 
+  // Color Variants
   &.primary {
-    background: v.$primary-light;
+    background: v.$primary;
   }
   &.secondary {
-    background: v.$secondary-light;
+    background: v.$secondary;
   }
   &.tertiary {
-    background: v.$tertiary-light;
+    background: v.$tertiary;
     color: v.$off-black;
   }
   &.none {
     background-color: transparent;
   }
 
+  // Interaction States
   &:hover,
   &:active {
-    filter: brightness(80%) contrast(120%);
-    box-shadow: 0 0 5px v.$tertiary;
+    filter: hue-rotate(-10deg) brightness(1.1);
+    box-shadow: 0 0 8px light-dark(v.$black, v.$white);
   }
   &:focus {
     box-shadow: 0 0 0 2px v.$grey;
   }
 
+  &:disabled {
+    background: v.$dark-grey;
+    color: v.$light-grey;
+    cursor: not-allowed;
+    filter: none;
+    box-shadow: none;
+  }
+
+  // Size Variants
   &.normal {
     min-width: min(200px, calc(100% - 40px));
     min-height: 40px;

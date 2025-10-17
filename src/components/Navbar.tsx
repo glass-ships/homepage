@@ -1,6 +1,3 @@
-// import { useEffect, useState } from "react";
-import { Button, Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
-
 import Logo from "@/assets/images/logo.svg";
 import AppFlex from "@/components/AppFlex";
 import AppIcon from "@/components/AppIcon";
@@ -17,20 +14,26 @@ export default function Navbar() {
       </a>
 
       {isThin ? (
-        <MenuTrigger>
-          <Button aria-label="Menu" className={styles.dropdownbutton}>
+        <div>
+          <button
+            type="button"
+            id="navbar-button"
+            popoverTarget="navbar-popover"
+            className={styles.dropdownbutton}
+            aria-label="navbar menu"
+          >
             <AppIcon icon="bars" size="medium" color="#fff" />
-          </Button>
-          <Popover className={styles.popover}>
-            <Menu className={styles.menu}>
+          </button>
+          <div id="navbar-popover" popover="auto" className={styles.popover}>
+            <div className={styles.menu}>
               {links.map((link) => (
-                <MenuItem key={`navbar-link-${link.label}`} href={link.href} className={styles.menuitem}>
+                <a key={`navbar-link-${link.label}`} href={link.href} className={styles.menuitem}>
                   {link.label}
-                </MenuItem>
+                </a>
               ))}
-            </Menu>
-          </Popover>
-        </MenuTrigger>
+            </div>
+          </div>
+        </div>
       ) : (
         <AppFlex alignH="right" flow="inline">
           {links.map((link) => (

@@ -11,9 +11,8 @@ export default function Skills() {
         <p>
           I develop software for the scientific community for various purposes, including <b>math</b> and{" "}
           <b>physics models</b>, and <b>data processing, analysis, and visualization</b>.
-          <br />
-          I'm comfortable working with a variety of programming languages, frameworks, and tools. I'm always learning
-          new things, so this list is always growing!
+          <br />I am comfortable working with a variety of programming languages, frameworks, and tools - and I aim to
+          keep this list growing by learning new skills and technologies as needed.
           <br />
           You can also see my Credly badges{" "}
           <a href="https://credly.com/users/glass-ships/badges" target="_blank" rel="noopener noreferrer">
@@ -26,6 +25,7 @@ export default function Skills() {
       </div>
 
       <AppGrid cols={3}>
+        {/* <div className={styles.skillgrid}> */}
         {skills.map((skill) => (
           <div key={`skill-${skill.icon}`} className={`${styles.card} ${styles.skillcard}`}>
             <AppIcon icon={skill.icon} size="large" color="#facc15" background />
@@ -33,12 +33,12 @@ export default function Skills() {
             <p>{skill.description}</p>
           </div>
         ))}
+        {/* </div> */}
       </AppGrid>
     </AppSection>
   );
 }
 
-// Array of skills
 const skills = [
   {
     title: "Python",
@@ -63,9 +63,8 @@ const skills = [
   },
   {
     title: "Web Development",
-    description: `I've worked with a variety of web technologies, including HTML, SCSS,
-      JavaScript/Typescript, React, and Vue. I'm also familiar with web hosting and deployment.
-      (This website is built with React/TS!)`,
+    description: `I've worked with a variety of web technologies, including HTML, CSS, JS/TS, React, and Vue.
+    I'm also familiar with web hosting and deployment. (This website is built with React + TS!)`,
     icon: "display",
   },
   {
@@ -76,8 +75,8 @@ const skills = [
   },
   {
     title: "Physics",
-    description: `I have a strong background in physics, including classical mechanics,
-    quantum mechanics, and electromagnetism, as well as a variety of mathematical techniques
+    description: `I have a strong background in physics, including classical and 
+    quantum mechanics, electromagnetism, and a variety of mathematical techniques
     such as linear algebra and differential equations.`,
     icon: "user-astronaut",
   },

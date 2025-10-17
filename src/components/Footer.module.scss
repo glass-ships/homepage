@@ -1,16 +1,20 @@
 @use "../global/variables" as v;
+@use "../global/styles";
 
 $wrap: 500px;
 
 .footer {
-  z-index: 100;
+  // z-index: 100;
+  position: fixed;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
   display: flex;
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
   align-items: center;
   align-content: center;
   vertical-align: middle;
   justify-content: space-between;
+
   padding: 15px 25px;
   background: v.$primary;
   a {
@@ -24,30 +28,34 @@ $wrap: 500px;
   }
 }
 
-.social {
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  gap: 10px;
-  font-size: 1.1rem;
-}
+// .socials {
+//   display: flex;
+//   height: 100%;
+//   align-items: center;
+//   justify-self: center;
+//   // gap: 10px;
+//   font-size: 1.1rem;
+//   a {
+//     padding: 5px;
+//   }
+// }
 
-.social a {
-  padding: 5px;
-}
+// .social-item {
+//   margin: 0;
+//   padding: 0;
+//   height: 100%;
+// }
 
 .license,
 .license a {
   line-height: v.$spacing;
   text-align: right;
-  // font-size: 0.9rem;
   font-size: clamp(v.$fs-tiny, -0.8rem + 4vw, v.$fs-medium);
   align-self: flex-end;
 }
 
 @media (max-width: $wrap) {
-  .footer {
-    flex-direction: column;
-    gap: 10px;
+  .license {
+    display: none;
   }
 }

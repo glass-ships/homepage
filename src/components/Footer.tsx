@@ -1,34 +1,19 @@
+import { Tooltip } from "react-tooltip";
 import AppFlex from "./AppFlex";
 import AppIcon from "./AppIcon";
-import AppTooltip from "./AppTooltip";
 import styles from "./Footer.module.scss";
 
 export default function Footbar() {
   return (
     <footer className={styles.footer}>
-      <AppFlex flow="inline" alignH="stretch" className={styles.social}>
-        {[
-          {
-            icon: "github",
-            label: "GitHub",
-            link: "https://github.com/glass-ships",
-          },
-          {
-            icon: "linkedin",
-            label: "LinkedIn",
-            link: "https://www.linkedin.com/in/glass-ships",
-          },
-          {
-            icon: "envelope",
-            label: "Email",
-            link: "mailto:contact@glass-ships.com",
-          },
-        ].map((item, _index) => (
-          <AppTooltip key={`footer-icon-${item.label}`} content={item.label} position="top">
-            <a href={item.link} target="_blank">
+      <AppFlex flow="inline" alignH="stretch" className={styles.socials}>
+        {socials.map((item, _index) => (
+          <div key={item.label} className={styles["social-item"]}>
+            <a id={`social-link-${item.label}`} href={item.link} target="_blank">
               <AppIcon icon={item.icon} size="small" color="#facc15" />
             </a>
-          </AppTooltip>
+            <Tooltip anchorSelect={`#social-link-${item.label}`} content={item.label} className={styles.tooltip} />
+          </div>
         ))}
       </AppFlex>
 
@@ -43,3 +28,21 @@ export default function Footbar() {
     </footer>
   );
 }
+
+const socials = [
+  {
+    icon: "github",
+    label: "GitHub",
+    link: "https://github.com/glass-ships",
+  },
+  {
+    icon: "linkedin",
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/glass-ships",
+  },
+  {
+    icon: "envelope",
+    label: "Email",
+    link: "mailto:contact@glass-ships.com",
+  },
+];

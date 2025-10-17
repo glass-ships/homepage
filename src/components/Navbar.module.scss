@@ -43,6 +43,10 @@
 
 /** DROPDOWN MENU */
 .dropdownbutton {
+  anchor-name: --dropdownbutton;
+  cursor: pointer;
+  
+  display: absolute;
   background: none;
   border: none;
   border-radius: 5px;
@@ -50,11 +54,7 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
-  transition:
-    color v.$fast,
-    background v.$fast,
-    opacity v.$fast,
-    box-shadow v.$fast;
+  transition: color v.$fast, background v.$fast, opacity v.$fast, box-shadow v.$fast;
 
   &:hover {
     background: linear-gradient(#3b82f6, #8b5cf6);
@@ -68,8 +68,7 @@
   padding: 2px;
   min-width: 100px;
   box-sizing: border-box;
-  background-color: v.$desaturated2;
-  outline: 1px solid v.$dark-grey;
+  background-color: v.$desaturated1;
   border-radius: 3px;
 }
 
@@ -84,21 +83,43 @@
     "desc  kbd";
   align-items: center;
   column-gap: 20px;
-  border-radius: 6px;
+  border-radius: v.$rounded;
   outline: none;
   forced-color-adjust: none;
   color: v.$white;
   font-size: 1.072rem;
   font-weight: v.$normal;
-  &[data-focused] {
+  &:focus, &:hover {
     background: v.$primary-light;
     color: v.$black;
   }
 }
 
 .popover {
-  padding: 0.25rem;
-  width: 14rem;
-  overflow: auto;
+  position: fixed;
+  position-anchor: --dropdownbutton;
+  position-visibility: always;
+  position-area: start;
+  position-try: top right, bottom right, top left, bottom left;
+
+  margin: unset;
+  padding: unset;
+  border: none;
+  border-radius: v.$rounded;
+  width: 10rem;
   box-shadow: v.$shadow;
 }
+[popover] {
+  transition: opacity 0.3s ease-out, display 600ms allow-discrete;
+  opacity: 0;
+}
+
+[popover]:popover-open {
+  opacity: 1;
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+

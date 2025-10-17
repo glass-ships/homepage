@@ -5,22 +5,6 @@
   Typography
 ============= */
 
-// Uncomment to use GeistVF and GeistVFMono locally
-@font-face {
-  font-family: "GeistVF";
-  src: url("/assets/fonts/GeistVF.woff") format("woff");
-  font-weight: 100 300 500 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "GeistVFMono";
-  src: url("/assets/fonts/GeistVFMono.woff") format("woff");
-  font-weight: 400 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 /** Font Families */
 $sans: "Roboto";
 $mono: "Courier Prime", monospace;
@@ -54,15 +38,11 @@ $primary: oklch(0.5 0.2 280);
 $primary-dark: oklch(from $primary calc(l - 0.1) c h);
 $primary-light: oklch(from $primary calc(l + 0.1) c h);
 $secondary: oklch(0.6 0.104 185);
-$secondary-mid: oklch(0.704 0.123 183);
 $secondary-dark: oklch(from $secondary calc(l - 0.1) c h);
 $secondary-light: oklch(from $secondary calc(l + 0.1) c h);
 $tertiary: oklch(0.861 0.173 92);
-$tertiary-mid: oklch(0.905 0.166 98);
 $tertiary-dark: oklch(from $tertiary calc(l - 0.1) c h);
 $tertiary-light: oklch(from $tertiary calc(l + 0.1) c h);
-$desaturated1: oklch(0.67 0.04 245);
-$desaturated2: oklch(0.36 0.08 260);
 $desaturated1: oklch(from $primary l calc(c - 0.15) h);
 $desaturated2: oklch(from $primary calc(l + 0.2) calc(c - 0.15) calc(h));
 
@@ -91,7 +71,7 @@ $section-big: 1400px; // 1200px;
 /** Effects */
 $rounded: 5px;
 $outline: 0 0 0 3px $tertiary-light;
-$shadow: 1px 2px 10px oklch(0.378 0.027 285 / 0.13);
+$shadow: 1px 2px 8px oklch(0.05 0 0 / 0.7);
 
 /** Gradient fade size */
 $fade: 15px;

@@ -7,8 +7,12 @@
   align-items: center;
   justify-content: center;
   justify-items: center;
-  text-align: center;
   scroll-snap-type: y mandatory;
+
+  p {
+    text-align: left;
+    word-spacing: -1px;
+  }
   &.normal {
     // background: linear-gradient(rgb(0, 0, 0, 0.1) 10%, rgb(0, 0, 0, 0.3) 50%, rgb(0, 0, 0, 0.1) 100%);
     // background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.3) 50%, rgb(0, 0, 0, 0.1) 100%);

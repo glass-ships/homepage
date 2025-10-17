@@ -18,20 +18,20 @@
     "@fortawesome/react-fontawesome": "^3.1.0",
     "lodash": "^4.17.21",
     "react": "^19.2.0",
-    "react-aria-components": "^1.13.0",
     "react-dom": "^19.2.0",
     "react-router": "^7.9.4",
+    "react-tooltip": "^5.30.0",
     "sass": "^1.93.2"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.20",
-    "@types/node": "^24.7.1",
+    "@types/node": "^24.8.1",
     "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.1",
+    "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.0.4",
     "@biomejs/biome": "*",
     "typescript": "~5.9.3",
-    "vite": "^7.1.9",
+    "vite": "^7.1.10",
     "vite-plugin-svgr": "^4.5.0"
   }
 }
