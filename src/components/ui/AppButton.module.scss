@@ -1,10 +1,4 @@
-@use "../global/variables" as v;
-
-@property --fill {
-  syntax: "<percentage>";
-  inherits: true;
-  initial-value: 0%;
-}
+@use "@/global/variables" as v;
 
 .button {
   display: inline-flex;
@@ -16,23 +10,27 @@
   max-width: 100%;
   gap: 10px;
   border: none;
-  box-shadow: 0 0 2px light-dark(v.$black, v.$white);
-  transition: color v.$fast, background v.$fast, opacity v.$fast, box-shadow v.$fast, filter v.$fast;
+  // box-shadow: 0 0 0px transparent;
+  box-shadow: v.$shadow-m;
+  transition:
+    color v.$fast,
+    background v.$fast,
+    opacity v.$fast,
+    box-shadow v.$fast,
+    filter v.$fast;
   cursor: pointer;
-  position: relative;
 
   &.text {
     font-size: 1rem;
     font-weight: 500;
-    color: inherit;
+    color: light-dark(v.$off-white, v.$off-black);
   }
 
-  // Color Variants
   &.primary {
-    background: v.$primary;
+    background: v.$primary-light;
   }
   &.secondary {
-    background: v.$secondary;
+    background: v.$secondary-light;
   }
   &.tertiary {
     background: v.$tertiary;
@@ -40,27 +38,21 @@
   }
   &.none {
     background-color: transparent;
+    color: v.$text;
   }
 
-  // Interaction States
   &:hover,
   &:active {
-    filter: hue-rotate(-10deg) brightness(1.1);
-    box-shadow: 0 0 8px light-dark(v.$black, v.$white);
+    filter: brightness(85%) contrast(110%);
+    box-shadow: v.$shadow-l;
+    &.none {
+      background-color: v.$bg;
+    }
   }
   &:focus {
     box-shadow: 0 0 0 2px v.$grey;
   }
 
-  &:disabled {
-    background: v.$dark-grey;
-    color: v.$light-grey;
-    cursor: not-allowed;
-    filter: none;
-    box-shadow: none;
-  }
-
-  // Size Variants
   &.normal {
     min-width: min(200px, calc(100% - 40px));
     min-height: 40px;

@@ -2,17 +2,17 @@
   <defs>
     <style>
       .light-blue {
-        fill: #ffffff;
+        fill: #7c9aff;
         opacity: 0.5;
       }
       .white {
         fill: #ffffff;
       }
       .orange {
-        fill: #ffffff;
+        fill: #80a2ff;
       }
       .blue {
-        fill: #ffffff;
+        fill: #80a2ff;
       }
     </style>
   </defs>

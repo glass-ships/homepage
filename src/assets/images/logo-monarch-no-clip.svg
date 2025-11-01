@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" style="enable-background:new 0 0 510 130.7;" xml:space="preserve">
+  <style type="text/css">
+    svg {
+      color: oklch(0.585 0.1 206);
+    }
+  </style>
+  <g transform="scale(0.8) rotate(-45)">
+    <path
+      fill="none"
+      stroke="#008C99"
+      stroke-width="5"
+      stroke-linecap="round"
+      d="M 5 5 L 5 -20 A 25 25 0 1 0 -20 5 L -15 5"
+    />
+    <path
+      fill="none"
+      stroke="#008C99"
+      stroke-width="5"
+      stroke-linecap="round"
+      d="M -5 5 L -5 -20 A 15 15 0 1 0 -20 -5 L -15 -5"
+    />
+    <path
+      fill="none"
+      stroke="#008C99"
+      stroke-width="5"
+      stroke-linecap="round"
+      d="M -5 15 L -5 20 A 25 25 0 1 0 20 -5 L 15 -5"
+    />
+    <path
+      fill="none"
+      stroke="#008C99"
+      stroke-width="5"
+      stroke-linecap="round"
+      d="M 5 15 L 5 20 A 15 15 0 1 0 20 5 L 15 5"
+    />
+  </g>
+</svg>

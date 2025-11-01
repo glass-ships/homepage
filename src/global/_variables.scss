@@ -1,15 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 /** =========
   Typography
 ============= */
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 /** Font Families */
 $sans: "Roboto";
 $mono: "Courier Prime", monospace;
-// $sans: "GeistVF", sans-serif;
-// $mono: "GeistVFMono", monospace;
 
 /** Font Sizes */
 $fs-tiny: 0.8rem;
@@ -33,32 +31,37 @@ $spacing: 1.5;
   Color palette
 ================ */
 
+/* Neutrals */
+$white: oklch(0.95 0 0);
+$off-white: oklch(0.9 0 0);
+$light-grey: oklch(0.8 0 0);
+$grey: oklch(0.67 0 0);
+$dark-grey: oklch(0.4 0 0);
+$off-black: oklch(0.3 0 0);
+$black: oklch(0.15 0.01 264);
+
 /* Theme Colors */
-$primary: oklch(0.5 0.2 280);
+$primary: light-dark(oklch(0.5 0.2 280), oklch(0.7 0.2 280));
 $primary-dark: oklch(from $primary calc(l - 0.1) c h);
 $primary-light: oklch(from $primary calc(l + 0.1) c h);
-$secondary: oklch(0.6 0.104 185);
+$secondary: light-dark(oklch(0.6 0.1 185), oklch(0.7 0.1 185));
 $secondary-dark: oklch(from $secondary calc(l - 0.1) c h);
 $secondary-light: oklch(from $secondary calc(l + 0.1) c h);
-$tertiary: oklch(0.861 0.173 92);
-$tertiary-dark: oklch(from $tertiary calc(l - 0.1) c h);
-$tertiary-light: oklch(from $tertiary calc(l + 0.1) c h);
-$desaturated1: oklch(from $primary l calc(c - 0.15) h);
-$desaturated2: oklch(from $primary calc(l + 0.2) calc(c - 0.15) calc(h));
+$tertiary: oklch(0.88 0.2 90);
 
-/* Neutrals */
-$white: oklch(1 0 0);
-$off-white: oklch(0.98 0 0);
-$light-grey: oklch(0.94 0 0);
-$grey: oklch(0.67 0 0);
-$dark-grey: oklch(0.57 0 0);
-$off-black: oklch(0.37 0 0);
-$black: oklch(0 0 0);
+/* Backgrounds */
+$bg-light: light-dark($white, $off-black);
+$bg: light-dark($off-white, $dark-grey);
+$bg-dark: light-dark(oklch(0.8 0 0), oklch(0.26 0.08 260));
+
+/* Text Colors */
+$text: light-dark(oklch(0.15 0 264), oklch(0.96 0 264));
+$text-muted: light-dark(oklch(0.4 0 264), oklch(0.76 0 264));
 
 /* Misc */
-$success: oklch(0.75 0.18 150);
-$error: oklch(0.661 0.225 17);
-$highlight-bg: oklch(0.398 0.177 277);
+$success: light-dark(oklch(0.65 0.12 150), oklch(0.76 0.18 150));
+$error: light-dark(oklch(0.5 0.15 17), oklch(0.661 0.225 17));
+$select-bg: oklch(0.398 0.177 277);
 
 /** ==============
   Global settings
@@ -70,8 +73,20 @@ $section-big: 1400px; // 1200px;
 
 /** Effects */
 $rounded: 5px;
-$outline: 0 0 0 3px $tertiary-light;
+$outline: 0 0 0 3px $primary-light;
 $shadow: 1px 2px 8px oklch(0.05 0 0 / 0.7);
+$shadow-s: inset 
+  0 1px 2px #ffffff30, /* top highlight */ 
+  0 1px 2px #00000030, /* dark shadow */ 
+  0 2px 4px #00000015; /* soft shadow */
+$shadow-m: inset
+  0 1px 2px #ffffff50, /* top highlight */
+  0 2px 4px #00000030, /* dark shadow */
+  0 4px 8px #00000015; /* soft shadow */
+$shadow-l: inset
+  0 1px 2px #ffffff70, /* top highlight */
+  0 4px 6px #00000030, /* dark shadow */
+  0 6px 10px #00000015; /* soft shadow */
 
 /** Gradient fade size */
 $fade: 15px;

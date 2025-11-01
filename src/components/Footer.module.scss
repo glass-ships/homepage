@@ -1,5 +1,5 @@
-@use "../global/variables" as v;
-@use "../global/styles";
+@use "@/global/variables" as v;
+@use "@/global/styles";
 
 $wrap: 500px;
 
@@ -16,9 +16,10 @@ $wrap: 500px;
   justify-content: space-between;
 
   padding: 15px 25px;
-  background: v.$primary;
+  background: v.$primary-dark;
+  p { color: v.$off-white;}
   a {
-    color: v.$white;
+    color: v.$tertiary;
     transition: opacity v.$fast;
 
     &:hover {
@@ -27,24 +28,6 @@ $wrap: 500px;
     }
   }
 }
-
-// .socials {
-//   display: flex;
-//   height: 100%;
-//   align-items: center;
-//   justify-self: center;
-//   // gap: 10px;
-//   font-size: 1.1rem;
-//   a {
-//     padding: 5px;
-//   }
-// }
-
-// .social-item {
-//   margin: 0;
-//   padding: 0;
-//   height: 100%;
-// }
 
 .license,
 .license a {

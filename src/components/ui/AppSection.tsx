@@ -8,13 +8,11 @@ import styles from "./AppSection.module.scss";
 // Props and Types for the AppSection component
 export type AppSectionWidth = "full" | "medium" | "big";
 export type AppSectionHeight = "full" | "auto";
-export type AppSectionDesign = "normal" | "fill";
 export interface AppSectionProps {
   children: React.ReactNode;
   id?: string;
   width?: AppSectionWidth;
   height?: AppSectionHeight;
-  design?: AppSectionDesign;
   onScroll?: (event: React.UIEvent<HTMLDivElement>) => void;
 }
 
@@ -24,14 +22,13 @@ export default function AppSection({
   id = "",
   width = "full",
   height = "full",
-  design = "normal",
   onScroll,
 }: AppSectionProps) {
   const hStyle = height === "full" ? styles.hFull : styles.hAuto;
   return (
     <div
       id={id}
-      className={`${styles.appsection} ${styles[width]} ${hStyle} ${styles[design]}`}
+      className={`${styles.appsection} ${styles[width]} ${hStyle}`}
       onScroll={onScroll ? onScroll : undefined}
     >
       {children}

@@ -1,6 +1,6 @@
 import { findIconDefinition, type IconName, type IconPrefix } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon as FaIcon } from "@fortawesome/react-fontawesome";
-import { lazy, Suspense, useMemo } from "react";
+import { lazy, Suspense } from "react";
 
 import styles from "./AppIcon.module.scss";
 
@@ -38,7 +38,7 @@ function getCustomIcon(props: AppIconProps) {
   const suffix = `/${icon}.svg`;
   const name = Object.keys(iconModules).find((k) => k.endsWith(suffix));
   if (!name) return <FallbackSvg size={size} color={color} className={className} background={background} />;
-  const SvgComponent = lazy(() => import(`@/assets/icons/${icon}.svg?react`));
+  const SvgComponent = lazy(async () => await import(`@/assets/icons/${icon}.svg`));
 
   return (
     <Suspense fallback={<FallbackSvg size={size} color={color} className={className} background={background} />}>
@@ -67,10 +67,7 @@ export default function AppIcon({
   className = "",
   background = false,
 }: AppIconProps) {
-  const computedClassName = useMemo(
-    () => [styles.appicon, styles[size], className].filter(Boolean).join(" "),
-    [size, className],
-  );
+  const computedClassName = [styles.appicon, styles[size], className].filter(Boolean).join(" ");
 
   // Check if icon is FontAwesome first
   const faIcon = getFontAwesomeIcon(icon);

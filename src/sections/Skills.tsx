@@ -1,12 +1,13 @@
-import AppGrid from "@/components/AppGrid";
-import AppIcon from "@/components/AppIcon";
-import AppSection from "@/components/AppSection";
+import AppCard from "@/components/ui/AppCard";
+import AppGrid from "@/components/ui/AppGrid";
+import AppIcon from "@/components/ui/AppIcon";
+import AppSection from "@/components/ui/AppSection";
 import styles from "./Skills.module.scss";
 
 export default function Skills() {
   return (
     <AppSection id="skills" width="big">
-      <div className={styles.card}>
+      <AppCard>
         <h2 className="appsecheader">Skills</h2>
         <p>
           I develop software for the scientific community for various purposes, including <b>math</b> and{" "}
@@ -22,16 +23,16 @@ export default function Skills() {
           <br />
           <br />
         </p>
-      </div>
+      </AppCard>
 
       <AppGrid cols={3}>
         {/* <div className={styles.skillgrid}> */}
         {skills.map((skill) => (
-          <div key={`skill-${skill.icon}`} className={`${styles.card} ${styles.skillcard}`}>
-            <AppIcon icon={skill.icon} size="large" color="#facc15" background />
+          <AppCard key={`skill-${skill.icon}`} className={styles.skillcard}>
+            <AppIcon icon={skill.icon} size="large" color="#1b9388" background />
             <h5>{skill.title}</h5>
             <p>{skill.description}</p>
-          </div>
+          </AppCard>
         ))}
         {/* </div> */}
       </AppGrid>

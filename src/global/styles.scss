@@ -5,17 +5,30 @@
   font-family: v.$sans;
 }
 
+:root {
+  color-scheme: light dark;
+}
+.light {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
 body {
   overflow-x: hidden;
 }
 
 main {
+  transition: background 0.3s ease, color 0.3s ease;
+
   min-height: 100dvh;
   margin: 0;
   padding: 0;
   z-index: 1;
 
-  background: oklch(0.26 0.08 260);
+  // background: oklch(0.26 0.08 260);
+  background: v.$bg-dark;
   color: v.$light-grey;
 
   display: flex;
@@ -30,40 +43,33 @@ main {
   Text styles 
 --------------*/
 
+:is(h1, h2, h3, h4, h5, h6) {
+  font-weight: v.$light;
+  color: v.$text;
+  line-height: 0.8;
+}
 h1 {
   font-size: clamp(2rem, 1rem + 4vw, 8rem);
-  font-weight: v.$light;
-  color: v.$white;
-  text-shadow: 0 0 10px v.$black;
 }
 h2 {
   font-size: clamp(1.75rem, 1rem + 3vw, 5rem);
-  font-weight: v.$light;
-  color: v.$white;
-  text-shadow: 0 0 10px v.$black;
 }
 h3 {
   font-size: clamp(1.5rem, 0.8rem + 3vw, 4rem);
-  font-weight: v.$light;
-  color: v.$white;
-  text-shadow: 0 0 10px v.$black;
 }
 h4 {
   font-size: clamp(1.25rem, 0.7rem + 3vw, 3rem);
-  font-weight: v.$light;
-  color: v.$white;
-  text-shadow: 0 0 10px v.$black;
 }
 h5 {
   font-size: clamp(1rem, 1.2rem + 2vw, 2rem);
-  font-weight: v.$light;
-  color: v.$white;
-  text-shadow: 0 0 10px v.$black;
+}
+:is(h1, h2, h3, h4, h5, h6, p, a) {
+  margin: 0;
 }
 p {
   font-size: clamp(0.8rem, 0.7rem + 2vw, 1.25rem);
   font-weight: v.$normal;
-  color: v.$light-grey;
+  color: v.$text-muted;
   line-height: v.$spacing;
   max-width: 50ch;
   text-align: center;
@@ -71,30 +77,18 @@ p {
 a {
   font-size: clamp(0.8rem, 0.7rem + 2vw, 1.25rem);
   font-weight: v.$normal;
-  color: v.$tertiary;
+  color: v.$secondary;
   text-decoration: none;
 }
 code {
   font-size: clamp(0.8rem, 0.5rem + 2vw, 1rem);
-}
-h1, h2, h3, h4, h5, h6, p, a {
-  margin: 0;
-  // padding: 0;
+  color: v.$text-muted;
+  max-width: 80ch;
 }
 
 ::selection {
-  background-color: v.$highlight-bg;
+  background-color: v.$select-bg;
   color: #e0e7ff;
-}
-
-/**------------ 
-  Global styles 
----------------*/
-
-[disabled] {
-  filter: saturate(0);
-  opacity: 0.35;
-  pointer-events: none;
 }
 
 /**------------- 
@@ -116,20 +110,24 @@ h1, h2, h3, h4, h5, h6, p, a {
   box-shadow: v.$shadow;
 }
 
+/**------------ 
+  Global styles 
+---------------*/
+
+[disabled] {
+  filter: saturate(0);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.icon-primary {
+  fill: v.$light-grey;
+}
+.icon-secondary {
+  fill: v.$secondary-light;
+}
 /**---------- 
   Misc styles 
 -------------*/
 
-/* Card style for sections */
-.card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  justify-items: center;
-  background-color: oklch(0.274 0.005 286 / 0.8);
-  border-radius: v.$rounded;
-  box-shadow: v.$shadow;
-  padding: v.$fs-large;
-}
+// Add any additional global styles specific to your project below this line

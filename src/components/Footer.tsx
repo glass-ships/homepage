@@ -1,6 +1,6 @@
 import { Tooltip } from "react-tooltip";
-import AppFlex from "./AppFlex";
-import AppIcon from "./AppIcon";
+import AppFlex from "@/components/ui/AppFlex";
+import AppIcon from "@/components/ui/AppIcon";
 import styles from "./Footer.module.scss";
 
 export default function Footbar() {

@@ -14,7 +14,6 @@ export interface AppButtonProps {
   color?: "primary" | "secondary" | "tertiary" | "none";
   design?: "normal" | "circle" | "small";
   type?: "button" | "link" | "submit";
-  disabled?: boolean;
   text?: string;
   icon?: string;
   iconColor?: string;
@@ -30,7 +29,6 @@ export default function AppButton({
   color = "primary",
   design = "normal",
   type = "button",
-  disabled = false,
   text = "",
   icon = "",
   iconColor,
@@ -64,13 +62,13 @@ export default function AppButton({
     );
   } else if (type === "button") {
     return (
-      <button id={id} disabled={disabled} type="button" onClick={onClick} onKeyDown={onKeyDown} className={buttonClass}>
+      <button id={id} type="button" onClick={onClick} onKeyDown={onKeyDown} className={buttonClass}>
         {content}
       </button>
     );
   } else if (type === "submit") {
     return (
-      <button id={id} disabled={disabled} type="submit" className={buttonClass}>
+      <button id={id} type="submit" className={buttonClass}>
         {content}
       </button>
     );

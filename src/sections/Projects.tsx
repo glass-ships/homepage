@@ -1,12 +1,13 @@
-import AppButton from "@/components/AppButton";
-import AppGrid from "@/components/AppGrid";
-import AppSection from "@/components/AppSection";
+import AppButton from "@/components/ui/AppButton";
+import AppCard from "@/components/ui/AppCard";
+import AppGrid from "@/components/ui/AppGrid";
+import AppSection from "@/components/ui/AppSection";
 import styles from "./Projects.module.scss";
 
 export default function Projects() {
   return (
     <AppSection id="projects" width="big">
-      <div className={styles.card}>
+      <AppCard>
         <h2 className="appsecheader">Projects</h2>
         <p>
           These are some of the projects I've worked on.
@@ -17,12 +18,12 @@ export default function Projects() {
           </a>
           .
         </p>
-      </div>
+      </AppCard>
 
       <AppGrid cols={3}>
         {projects.map((project) => {
           return (
-            <div key={`project-${project.title}`} className={`${styles.card} ${styles.project}`}>
+            <AppCard key={`project-${project.title}`} className={styles.project}>
               <h5>{project.title}</h5>
               <p>
                 {project.description.split("\n").map((line, index) => (
@@ -33,7 +34,7 @@ export default function Projects() {
                 ))}
               </p>
               <AppButton text="View Project" icon="arrow-up-right-from-square" linkTo={project.link} newTab />
-            </div>
+            </AppCard>
           );
         })}
       </AppGrid>

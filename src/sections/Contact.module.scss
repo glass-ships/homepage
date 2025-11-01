@@ -1,5 +1,5 @@
-@use "../global/variables" as v;
-@use "../global/styles.scss";
+@use "@/global/variables" as v;
+@use "@/global/styles.scss";
 
 .form {
   display: flex;
@@ -8,10 +8,15 @@
   padding: 2rem;
   width: 75%;
   height: 75%;
+
+  accent-color: v.$primary;
 }
 .textbox {
-  background-color: rgb(39 39 42 / 80%);
-  color: v.$white;
+  // background-color: rgb(39 39 42 / 80%);
+  background-color: v.$bg-light;
+  color: v.$text;
   padding: 0.5rem;
   font-size: v.$fs-large;
+  min-width: 100%;
+  max-width: 100%; 
 }

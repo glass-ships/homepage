@@ -1,6 +1,7 @@
-import AppButton from "@/components/AppButton";
-import AppFlex from "@/components/AppFlex";
-import AppSection from "@/components/AppSection";
+import AppButton from "@/components/ui/AppButton";
+import AppCard from "@/components/ui/AppCard";
+import AppFlex from "@/components/ui/AppFlex";
+import AppSection from "@/components/ui/AppSection";
 import styles from "./Contact.module.scss";
 
 const buttonStyle = {
@@ -11,7 +12,7 @@ const buttonStyle = {
 export default function Contact() {
   return (
     <AppSection id="contact" width="medium">
-      <div className={styles.card}>
+      <AppCard>
         <h2 className="appsecheader">Contact</h2>
         <p>
           Interested in working together? <br />
@@ -20,7 +21,6 @@ export default function Contact() {
           or send me an email using the form below!
         </p>
         <p>I'll do my best to get back to you as soon as I can!</p>
-      </div>
       <AppFlex>
         <form className={styles.form} action="https://formspree.io/f/moqpzbzj" method="POST">
           <input className={styles.textbox} type="email" name="email" placeholder="Your email" />
@@ -31,6 +31,7 @@ export default function Contact() {
           </div>
         </form>
       </AppFlex>
+      </AppCard>
     </AppSection>
   );
 }

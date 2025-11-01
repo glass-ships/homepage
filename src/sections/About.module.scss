@@ -1,5 +1,5 @@
-@use "../global/variables" as v;
-@use "../global/styles.scss";
+@use "@/global/variables" as v;
+@use "@/global/styles.scss";
 
 .appsecheader {
   text-shadow: 0 0 10px v.$black;
@@ -14,6 +14,11 @@
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+
+  // color: v.$tertiary;
+  // filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+
+  // filter: drop-shadow(2px 2px 10px v.$off-black);
 
   &:hover {
     transform: scale(1.2);

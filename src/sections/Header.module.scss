@@ -1,14 +1,8 @@
 @use "../global/variables" as v;
 
-.header {  
-  background: linear-gradient(rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  background: -webkit-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  background: -moz-linear-gradient(bottom, rgb(0, 0, 0, 0.1) 0%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.3) 100%);
-  // background: oklch(0% 0 0 / 0.5);
-  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.08));
-
-  width: 100%;
-  height: 100dvh;
+.header {
+  // width: 100%;
+  // height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,19 +11,23 @@
   padding: 0;
   margin: 0;
 
-  #logo {
-    position: relative;
-    filter: drop-shadow(0 0 0.3rem #ffffff70);
-  }
+  backdrop-filter: blur(0.2rem);
 
-  h2 {
-    padding-bottom: 1rem;
-    color: v.$light-grey;
+  h2 { padding-bottom: 1rem }
+  h3 { padding-bottom: 4rem; }
+}
+
+.text {
+  text-shadow: 3px 2px 1rem light-dark(v.$dark-grey, v.$grey);
+  :is(h2, h3) {
+    color: light-dark(v.$off-black, v.$off-white);
+    font-weight: 300;
   }
-  h3 {
-    padding-bottom: 4rem;
-    color: v.$light-grey;
-  }
+}
+
+#logo {
+  position: relative;
+  filter: drop-shadow(0 0 0.2rem #ffffff70);
 }
 
 /* Media Queries */

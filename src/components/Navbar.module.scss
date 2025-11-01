@@ -1,4 +1,4 @@
-@use "../global/variables" as v;
+@use "@/global/variables" as v;
 
 .navbar {
   position: sticky;
@@ -14,7 +14,7 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
-  background: v.$primary;
+  background: v.$primary-dark;
 
   .logo {
     width: 75px;
@@ -68,7 +68,7 @@
   padding: 2px;
   min-width: 100px;
   box-sizing: border-box;
-  background-color: v.$desaturated1;
+  background-color: v.$primary-dark;
   border-radius: 3px;
 }
 

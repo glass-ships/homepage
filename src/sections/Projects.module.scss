@@ -1,5 +1,5 @@
-@use "../global/variables" as v;
-@use "../global/styles.scss";
+@use "@/global/variables" as v;
+@use "@/global/styles.scss";
 
 .project {
   display: flex;
@@ -12,8 +12,6 @@
   height: 100%;
 
   p {
-    color: v.$white;
-    font-weight: v.$light;
     overflow-wrap: break-word;
     overflow: auto;
   }

@@ -1,5 +1,5 @@
-@use "../global/styles.scss";
-@use "../global/variables" as v;
+@use "@/global/styles.scss";
+@use "@/global/variables" as v;
 
 .skillgrid {
   display: grid;
@@ -20,11 +20,7 @@
   padding: 2rem;
 
   p {
-    color: v.$white;
-    font-weight: v.$light;
     overflow-wrap: break-word;
     overflow: auto;
   }
 }
-
-
