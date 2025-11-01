@@ -1,16 +1,20 @@
+import { useEffect, useRef } from "react";
 import "./ThemeToggle.scss";
 
 export default function ThemeToggle() {
-  // Get initial theme from user preference or default to dark
-  const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-  const initialTheme = localStorage.getItem("theme") || (prefersLight ? "light" : "dark");
-  document.body.classList.add(initialTheme);
+  const checkboxRef = useRef<HTMLInputElement>(null);
 
-  // Set checkbox state based on initial theme
-  const checkbox = document.getElementById("switch") as HTMLInputElement | null;
-  if (checkbox) {
-    checkbox.checked = initialTheme === "light";
-  }
+  useEffect(() => {
+    // Get initial theme from user preference or default to dark
+    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const initialTheme = localStorage.getItem("theme") || (prefersLight ? "light" : "dark");
+    document.body.classList.add(initialTheme);
+
+    // Set checkbox state based on initial theme
+    if (checkboxRef.current) {
+      checkboxRef.current.checked = initialTheme === "light";
+    }
+  }, []);
 
   // Toggle theme function
   function toggleTheme() {
@@ -18,11 +22,12 @@ export default function ThemeToggle() {
     const newTheme = currentTheme === "light" ? "dark" : "light";
     document.body.classList.remove(currentTheme);
     document.body.classList.add(newTheme);
+    localStorage.setItem("theme", newTheme);
   }
 
   return (
     <>
-      <input type="checkbox" id="switch" name="theme_switch" onClick={toggleTheme} />
+      <input type="checkbox" id="switch" ref={checkboxRef} onClick={toggleTheme} />
       <label htmlFor="switch">Toggle</label>
     </>
   );
