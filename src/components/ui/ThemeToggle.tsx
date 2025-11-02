@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./ThemeToggle.scss";
+import { Tooltip } from "react-tooltip";
 
 export default function ThemeToggle() {
   const checkboxRef = useRef<HTMLInputElement>(null);
@@ -27,8 +28,9 @@ export default function ThemeToggle() {
 
   return (
     <>
-      <input type="checkbox" id="switch" ref={checkboxRef} onClick={toggleTheme} />
-      <label htmlFor="switch">Toggle</label>
+      <input type="checkbox" id="toggleCheckbox" ref={checkboxRef} onClick={toggleTheme} />
+      <label id="toggleLabel" htmlFor="toggleCheckbox">Toggle</label>
+      <Tooltip anchorSelect="#toggleLabel" content="Toggle Theme" clickable />
     </>
   );
 }

@@ -12,7 +12,7 @@ export default function Footbar() {
             <a id={`social-link-${item.label}`} href={item.link} target="_blank">
               <AppIcon icon={item.icon} size="small" color="#facc15" />
             </a>
-            <Tooltip anchorSelect={`#social-link-${item.label}`} content={item.label} className={styles.tooltip} />
+            <Tooltip anchorSelect={`#social-link-${item.label}`} content={item.label} clickable />
           </div>
         ))}
       </AppFlex>

@@ -27,7 +27,7 @@
 
 #logo {
   position: relative;
-  filter: drop-shadow(0 0 0.2rem #ffffff70);
+  filter: drop-shadow(0 0 0.2rem light-dark(oklch(from v.$black l c h / .7), #ffffff70));
 }
 
 /* Media Queries */
