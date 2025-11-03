@@ -5,6 +5,7 @@ import { lazy, Suspense } from "react";
 import styles from "./AppIcon.module.scss";
 
 export type AppIconProps = {
+  id?: string;
   icon: string;
   size?: "tiny" | "small" | "medium" | "large";
   color?: string;
@@ -12,16 +13,12 @@ export type AppIconProps = {
   background?: boolean;
 };
 
-// const sizePx: Record<NonNullable<AppIconProps["size"]>, number> = {
-//   tiny: 16, small: 24, medium: 36, large: 52
-// }
-
 const iconModules = import.meta.glob<{ default: React.ComponentType }>("/src/assets/icons/*");
 
-const FallbackSvg = (props: Pick<AppIconProps, "color" | "size" | "background" | "className">) => {
+const FallbackSvg = (props: Omit<AppIconProps, "icon">) => {
   const size = props.size || "small";
   return (
-    <div className={`${styles[size]} ${props.background ? styles.background : ""}`}>
+    <div id={props.id} className={`${styles[size]} ${props.background ? styles.background : ""}`}>
       <svg className={`${styles.appicon} ${styles[size]} ${props.className}`} viewBox="0 0 24 24" fill="none">
         <title>Unknown Icon</title>
         <circle cx="12" cy="12" r="10" stroke={props.color} strokeWidth="2" />
@@ -34,7 +31,7 @@ const FallbackSvg = (props: Pick<AppIconProps, "color" | "size" | "background" |
 };
 
 function getCustomIcon(props: AppIconProps) {
-  const { icon, size, color, className, background } = props;
+  const { id, icon, size, color, className, background } = props;
   const suffix = `/${icon}.svg`;
   const name = Object.keys(iconModules).find((k) => k.endsWith(suffix));
   if (!name) return <FallbackSvg size={size} color={color} className={className} background={background} />;
@@ -43,7 +40,7 @@ function getCustomIcon(props: AppIconProps) {
   return (
     <Suspense fallback={<FallbackSvg size={size} color={color} className={className} background={background} />}>
       <div className={`${styles[size || "small"]} ${background ? styles.background : ""}`}>
-        <SvgComponent className={className} style={{ color: color }} width="100%" height="100%" />
+        <SvgComponent id={id} className={className} style={{ color: color }} width="100%" height="100%" />
       </div>
     </Suspense>
   );
@@ -61,9 +58,10 @@ function getFontAwesomeIcon(iconName: string) {
 }
 
 export default function AppIcon({
+  id = "",
   icon = "",
   size = "small",
-  color = "yellow",
+  color,
   className = "",
   background = false,
 }: AppIconProps) {
@@ -73,11 +71,18 @@ export default function AppIcon({
   const faIcon = getFontAwesomeIcon(icon);
   if (faIcon) {
     return (
-      <div className={`${styles[size]} ${background ? styles.background : ""}`}>
-        <FaIcon icon={faIcon} color={color} className={computedClassName} />
+      <div id={id} className={`${styles[size]} ${background ? styles.background : ""}`}>
+        <FaIcon icon={faIcon} color={color } className={computedClassName} />
       </div>
     );
   }
 
-  return getCustomIcon({ icon: icon, size: size, color: color, className: computedClassName, background: background });
+  return getCustomIcon({
+    id: id,
+    icon: icon,
+    size: size,
+    color: color,
+    className: computedClassName,
+    background: background,
+  });
 }

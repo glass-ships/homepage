@@ -1,6 +1,6 @@
 @use "@/global/variables" as v;
 
-.appicon {  
+.appicon {
   &.tiny { height: 1em; width: 1em; }
   &.small { height: 1.5em; width: 1.5em; }
   &.medium { height: 2em; width: 2em; }
@@ -8,11 +8,9 @@
 }
 
 .background {
-  // background-color: v.$off-black;
   background-color: v.$bg-light;
   border-radius: 100%;
-  box-shadow: 2px 2px 5px 1px light-dark(v.$dark-grey, v.$black);
-  // box-shadow: v.$shadow-l;
+  box-shadow: 5px 5px 10px 1px #000;
   display: inline-flex;
   align-items: center;
   justify-content: center;
