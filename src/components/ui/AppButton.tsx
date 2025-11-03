@@ -38,11 +38,10 @@ export default function AppButton({
   onClick = undefined,
   onKeyDown = undefined,
 }: AppButtonProps) {
-  const defaultIconColor = color === "none" ? "#facc15" : color === "tertiary" ? "black" : "white";
   const buttonClass = `${styles.button} ${styles[color]} ${styles[design]} ${text ? styles.text : ""}`;
   const iconArgs: AppIconProps = {
     icon,
-    color: iconColor || defaultIconColor,
+    color: iconColor,
     size: text ? "tiny" : "small",
   };
 

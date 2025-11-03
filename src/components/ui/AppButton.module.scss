@@ -10,14 +10,8 @@
   max-width: 100%;
   gap: 10px;
   border: none;
-  // box-shadow: 0 0 0px transparent;
   box-shadow: v.$shadow-m;
-  transition:
-    color v.$fast,
-    background v.$fast,
-    opacity v.$fast,
-    box-shadow v.$fast,
-    filter v.$fast;
+  transition: all v.$fast;
   cursor: pointer;
 
   &.text {
@@ -26,6 +20,7 @@
     color: light-dark(v.$off-white, v.$off-black);
   }
 
+  /** Color variants */
   &.primary {
     background: v.$primary-light;
   }
@@ -37,13 +32,13 @@
     color: v.$off-black;
   }
   &.none {
-    background-color: transparent;
+    background-color: v.$bg-light;
     color: v.$text;
   }
 
   &:hover,
   &:active {
-    filter: brightness(85%) contrast(110%);
+    filter: brightness(85%) contrast(110%) hue-rotate(-5deg);
     box-shadow: v.$shadow-l;
     &.none {
       background-color: v.$bg;
@@ -53,11 +48,12 @@
     box-shadow: 0 0 0 2px v.$grey;
   }
 
+  /** Design variants */
   &.normal {
     min-width: min(200px, calc(100% - 40px));
     min-height: 40px;
     padding: 5px 20px;
-    border-radius: 8px;
+    border-radius: v.$rounded;
   }
 
   &.circle {
@@ -75,7 +71,7 @@
 
   &.small {
     padding: 0.25rem 0.5rem;
-    border-radius: 8px;
+    border-radius: v.$rounded;
     width: fit-content;
   }
 }
