@@ -1,7 +1,7 @@
 @use "@/global/variables" as v;
 
 .appsection {
-  gap: 40px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,9 +13,9 @@
   &:last-of-type { flex-grow: 1; }
   
   // Width of the section
-  &.full { padding: 75px 40px; }
-  &.big { padding: 75px max(40px, calc((100% - v.$section-big) / 2)); }
-  &.medium { padding: 75px max(40px, calc((100% - v.$section) / 2)); }
+  &.full { padding: 5vh 40px; }
+  &.big { padding: 5vh max(2%, calc((100% - v.$section-big) / 2)); }
+  &.medium { padding: 5vh max(2%, calc((100% - v.$section) / 2)); }
   
   // Height of the section
   &.hFull { min-height: 100dvh; }

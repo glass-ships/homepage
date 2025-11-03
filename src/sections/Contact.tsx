@@ -16,8 +16,7 @@ export default function Contact() {
         <h2 className="appsecheader">Contact</h2>
         <p>
           Interested in working together? <br />
-          Reach out to me at any of the links below,
-          <br />
+          Reach out to me any of the links in the footer, <br />
           or send me an email using the form below!
         </p>
         <p>I'll do my best to get back to you as soon as I can!</p>

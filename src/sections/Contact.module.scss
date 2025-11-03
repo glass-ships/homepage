@@ -5,18 +5,27 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 2rem;
+  padding: 0;
   width: 75%;
   height: 75%;
 
   accent-color: v.$primary;
-}
-.textbox {
-  // background-color: rgb(39 39 42 / 80%);
-  background-color: v.$bg-light;
-  color: v.$text;
-  padding: 0.5rem;
-  font-size: v.$fs-large;
-  min-width: 100%;
-  max-width: 100%; 
+
+  .textbox {
+    // background-color: rgb(39 39 42 / 80%);
+    background-color: v.$bg-light;
+    color: v.$text;
+    padding: 0.5rem;
+    font-size: v.$fs-large;
+    min-width: 100%;
+    max-width: 100%;
+    outline: none;
+    border: 1px solid v.$off-black;
+    box-shadow: v.$shadow-l;
+
+    &:focus {
+      outline: none;
+      border: 2px solid v.$primary;
+    }
+  }
 }
