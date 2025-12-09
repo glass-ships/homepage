@@ -14,9 +14,9 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 
-  font-size: 100%;  /* Correct the font size in all browsers. */
-  line-height: 1.15;    /* Correct the line height in all browsers. */
-  tab-size: 4;          /* Use a more readable tab size (opinionated). */
+  font-size: 100%;    /* Correct the font size in all browsers. */
+  line-height: 1.15;  /* Correct the line height in all browsers. */
+  tab-size: 4;        /* Use a more readable tab size (opinionated). */
 }
 
 body {
