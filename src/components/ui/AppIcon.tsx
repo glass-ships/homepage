@@ -72,7 +72,7 @@ export default function AppIcon({
   if (faIcon) {
     return (
       <div id={id} className={`${styles[size]} ${background ? styles.background : ""}`}>
-        <FaIcon icon={faIcon} color={color } className={computedClassName} />
+        <FaIcon icon={faIcon} color={color} className={computedClassName} />
       </div>
     );
   }

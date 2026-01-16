@@ -20,16 +20,16 @@ export default function Contact() {
           or send me an email using the form below!
         </p>
         <p>I'll do my best to get back to you as soon as I can!</p>
-      <AppFlex>
-        <form className={styles.form} action="https://formspree.io/f/moqpzbzj" method="POST">
-          <input className={styles.textbox} type="email" name="email" placeholder="Your email" />
-          <input className={styles.textbox} type="text" name="subject" placeholder="Subject" />
-          <textarea className={styles.textbox} name="message" placeholder="Your message" rows={10} />
-          <div style={buttonStyle}>
-            <AppButton text="Send" type="submit" icon="paper-plane" color="tertiary" />
-          </div>
-        </form>
-      </AppFlex>
+        <AppFlex>
+          <form className={styles.form} action="https://formspree.io/f/moqpzbzj" method="POST">
+            <input className={styles.textbox} type="email" name="email" placeholder="Your email" />
+            <input className={styles.textbox} type="text" name="subject" placeholder="Subject" />
+            <textarea className={styles.textbox} name="message" placeholder="Your message" rows={10} />
+            <div style={buttonStyle}>
+              <AppButton text="Send" type="submit" icon="paper-plane" color="tertiary" />
+            </div>
+          </form>
+        </AppFlex>
       </AppCard>
     </AppSection>
   );

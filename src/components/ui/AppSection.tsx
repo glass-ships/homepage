@@ -17,13 +17,7 @@ export interface AppSectionProps {
 }
 
 // AppSection component
-export default function AppSection({
-  children,
-  id = "",
-  width = "full",
-  height = "full",
-  onScroll,
-}: AppSectionProps) {
+export default function AppSection({ children, id = "", width = "full", height = "full", onScroll }: AppSectionProps) {
   const hStyle = height === "full" ? styles.hFull : styles.hAuto;
   return (
     <div

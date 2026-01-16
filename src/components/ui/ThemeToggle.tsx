@@ -29,7 +29,9 @@ export default function ThemeToggle() {
   return (
     <>
       <input type="checkbox" id="toggleCheckbox" ref={checkboxRef} onClick={toggleTheme} />
-      <label id="toggleLabel" htmlFor="toggleCheckbox">Toggle</label>
+      <label id="toggleLabel" htmlFor="toggleCheckbox">
+        Toggle
+      </label>
       <Tooltip anchorSelect="#toggleLabel" content="Toggle Theme" clickable />
     </>
   );
