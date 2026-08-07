@@ -35,9 +35,9 @@ export default function About() {
           and hanging out with my cats, Korra and Bonnie.
         </p>
         <AppButton
-          text="Download my resume"
+          text="See my resume"
           icon="file-arrow-down"
-          linkTo="https://docs.google.com/document/d/19AHFlI_aqSv938bjgQXM9jodd2I12gmVEhtA8yXsLck/export?format=pdf"
+          linkTo="https://drive.proton.me/urls/YPW65TEP34#fF6UT7BkYUDL"
         />
         <h5>I'm proud to have collaborated with:</h5>
         <AppFlex direction="row" gap="tiny">

@@ -11,27 +11,27 @@
     "lint": "biome check src --fix"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^7.2.0",
-    "@fortawesome/free-brands-svg-icons": "^7.2.0",
-    "@fortawesome/free-regular-svg-icons": "^7.2.0",
-    "@fortawesome/free-solid-svg-icons": "^7.2.0",
-    "@fortawesome/react-fontawesome": "^3.3.1",
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/free-regular-svg-icons": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "@fortawesome/react-fontawesome": "^3.5.0",
     "lodash": "^4.18.1",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "react-router": "^7.14.2",
-    "react-tooltip": "^5.30.1",
-    "sass": "^1.99.0"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router": "^8.3.0",
+    "react-tooltip": "^6.0.8",
+    "sass": "^1.102.0"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.24",
-    "@types/node": "^25.6.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "@biomejs/biome": "^2.4.12",
-    "typescript": "~6.0.3",
-    "vite": "^8.0.9",
+    "@types/lodash": "^4.17.25",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "@biomejs/biome": "^2.5.7",
+    "typescript": "~7.0.2",
+    "vite": "^8.2.1",
     "vite-plugin-svgr": "^5.2.0"
   }
 }
