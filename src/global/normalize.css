@@ -5,18 +5,22 @@
   box-sizing: border-box;
 }
 
-html {
-  /* Enable smooth scrolling */
-  scroll-behavior: smooth;
+/* Enable smooth scrolling, unless the user prefers reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
+html {
   /* Prevent font size inflation */
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 
-  font-size: 100%;    /* Correct the font size in all browsers. */
-  line-height: 1.15;  /* Correct the line height in all browsers. */
-  tab-size: 4;        /* Use a more readable tab size (opinionated). */
+  font-size: 100%;  /* Correct the font size in all browsers. */
+  line-height: 1.15;    /* Correct the line height in all browsers. */
+  tab-size: 4;          /* Use a more readable tab size (opinionated). */
 }
 
 body {

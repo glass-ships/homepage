@@ -15,9 +15,9 @@ export default function Skills() {
           <br />I am comfortable working with a variety of programming languages, frameworks, and tools - and I aim to
           keep this list growing by learning new skills and technologies as needed.
           <br />
-          You can also see my Credly badges{" "}
+          You can also see my{" "}
           <a href="https://credly.com/users/glass-ships/badges" target="_blank" rel="noopener noreferrer">
-            here
+            Credly badges
           </a>
           .
           <br />

@@ -13,11 +13,11 @@
   box-shadow: v.$shadow-m;
   transition: all v.$fast;
   cursor: pointer;
+  color: light-dark(v.$white, v.$black);
 
   &.text {
     font-size: 1rem;
     font-weight: 500;
-    color: light-dark(v.$off-white, v.$off-black);
   }
 
   /** Color variants */

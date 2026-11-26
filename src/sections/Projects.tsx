@@ -27,7 +27,7 @@ export default function Projects() {
               <h5>{project.title}</h5>
               <p>
                 {project.description.split("\n").map((line, index) => (
-                  <span key={`project-${project.title}-line-${index}`}>
+                  <span key={line}>
                     {line}
                     {index < project.description.split("\n").length - 1 && <br />}
                   </span>

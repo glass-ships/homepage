@@ -1,6 +1,8 @@
-import { debounce, sortBy } from "lodash";
+import debounce from "lodash/debounce";
+import sortBy from "lodash/sortBy";
 import { useEffect } from "react";
 
+import useMediaQuery from "@/hooks/useMediaQuery";
 import type { Point2d, Point3d } from "@/utils/math";
 import { cos, dist, getMidpoint, project, sin } from "@/utils/math";
 import style from "./Nexus.module.scss";
@@ -102,7 +104,7 @@ const generateField = debounce(() => {
   /** hard limit dots for performance */
   while (dots.length > 200) dots.splice(Math.floor(dots.length * Math.random()), 1);
 
-  /** sort dots by z */
+  /** sort dots by x */
   dots = sortBy(dots, (p) => p.point.x);
 
   /** go through each pair of dots */
@@ -127,6 +129,9 @@ const generateField = debounce(() => {
 
   /** eliminate dots with no links */
   dots = dots.filter((dot) => links.find(({ from, to }) => dot === from || dot === to));
+
+  /** draw once, so the field shows even without the animation loop */
+  step();
 }, 50);
 
 /** rotate 3d world */
@@ -196,6 +201,17 @@ function draw() {
   }
 }
 
+/** pending pulse timeouts, so they can be cancelled on unmount */
+const pulseTimers = new Set<number>();
+
+function later(fn: () => void, ms: number) {
+  const id = window.setTimeout(() => {
+    pulseTimers.delete(id);
+    fn();
+  }, ms);
+  pulseTimers.add(id);
+}
+
 /** pulse color of field of dots and links from inward to outward */
 function pulse() {
   for (const entity of [...dots, ...links]) {
@@ -210,10 +226,10 @@ function pulse() {
     const start = dist(center.x - width / 2, center.y - height / 2) / speed / band;
     const reset = start + 100 / speed;
     /** set timers */
-    window.setTimeout(() => {
+    later(() => {
       entity.colorTarget = [...pulseColor];
     }, start);
-    window.setTimeout(() => {
+    later(() => {
       entity.colorTarget = [...baseColor];
     }, reset);
   }
@@ -226,7 +242,14 @@ function step() {
   draw();
 }
 
+/**
+ * A background of dots joined by lines, on a canvas fixed behind the page. It tilts toward the
+ * pointer, and pulses with color every 5 seconds and on click. It doesn't move when the user prefers
+ * reduced motion.
+ */
 export default function Nexus() {
+  const reduceMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
+
   useEffect(() => {
     // setup canvas
     canvas = document.querySelector("#nexus");
@@ -243,11 +266,13 @@ export default function Nexus() {
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      generateField.cancel();
     };
   }, []);
 
-  // event listeners
+  // motion: pointer tilt, click pulse, animation loop and auto pulse
   useEffect(() => {
+    if (reduceMotion) return;
     const handleMouseMove = (event: MouseEvent) => rotate(event);
     const handleTouchMove = (event: TouchEvent) => rotate(event);
     const handleMouseDown = () => pulse();
@@ -255,25 +280,19 @@ export default function Nexus() {
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("touchmove", handleTouchMove);
     document.addEventListener("mousedown", handleMouseDown);
+    const stepInterval = setInterval(step, 1000 / 60);
+    const pulseInterval = setInterval(pulse, 5000);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("mousedown", handleMouseDown);
-    };
-  }, []);
-
-  // intervals
-  useEffect(() => {
-    const stepInterval = setInterval(step, 1000 / 60);
-    // const pulseInterval = setInterval(pulse, 10000);
-    const pulseInterval = setInterval(pulse, 5000);
-
-    return () => {
       clearInterval(stepInterval);
       clearInterval(pulseInterval);
+      for (const id of pulseTimers) clearTimeout(id);
+      pulseTimers.clear();
     };
-  }, []);
+  }, [reduceMotion]);
 
   return <canvas id="nexus" className={style.nexus} />;
 }

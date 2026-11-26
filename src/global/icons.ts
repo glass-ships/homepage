@@ -11,7 +11,6 @@ const faIcons: { [key: string]: fab.IconDefinition } = {
   // Regular icons
   "paper-plane": far.faPaperPlane,
   square: far.faSquare,
-  vial: fas.faVial,
   // Solid icons
   "angle-up": fas.faAngleUp,
   "angle-down": fas.faAngleDown,
@@ -29,14 +28,17 @@ const faIcons: { [key: string]: fab.IconDefinition } = {
   "diagram-project": fas.faDiagramProject,
   display: fas.faDisplay,
   envelope: fas.faEnvelope,
-  "file-arrow-down": fas.faFileDownload,
+  "file-arrow-up": fas.faFileArrowUp,
+  "file-arrow-down": fas.faFileArrowDown,
   filter: fas.faFilter,
   "magnifying-glass": fas.faMagnifyingGlass,
+  rotate: fas.faRotate,
   "square-check": fas.faSquareCheck,
   terminal: fas.faTerminal,
   trash: fas.faTrash,
   upload: fas.faUpload,
   "user-astronaut": fas.faUserAstronaut,
+  vial: fas.faVial,
   xmark: fas.faXmark,
 };
 

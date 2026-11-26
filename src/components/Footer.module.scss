@@ -1,5 +1,4 @@
 @use "@/global/variables" as v;
-@use "@/global/styles";
 
 $wrap: 500px;
 
@@ -17,24 +16,27 @@ $wrap: 500px;
 
   padding: 15px 25px;
   background: v.$primary-dark;
-  p { color: v.$off-white;}
   a {
-    color: v.$tertiary;
+    color: v.$white;
     transition: opacity v.$fast;
 
     &:hover {
       opacity: 0.7;
-      transform: scale(1.1);
     }
   }
 }
 
-.license,
-.license a {
+.license {
   line-height: v.$spacing;
   text-align: right;
   font-size: clamp(v.$fs-tiny, -0.8rem + 4vw, v.$fs-medium);
   align-self: flex-end;
+  color: v.$white;
+
+  a {
+    color: v.$tertiary;
+    text-decoration: underline;
+  }
 }
 
 @media (max-width: $wrap) {

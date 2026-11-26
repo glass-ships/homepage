@@ -9,7 +9,7 @@ export default function Footbar() {
       <AppFlex flow="inline" alignH="stretch" className={styles.socials}>
         {socials.map((item, _index) => (
           <div key={item.label} className={styles["social-item"]}>
-            <a id={`social-link-${item.label}`} href={item.link} target="_blank">
+            <a id={`social-link-${item.label}`} href={item.link} target="_blank" rel="noopener">
               <AppIcon icon={item.icon} size="small" color="#facc15" />
             </a>
             <Tooltip anchorSelect={`#social-link-${item.label}`} content={item.label} clickable />

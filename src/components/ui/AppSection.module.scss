@@ -6,9 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  justify-items: center;
   text-align: center;
-  scroll-snap-type: y mandatory;
   // background-color: v.$bg-dark;
   &:last-of-type { flex-grow: 1; }
   
@@ -19,7 +17,10 @@
   
   // Height of the section
   &.hFull { min-height: 100dvh; }
-  &.hAuto { min-height: auto; }
+  &.hAuto {
+    min-height: auto;
+    justify-content: flex-start; // Align children to the top of the section
+  }
   // .hBig { min-height: 75vh; }
   // .hMedium {  }
 }

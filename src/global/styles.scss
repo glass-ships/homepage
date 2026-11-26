@@ -1,13 +1,18 @@
 @use "variables" as v;
 @use "normalize.css";
 
-* {
-  font-family: v.$sans;
-}
-
+// <html> element
 :root {
   color-scheme: light dark;
+  scrollbar-gutter: stable both-edges;
+  font-family: v.$sans;
+  background: v.$bg-dark;
+  color: v.$text;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
+// theme classes for light and dark modes
 .light {
   color-scheme: light;
 }
@@ -15,26 +20,24 @@
   color-scheme: dark;
 }
 
+// vite/react root element (<div id="root">)
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
 body {
   overflow-x: hidden;
+  // max-width: 100vw;
 }
 
 main {
-  transition: background 0.3s ease, color 0.3s ease;
-
-  min-height: 100dvh;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-
-  background: v.$bg-dark;
-  color: v.$light-grey;
-
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   position: relative;
-  flex-grow: 1;
-  align-items: stretch;
+  z-index: 1;
 }
 
 /**------------ 
@@ -73,15 +76,27 @@ p {
   text-align: center;
 }
 a {
-  font-size: clamp(0.8rem, 0.7rem + 2vw, 1.25rem);
-  font-weight: v.$normal;
-  color: v.$secondary;
-  text-decoration: none;
+  color: light-dark(v.$secondary, v.$tertiary);
 }
 code {
   font-size: clamp(0.8rem, 0.5rem + 2vw, 1rem);
   color: v.$text-muted;
   max-width: 80ch;
+}
+pre {
+  font-size: clamp(v.$fs-tiny, -0.8rem + 4vw, v.$fs-medium);
+  font-weight: v.$normal;
+  font-family: v.$mono;
+  color: v.$grey;
+  background: v.$black;
+  padding: 1rem;
+  // border: 1px solid v.$tertiary;
+  border-radius: v.$rounded;
+  box-shadow: v.$shadow;
+  max-width: 90%;
+  overflow-x: auto;
+  text-align: left;
+  align-self: center;
 }
 
 ::selection {
@@ -95,17 +110,18 @@ code {
 
 /* react-toastify styles */
 .Toastify__toast-container {
-  position: absolute;
+  position: fixed;
   top: 5rem;
   z-index: 9999;
 }
 
 /* react-tooltip styles */
-.tooltip {
-  background-color: v.$dark-grey;
-  color: v.$off-white;
+body .react-tooltip {
+  background-color: v.$secondary-light;
+  color: light-dark(v.$white, v.$black);
   border-radius: v.$rounded;
-  box-shadow: v.$shadow;
+  box-shadow: v.$shadow-m;
+  --rt-opacity: 1;
 }
 
 /**------------ 
@@ -118,12 +134,11 @@ code {
   pointer-events: none;
 }
 
-.icon-primary {
-  fill: v.$light-grey;
+:focus-visible {
+  outline: v.$outline;
+  outline-offset: 2px;
 }
-.icon-secondary {
-  fill: v.$secondary-light;
-}
+
 /**---------- 
   Misc styles 
 -------------*/
